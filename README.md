@@ -5,7 +5,7 @@ This is the source for OnGround Robotics Tutorial.
 Publishing sphinx-generated docs on github
 ------------------------------------------
 
-Set up sphinx:
+#####Set up sphinx:
 ```
 sudo pip install sphinx
 mkdir docs
@@ -13,7 +13,7 @@ cd docs
 sphinx-quickstart
 ```
 
-Set up docs repository:
+#####Set up docs repository:
 ```
 rm -rf _build/html
 cd _build
@@ -25,7 +25,7 @@ rm .git/index
 git clean -fdx
 ```
 
-Initial creation and commit:
+#####Initial creation and commit:
 ```
 cd _build/html
 git add .
