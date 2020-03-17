@@ -17,7 +17,7 @@ Set up docs repository:
 ```
 rm -rf _build/html
 cd _build
-git clone git@github.com:daler/sphinxdoc-test.git html
+git clone https://github.com/brightenlee/docs.git html
 cd html
 git branch gh-pages
 git symbolic-ref HEAD refs/heads/gh-pages
