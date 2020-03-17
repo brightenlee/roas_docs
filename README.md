@@ -6,6 +6,10 @@ This is the source for OnGround Robotics Tutorial.
 Building new releases
 ------------------------------------------
 
+```
+git clone https://github.com/brightenlee/docs.git html
+```
+
 
 Publishing sphinx-generated docs on github
 ------------------------------------------
