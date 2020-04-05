@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview &mdash; OnGround Tutorial 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> OnGround Tutorial
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="scout.html">Mobile Robot: Scout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scout_mini/scout_mini.html">Mobile Robot: Scout Mini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hunter/hunter.html">Mobile Robot: Hunter</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OnGround Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/scout/overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>(V2.0 사진 업데이트 예정)</p>
+<p>조명은 로봇의 전면과 후면에 설치되어 있습니다.
+전면에는 백색 조명이 설치되어 있고, 후면에는 적색 조명이 설치되어 있습니다.
+로봇 양쪽에 비상 정지 버튼이 설치되어 있습니다.
+로봇이 비정상적으로 동작 할 때 로봇의 전원을 즉시 차단할 수 있습니다.</p>
+<p>DC 전원 및 통신 인터페이스를 위한 방수 커넥터는 로봇의 상단과 후면에 있습니다.
+로봇과 외부 구성 요소를 유연하게 연결할 수 있고, 외부 요인으로부터 로봇 내부를 보호할 수 있습니다.</p>
+<div class="section" id="indication">
+<h2>Indication<a class="headerlink" href="#indication" title="Permalink to this headline">¶</a></h2>
+<p>사용자는 전압계, 신호음 및 조명을 통해서 로봇의 상태를 확인할 수 있습니다.</p>
+<p><strong>Voltage:</strong>
+배터리의 현재 전압은 로봇 후면에 있는 인터페이스에서 확인할 수 있습니다. 전압은 1V 단위로 표시됩니다.</p>
+<p><strong>Battery:</strong>
+배터리 전압이 22.5V보다 낮으면 경고음이 울립니다.
+배터리 전압이 22V보다 낮아지면 로봇은 전원 공급을 차단하여 배터리 손상을 방지합니다.</p>
+<p><strong>Power on:</strong>
+전면과 후면의 조명이 켜집니다.</p>
+</div>
+<div class="section" id="electrical-interface">
+<h2>Electrical interface<a class="headerlink" href="#electrical-interface" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="remote-control">
+<h2>Remote Control<a class="headerlink" href="#remote-control" title="Permalink to this headline">¶</a></h2>
+<p>RC 조종기를 이용하여 로봇을 수동으로 조작할 수 있습니다.
+모든 스위치를 중립 상태(상단으로 위치)로 두고, 두 개의 전원 버튼을 누르면 조종기를 켤 수 있습니다.
+조종기에는 2개의 스로틀이 있습니다. S1과 S2를 이용하여 각각 선속도과 각속도 명령을 보낼 수 있습니다.
+SWB 스위치를 중간 위치에 있으면 원격 제어 모드가 활성화되고, 하단 위치에 있으면 명령 모드가
+활성화됩니다.
+SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 있습니다.</p>
+</div>
+<div class="section" id="light-control">
+<h2>Light Control<a class="headerlink" href="#light-control" title="Permalink to this headline">¶</a></h2>
+<p>로봇의 전면과 후면에 조명이 설치되어 있으며, 제어 인터페이스는 사용자에게 개방되어 있습니다.</p>
+<p><strong>NC Mode:</strong></p>
+<p><strong>NO Mode:</strong></p>
+<p><strong>BL Mode:</strong>
+전면, 후면 조명은 점차적으로 켜졌다가 꺼졌다가를 반복합니다.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, OnGround Robotics
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
