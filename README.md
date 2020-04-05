@@ -16,7 +16,10 @@ Publishing sphinx-generated docs on github
 
 ##### Set up sphinx:
 ```
-sudo pip install sphinx
+pip install sphinx
+pip install sphinx_rtd_theme
+pip install recommonmark
+
 mkdir docs
 cd docs
 sphinx-quickstart
