@@ -4,12 +4,23 @@
    contain the root `toctree` directive.
 
 OnGround Robotics Tutorial Portal
-=============================================
+=================================
 
 .. toctree::
    :maxdepth: 2
 
    introduction
+
+
+Mobile Robot
+------------
+
+.. toctree::
+   :maxdepth: 2
+
+   scout/scout
+   scout_mini/scout_mini
+   hunter/hunter
 
 
 Indices and tables
