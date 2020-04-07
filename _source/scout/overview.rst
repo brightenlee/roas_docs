@@ -1,6 +1,18 @@
 Overview
 --------
 
+.. figure:: _static/front_view.png
+   :width: 90%
+   :align: center
+   :figclass: align-centered
+   :alt: front view
+
+.. figure:: _static/rear_view.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+   :alt: rear view
+
 (V2.0 사진 업데이트 예정)
 
 조명은 로봇의 전면과 후면에 설치되어 있습니다. 
@@ -10,6 +22,8 @@ Overview
 
 DC 전원 및 통신 인터페이스를 위한 방수 커넥터는 로봇의 상단과 후면에 있습니다.
 로봇과 외부 구성 요소를 유연하게 연결할 수 있고, 외부 요인으로부터 로봇 내부를 보호할 수 있습니다.
+
+|
 
 Indication
 ++++++++++
@@ -26,11 +40,114 @@ Indication
 **Power on:**
 전면과 후면의 조명이 켜집니다. 
 
-Electrical interface
+|
+
+Electrical Interface
 ++++++++++++++++++++
+
+Scout은 4핀 항공 커넥터 2개와 DB9(RS232) 커넥터 1개를 제공합니다.
+로봇의 상단과 후면에 항공 커넥터가 있으며, 전원 단자와 CAN 통신 단자로 구성되어 있습니다.
+
+.. warning::
+
+   배터리의 전압이 일정 전압 아래로 떨어지면 전원 공급이 차단됩니다.
+
+Top Electrical Interface
+''''''''''''''''''''''''
+
+.. figure:: _static/top_electrical_interface.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+   :alt: top electrical interface
+
+.. figure:: _static/top_aviation_connector.png
+   :width: 25%
+   :align: center
+   :figclass: align-centered
+   :alt: top aviation connector
+
++---------+----------+-------------------------+-------------------------------+
+| Pin No. | Pin Type | Function and Definition | Remarks                       |
++=========+==========+=========================+===============================+
+| 1       | Power    | VCC                     | Power positive, 23-29.2V, 10A |
++---------+----------+-------------------------+-------------------------------+
+| 2       | Power    | GND                     | Power negative                |
++---------+----------+-------------------------+-------------------------------+
+| 3       | CAN      | CAN_H                   | CAN bus high                  |
++---------+----------+-------------------------+-------------------------------+
+| 4       | CAN      | CAN_L                   | CAN bus low                   |
++---------+----------+-------------------------+-------------------------------+
+
+.. figure:: _static/top_db9_connector.png
+   :width: 25%
+   :align: center
+   :figclass: align-centered
+   :alt: top db9 connector
+
++---------+------------+
+| Pin No. | Definition |
++=========+============+
+| 2       | RS232-RX   |
++---------+------------+
+| 3       | RS232-TX   |
++---------+------------+
+| 5       | GND        |
++---------+------------+
+
+Rear Electrical Interface
+'''''''''''''''''''''''''
+
+.. figure:: _static/rear_electrical_interface.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+   :alt: rear electrical interface
+
++-----+----------------------------------------+
+| No. | Definition                             |
++=====+========================================+
+| Q1  | Main electrical switch                 |
++-----+----------------------------------------+
+| Q2  | Charging interface                     |
++-----+----------------------------------------+
+| Q3  | Power supply switch of drive system    |
++-----+----------------------------------------+
+| Q4  | DB9 serial port                        |
++-----+----------------------------------------+
+| Q5  | Interface for CAN and 24V power supply |
++-----+----------------------------------------+
+| Q6  | Display of battery voltage             |
++-----+----------------------------------------+
+
+.. figure:: _static/rear_aviation_connector.png
+   :width: 25%
+   :align: center
+   :figclass: align-centered
+   :alt: rear aviation connector
+
++---------+----------+-------------------------+-------------------------------+
+| Pin No. | Pin Type | Function and Definition | Remarks                       |
++=========+==========+=========================+===============================+
+| 1       | Power    | VCC                     | Power positive, 23-29.2V, 5A  |
++---------+----------+-------------------------+-------------------------------+
+| 2       | Power    | GND                     | Power negative                |
++---------+----------+-------------------------+-------------------------------+
+| 3       | CAN      | CAN_H                   | CAN bus high                  |
++---------+----------+-------------------------+-------------------------------+
+| 4       | CAN      | CAN_L                   | CAN bus low                   |
++---------+----------+-------------------------+-------------------------------+
+
+|
 
 Remote Control
 ++++++++++++++
+
+.. figure:: _static/rc_transmitter.png
+   :width: 70%
+   :align: center
+   :figclass: align-centered
+   :alt: rc transmitter
 
 RC 조종기를 이용하여 로봇을 수동으로 조작할 수 있습니다. 
 모든 스위치를 중립 상태(상단으로 위치)로 두고, 두 개의 전원 버튼을 누르면 조종기를 켤 수 있습니다.
@@ -38,6 +155,8 @@ RC 조종기를 이용하여 로봇을 수동으로 조작할 수 있습니다.
 SWB 스위치를 중간 위치에 있으면 원격 제어 모드가 활성화되고, 하단 위치에 있으면 명령 모드가
 활성화됩니다.
 SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 있습니다.
+
+|
 
 Light Control
 +++++++++++++
@@ -51,3 +170,15 @@ Light Control
 **BL Mode:**
 전면, 후면 조명은 점차적으로 켜졌다가 꺼졌다가를 반복합니다.
 
+|
+
+Coordinate System
+++++++++++++++++++
+
+.. figure:: _static/coordinate.png
+   :width: 80%
+   :align: center
+   :figclass: align-centered
+   :alt: coordinate
+
+Scout의 기준 좌표계는 위와 같습니다. 로봇의 차체는 좌표계의 X축과 평행합니다.
