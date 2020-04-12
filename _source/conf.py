@@ -92,6 +92,15 @@ html_show_sourcelink = False
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_context = {
+  "display_github": True,
+  "github_user": "brightenlee",
+  "github_repo": "docs",
+  "github_version": "master/_source/",
+  "conf_py_path": "",
+  "source_suffix": source_suffix
+}
+
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
 #
