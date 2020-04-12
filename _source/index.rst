@@ -26,6 +26,7 @@ Mobile Robot
 .. toctree::
    :maxdepth: 2
 
+   rabbot/rabbot
    scout/scout
    scout_mini/scout_mini
    hunter/hunter
