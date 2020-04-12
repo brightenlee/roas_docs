@@ -1,4 +1,4 @@
-Mobile Robot: Rabbot
+Rabbot
 ====================
 
 **Developing, Comming soon**

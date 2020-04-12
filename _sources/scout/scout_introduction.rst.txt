@@ -1,4 +1,0 @@
-Scout Introduction
-==================
-
-Hello World

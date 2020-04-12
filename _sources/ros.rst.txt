@@ -1,4 +1,4 @@
-Tutorial: ROS
+ROS
 =============
 
 **Working now**

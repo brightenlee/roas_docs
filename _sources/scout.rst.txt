@@ -1,4 +1,0 @@
-Mobile Robot: Scout
-===================
-
-Working now

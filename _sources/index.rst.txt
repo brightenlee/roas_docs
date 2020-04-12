@@ -11,20 +11,16 @@ OnGround Robotics Tutorial Portal
 
    introduction
 
-Tutorial
---------
-
 .. toctree::
    :maxdepth: 2
+   :caption: Tutorial
 
    ros
    ros2
 
-Mobile Robot
-------------
-
 .. toctree::
    :maxdepth: 2
+   :caption: Mobile Robot
 
    rabbot/rabbot
    scout/scout
