@@ -1,4 +1,4 @@
-Mobile Robot: Scout
+Scout
 ===================
 
 .. include:: introduction.rst

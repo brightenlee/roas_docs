@@ -1,4 +1,4 @@
-Mobile Robot: Hunter
+Hunter
 ====================
 
 **Working now**

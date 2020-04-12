@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = u'OnGround Tutorial'
+project = u'OnGround Robotics Tutorial'
 copyright = u'2020, OnGround Robotics'
 author = u'Brighten Lee'
 
@@ -85,7 +85,10 @@ html_show_sourcelink = False
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'display_version': True,
+    'style_nav_header_background': '#008d62'
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -98,7 +101,8 @@ html_context = {
   "github_repo": "docs",
   "github_version": "master/_source/",
   "conf_py_path": "",
-  "source_suffix": source_suffix
+  "source_suffix": source_suffix,
+  "css_files": ['_static/custom.css']
 }
 
 # Custom sidebar templates, must be a dictionary that maps document names
