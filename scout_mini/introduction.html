@@ -86,8 +86,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../ros2.html">Tutorial: ROS2</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="scout.html">Mobile Robot: Scout</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../scout_mini/scout_mini.html">Mobile Robot: Scout Mini</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scout/scout.html">Mobile Robot: Scout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scout_mini.html">Mobile Robot: Scout Mini</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hunter/hunter.html">Mobile Robot: Hunter</a></li>
 </ul>
 
@@ -141,7 +141,7 @@
         
             
             
-              <a href="https://github.com/brightenlee/docs/blob/master/_source/scout/introduction.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/brightenlee/docs/blob/master/_source/scout_mini/introduction.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -157,10 +157,11 @@
             
   <div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>Scout은 다양한 응용 시나리오를 고려한 다목적 UGV로 설계되었습니다.
+<p>Scout Mini는 강력한 오프로드 성능과 컴팩트한 크기를 가진 로봇입니다.
+Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능을 보여줍니다.
 CAN, RS232 통신을 지원하며, 2차 연구개발을 위하여 ROS, ROS2(Beta)를 지원합니다.
-Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar, GPS, IMU, Manipulator 등과
-같은 추가 구성 요소들을 Scout에 설치할 수 있습니다.
+상위 어플리케이션 개발을 위하여 Stereo Camera, Lidar, GPS, IMU 등과 같은
+추가 구성 요소들을 Scout Mini에 설치할 수 있습니다.
 이를 바탕으로 자율 주행 교육 및 연구, 실내외 보안 순찰, 환경 모니터링 등의 목적으로 사용할 수 있습니다.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -213,57 +214,54 @@ Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>L × W × H (mm)</td>
-<td>1080 x 726 x 336</td>
+<td>627 x 550 x 252</td>
 </tr>
 <tr class="row-odd"><td>Front and rear wheels separation (mm)</td>
-<td>648</td>
+<td>460</td>
 </tr>
 <tr class="row-even"><td>Right and left wheels separation (mm)</td>
-<td>580</td>
+<td>450</td>
 </tr>
 <tr class="row-odd"><td>Weight of vehicle body (kg)</td>
-<td>45~50</td>
+<td>20</td>
 </tr>
 <tr class="row-even"><td>Battery type</td>
-<td>Lithium battery 24V 30aH</td>
+<td>Lithium battery 24V 15aH</td>
 </tr>
 <tr class="row-odd"><td>Motor</td>
-<td>DC brushless 4 X 200W</td>
+<td>DC brushless 4 X 150W</td>
 </tr>
-<tr class="row-even"><td>Reduction gearbox</td>
-<td>1:30</td>
-</tr>
-<tr class="row-odd"><td>Drive type</td>
+<tr class="row-even"><td>Drive type</td>
 <td>Independent four-wheel drive</td>
 </tr>
-<tr class="row-even"><td>Suspension</td>
+<tr class="row-odd"><td>Suspension</td>
 <td>Independent suspension with single rocker arm</td>
 </tr>
-<tr class="row-odd"><td>Steering</td>
+<tr class="row-even"><td>Steering</td>
 <td>Four-wheel differential steering</td>
 </tr>
-<tr class="row-even"><td>Safety equipment</td>
+<tr class="row-odd"><td>Safety equipment</td>
 <td>Servo brake/anti-collision tube</td>
 </tr>
-<tr class="row-odd"><td>No-load highest speed (m/s)</td>
-<td>≤ 1.5</td>
+<tr class="row-even"><td>No-load highest speed (km/h)</td>
+<td>≤ 20</td>
 </tr>
-<tr class="row-even"><td>Minimum turning radius</td>
+<tr class="row-odd"><td>Minimum turning radius</td>
 <td>Be able to turn on a pivot</td>
 </tr>
-<tr class="row-odd"><td>Maximum climbing capacity</td>
+<tr class="row-even"><td>Maximum climbing capacity</td>
 <td>≥ 30°</td>
 </tr>
-<tr class="row-even"><td>Minimum ground clearance (mm)</td>
-<td>135</td>
+<tr class="row-odd"><td>Minimum ground clearance (mm)</td>
+<td>107</td>
 </tr>
-<tr class="row-odd"><td>Control mode</td>
+<tr class="row-even"><td>Control mode</td>
 <td>Remote control / Control command mode</td>
 </tr>
-<tr class="row-even"><td>RC transmitter</td>
+<tr class="row-odd"><td>RC transmitter</td>
 <td>2.4G/extreme distance 1km</td>
 </tr>
-<tr class="row-odd"><td>Communication interface</td>
+<tr class="row-even"><td>Communication interface</td>
 <td>CAN / RS232</td>
 </tr>
 </tbody>
