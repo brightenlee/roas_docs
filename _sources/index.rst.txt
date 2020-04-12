@@ -11,7 +11,6 @@ OnGround Robotics Tutorial Portal
 
    introduction
 
-
 Tutorial
 --------
 
@@ -20,7 +19,6 @@ Tutorial
 
    ros
    ros2
-
 
 Mobile Robot
 ------------
@@ -31,7 +29,6 @@ Mobile Robot
    scout/scout
    scout_mini/scout_mini
    hunter/hunter
-
 
 Indices and tables
 ==================
