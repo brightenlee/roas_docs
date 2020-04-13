@@ -57,7 +57,7 @@ Top Electrical Interface
 ''''''''''''''''''''''''
 
 .. figure:: _static/top_electrical_interface.png
-   :width: 100%
+   :width: 90%
    :align: center
    :figclass: align-centered
    :alt: top electrical interface
@@ -177,7 +177,7 @@ Coordinate System
 ++++++++++++++++++
 
 .. figure:: _static/coordinate.png
-   :width: 80%
+   :width: 90%
    :align: center
    :figclass: align-centered
    :alt: coordinate
@@ -208,5 +208,16 @@ Development
 
 Scout은 사용자가 개발할 수 있도록 CAN, RS232 통신 인터페이스를 제공합니다.
 통신 인터페이스를 이용하여 사용자가 직접 로봇을 제어할 수 있습니다.
+
+|
+
+Dimensions
++++++++++++
+
+.. figure:: _static/dimensions.png
+   :width: 90%
+   :align: center
+   :figclass: align-centered
+   :alt: dimensions
 
 |

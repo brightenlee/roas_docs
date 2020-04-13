@@ -6,6 +6,8 @@
 OnGround Robotics Tutorial Portal
 =================================
 
+|
+
 .. toctree::
    :maxdepth: 2
 
@@ -13,14 +15,21 @@ OnGround Robotics Tutorial Portal
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tutorial
+   :caption: tutorial
 
    ros
    ros2
 
 .. toctree::
    :maxdepth: 2
-   :caption: Mobile Robot
+   :caption: demo
+
+   slam
+   navigation
+
+.. toctree::
+   :maxdepth: 2
+   :caption: mobile robot
 
    rabbot/rabbot
    scout/scout
@@ -28,7 +37,7 @@ OnGround Robotics Tutorial Portal
    hunter/hunter
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
