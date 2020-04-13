@@ -84,12 +84,17 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tutorial</span></p>
+<p class="caption"><span class="caption-text">tutorial</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../ros.html">ROS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ros2.html">ROS2</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Mobile Robot</span></p>
+<p class="caption"><span class="caption-text">demo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../slam.html">SLAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../navigation.html">Navigation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">mobile robot</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../rabbot/rabbot.html">Rabbot</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Scout</a><ul>
@@ -110,6 +115,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#coordinate-system">Coordinate System</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#charging">Charging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#development">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dimensions">Dimensions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#ros-packages">ROS Packages</a><ul>
@@ -197,6 +203,12 @@
 <h1>Scout<a class="headerlink" href="#scout" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/scout.png"><img alt="scout" src="../_images/scout.png" style="width: 100%;" /></a>
+</div>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/customized_scout.png"><img alt="customized scout" src="../_images/customized_scout.png" style="width: 100%;" /></a>
+</div>
 <p>Scout은 다양한 응용 시나리오를 고려한 다목적 UGV로 설계되었습니다.
 CAN, RS232 통신을 지원하며, 2차 연구개발을 위하여 ROS, ROS2(Beta)를 지원합니다.
 Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar, GPS, IMU, Manipulator 등과
@@ -253,16 +265,16 @@ Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>L × W × H (mm)</td>
-<td>1080 x 726 x 336</td>
+<td>930 x 699 x 348</td>
 </tr>
 <tr class="row-odd"><td>Front and rear wheels separation (mm)</td>
-<td>648</td>
+<td>498</td>
 </tr>
 <tr class="row-even"><td>Right and left wheels separation (mm)</td>
-<td>580</td>
+<td>583</td>
 </tr>
 <tr class="row-odd"><td>Weight of vehicle body (kg)</td>
-<td>45~50</td>
+<td>62</td>
 </tr>
 <tr class="row-even"><td>Battery type</td>
 <td>Lithium battery 24V 30aH</td>
@@ -316,15 +328,15 @@ Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="../_images/front_view.png"><img alt="front view" src="../_images/front_view.png" style="width: 90%;" /></a>
+<a class="reference internal image-reference" href="../_images/front_view_v2.png"><img alt="front view" src="../_images/front_view_v2.png" style="width: 90%;" /></a>
 </div>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="../_images/rear_view.png"><img alt="rear view" src="../_images/rear_view.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="../_images/rear_view_v2.png"><img alt="rear view" src="../_images/rear_view_v2.png" style="width: 100%;" /></a>
 </div>
-<p>(V2.0 사진 업데이트 예정)</p>
+<p>충돌 방지 펜스는 로봇 주위에 설치되어 충돌시 차체의 손상을 줄입니다.</p>
 <p>조명은 로봇의 전면과 후면에 설치되어 있습니다.
-전면에는 백색 조명이 설치되어 있고, 후면에는 적색 조명이 설치되어 있습니다.
-로봇 양쪽에 비상 정지 버튼이 설치되어 있습니다.
+전면에는 백색 조명이 설치되어 있고, 후면에는 적색 조명이 설치되어 있습니다.</p>
+<p>로봇 양쪽에 비상 정지 버튼이 설치되어 있습니다.
 로봇이 비정상적으로 동작 할 때 로봇의 전원을 즉시 차단할 수 있습니다.</p>
 <p>DC 전원 및 통신 인터페이스를 위한 방수 커넥터는 로봇의 상단과 후면에 있습니다.
 로봇과 외부 구성 요소를 유연하게 연결할 수 있고, 외부 요인으로부터 로봇 내부를 보호할 수 있습니다.
@@ -357,7 +369,7 @@ Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar
 <div class="section" id="top-electrical-interface">
 <h4>Top Electrical Interface<a class="headerlink" href="#top-electrical-interface" title="Permalink to this headline">¶</a></h4>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="../_images/top_electrical_interface.png"><img alt="top electrical interface" src="../_images/top_electrical_interface.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="../_images/top_electrical_interface_v2.png"><img alt="top electrical interface" src="../_images/top_electrical_interface_v2.png" style="width: 90%;" /></a>
 </div>
 <div class="align-centered figure align-center">
 <a class="reference internal image-reference" href="../_images/top_aviation_connector.png"><img alt="top aviation connector" src="../_images/top_aviation_connector.png" style="width: 25%;" /></a>
@@ -535,7 +547,7 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <div class="section" id="coordinate-system">
 <h3>Coordinate System<a class="headerlink" href="#coordinate-system" title="Permalink to this headline">¶</a></h3>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="../_images/coordinate.png"><img alt="coordinate" src="../_images/coordinate.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/coordinate_v2.png"><img alt="coordinate" src="../_images/coordinate_v2.png" style="width: 90%;" /></a>
 </div>
 <p>Scout의 기준 좌표계는 위와 같습니다. 로봇의 차체는 좌표계의 X축과 평행합니다.</p>
 <div class="line-block">
@@ -564,6 +576,15 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <h3>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h3>
 <p>Scout은 사용자가 개발할 수 있도록 CAN, RS232 통신 인터페이스를 제공합니다.
 통신 인터페이스를 이용하여 사용자가 직접 로봇을 제어할 수 있습니다.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="dimensions">
+<h3>Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this headline">¶</a></h3>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/dimensions_v2.png"><img alt="dimensions" src="../_images/dimensions_v2.png" style="width: 90%;" /></a>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
