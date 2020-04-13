@@ -1,3 +1,11 @@
 .wy-menu > .caption > span.caption-text {
   color: #008d62;
 }
+
+body{
+  font-family:"Arial", Helvetica, sans-serif;
+}
+
+head{
+  font-family:"Arial", Helvetica, sans-serif;
+}
