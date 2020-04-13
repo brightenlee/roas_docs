@@ -1,6 +1,12 @@
 Introduction
 ------------
 
+.. figure:: _static/scout_mini.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+   :alt: scout mini
+
 Scout Mini는 강력한 오프로드 성능과 컴팩트한 크기를 가진 로봇입니다. 
 Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능을 보여줍니다.
 CAN, RS232 통신을 지원하며, 2차 연구개발을 위하여 ROS, ROS2(Beta)를 지원합니다.

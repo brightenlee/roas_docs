@@ -1,22 +1,24 @@
 Overview
 --------
 
-.. figure:: _static/front_view.png
+.. figure:: _static/front_view_v2.png
    :width: 90%
    :align: center
    :figclass: align-centered
    :alt: front view
 
-.. figure:: _static/rear_view.png
+.. figure:: _static/rear_view_v2.png
    :width: 100%
    :align: center
    :figclass: align-centered
    :alt: rear view
 
-(V2.0 사진 업데이트 예정)
+
+충돌 방지 펜스는 로봇 주위에 설치되어 충돌시 차체의 손상을 줄입니다.
 
 조명은 로봇의 전면과 후면에 설치되어 있습니다. 
 전면에는 백색 조명이 설치되어 있고, 후면에는 적색 조명이 설치되어 있습니다.
+
 로봇 양쪽에 비상 정지 버튼이 설치되어 있습니다.
 로봇이 비정상적으로 동작 할 때 로봇의 전원을 즉시 차단할 수 있습니다.
 
@@ -56,7 +58,7 @@ Scout은 4핀 항공 커넥터 2개와 DB9(RS232) 커넥터 1개를 제공합니
 Top Electrical Interface
 ''''''''''''''''''''''''
 
-.. figure:: _static/top_electrical_interface.png
+.. figure:: _static/top_electrical_interface_v2.png
    :width: 90%
    :align: center
    :figclass: align-centered
@@ -176,7 +178,7 @@ Light Control
 Coordinate System
 ++++++++++++++++++
 
-.. figure:: _static/coordinate.png
+.. figure:: _static/coordinate_v2.png
    :width: 90%
    :align: center
    :figclass: align-centered
@@ -214,7 +216,7 @@ Scout은 사용자가 개발할 수 있도록 CAN, RS232 통신 인터페이스�
 Dimensions
 +++++++++++
 
-.. figure:: _static/dimensions.png
+.. figure:: _static/dimensions_v2.png
    :width: 90%
    :align: center
    :figclass: align-centered
