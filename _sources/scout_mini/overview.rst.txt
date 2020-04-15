@@ -1,6 +1,12 @@
 Overview
 --------
 
+.. figure:: _static/overview.png
+   :width: 90%
+   :align: center
+   :figclass: align-centered
+   :alt: overview
+
 로봇은 서스펜션과 허브 모터 모듈로 구성되어 있습니다.
 충돌 방지 펜스는 로봇의 전면에 설치되어 충돌시 전방을 보호하고 차체의 손상을 줄입니다. 
 로봇의 전면에는 흰색 조명이 설치되어 있습니다.
@@ -28,6 +34,18 @@ Electrical Interface
 
 Scout Mini의 전기 인터페이스는 모두 로봇 후면에 있습니다. 
 전압 디스플레이, 전원 단자, CAN 통신 단자, 충전 인터페이스 및 전원 스위치가 있습니다.
+
+.. figure:: _static/electrical_interface.png
+   :width: 100%
+   :align: center
+   :figclass: align-centered
+   :alt: electrical interface
+
+.. figure:: _static/aviation_connector.png
+   :width: 25%
+   :align: center
+   :figclass: align-centered
+   :alt: aviation connector
 
 +---------+----------+-------------------------+-------------------------------+
 | Pin No. | Pin Type | Function and Definition | Remarks                       |
@@ -106,7 +124,19 @@ Charging
 Development
 +++++++++++
 
-Scout Mini는 사용자가 개발할 수 있도록 CAN, RS232 통신 인터페이스를 제공합니다.
+Scout Mini는 사용자가 개발할 수 있도록 **CAN, RS232** 통신 인터페이스를 제공합니다.
 통신 인터페이스를 이용하여 사용자가 직접 로봇을 제어할 수 있습니다.
+
+|
+
+
+Dimensions
++++++++++++
+
+.. figure:: _static/dimensions.png
+   :width: 90%
+   :align: center
+   :figclass: align-centered
+   :alt: dimensions
 
 |
