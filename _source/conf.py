@@ -96,7 +96,7 @@ html_theme_options = {
 html_static_path = ['_static']
 
 html_context = {
-  "display_github": True,
+  "display_github": False,
   "github_user": "brightenlee",
   "github_repo": "docs",
   "github_version": "master/_source/",
