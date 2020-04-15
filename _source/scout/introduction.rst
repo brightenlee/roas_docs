@@ -14,7 +14,7 @@ Introduction
    :alt: customized scout
 
 Scout은 다양한 응용 시나리오를 고려한 다목적 UGV로 설계되었습니다.
-CAN, RS232 통신을 지원하며, 2차 연구개발을 위하여 ROS, ROS2(Beta)를 지원합니다.
+**CAN, RS232** 통신을 지원하며, 2차 연구개발을 위하여 **ROS, ROS2(Beta)** 를 지원합니다.
 Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar, GPS, IMU, Manipulator 등과 
 같은 추가 구성 요소들을 Scout에 설치할 수 있습니다.
 이를 바탕으로 자율 주행 교육 및 연구, 실내외 보안 순찰, 환경 모니터링 등의 목적으로 사용할 수 있습니다.
