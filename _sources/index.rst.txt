@@ -6,7 +6,8 @@
 OnGround Robotics Tutorial Portal
 =================================
 
-|
+환영합니다! 이곳에서는 **ROS, ROS2** 에 대해서 학습할 수 있으며, 
+**OnGround Robotics** 에서 제공하는 모바일 로봇을 만나볼 수 있습니다.
 
 .. toctree::
    :maxdepth: 2
@@ -15,21 +16,21 @@ OnGround Robotics Tutorial Portal
 
 .. toctree::
    :maxdepth: 2
-   :caption: tutorial
+   :caption: Tutorial
 
    ros
    ros2
 
 .. toctree::
    :maxdepth: 2
-   :caption: demo
+   :caption: Demo
 
    slam
    navigation
 
 .. toctree::
    :maxdepth: 2
-   :caption: mobile robot
+   :caption: Mobile Robot
 
    rabbot/rabbot
    scout/scout

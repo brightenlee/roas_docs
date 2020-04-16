@@ -1,5 +1,6 @@
 ROS Packages
 ------------
+
 Scout의 **ROS** 인터페이스를 구성하고 있는 패키지들은 다음과 같습니다.
 
 scout_base
@@ -16,6 +17,12 @@ scout_bringup
 +++++++++++++
 로봇의 전체 ROS 시스템을 실행시키는 실행(launch) 파일과 
 설정 파일을 포함하고 있습니다.
+
+.. note::
+
+  scout_bringup 패키지에 있는 실행 파일(**scout_bringup.launch**)을 이용해서
+  전체 ROS 시스템을 실행 시킬 수 있습니다. 그리고 실행 파일의 **robot_name** 
+  변수 설정틀 통해서 V1, V2 모델을 선택할 수 있습니다.
 
 scout_description
 +++++++++++++++++

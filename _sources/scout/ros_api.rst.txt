@@ -77,7 +77,7 @@ Base Interface
 
 사용자는 /scout_base_controller/cmd_vel 토픽을 바로 이용할 수 있지만,
 일반적으로 어플리케이션은 /teleop/cmd_vel, /move_base/cmd_vel, /cmd_vel 토픽을 이용합니다.
-이 토픽들의 데이터는 설정된 우선 순위에 따라 /scout_base_controller/cmd_vel으로 전달됩니다.
+이 토픽들의 데이터는 설정된 우선 순위에 따라 /scout_base_controller/cmd_vel 토픽으로 전달됩니다.
 이와 같은 mux 시스템은 `twist_mux <http://wiki.ros.org/twist_mux>`_ 패키지를 이용하여
 구현되어 있습니다.
 
