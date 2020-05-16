@@ -6,7 +6,7 @@
 OnGround Robotics Tutorial Portal
 =================================
 
-환영합니다! 이곳에서는 **ROS, ROS2** 에 대해서 학습할 수 있으며, 
+환영합니다! 이 곳에서는 **ROS, ROS2** 에 대해서 학습할 수 있으며, 
 **OnGround Robotics** 에서 제공하는 모바일 로봇을 만나볼 수 있습니다.
 
 .. toctree::
