@@ -94,10 +94,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Mobile Robot</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../jackal/jackal.html">Jackal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../husky/husky.html">Husky</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rabbot/rabbot.html">Rabbot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scout/scout.html">Scout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scout_mini.html">Scout Mini</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hunter/hunter.html">Hunter</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contact_us.html">Contact Us</a></li>
 </ul>
 
             
@@ -162,9 +167,66 @@
             
   <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<p><strong>Working now</strong></p>
+<div class="section" id="turn-on-scout-mini">
+<h2>Turn on Scout Mini<a class="headerlink" href="#turn-on-scout-mini" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="log-in">
+<h2>Log In<a class="headerlink" href="#log-in" title="Permalink to this headline">¶</a></h2>
+<p>로봇이 네트워크에 연결되면, ssh를 이용해서 원격으로 접속할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt install ssh
+$ ssh scout@&lt;ROBOT_IP&gt;
+</pre></div>
+</div>
+<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IPv4 네트워크 주소이고, 로봇 PC의 비밀번호는 <strong>onground</strong> 입니다.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">로봇을 네트워크에 연결하기 위해서 모니터가 필요합니다.</p>
+</div>
+</div>
+<div class="section" id="ros-network-setup">
+<h2>ROS Network Setup<a class="headerlink" href="#ros-network-setup" title="Permalink to this headline">¶</a></h2>
+<p>ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS 인터페이스에 접근할 수 있습니다.
+<a class="reference external" href="http://wiki.ros.org/ROS/NetworkSetup">ROS 네트워크 설정</a>  방법은 아래와 같습니다.</p>
+<ol class="arabic simple">
+<li>bashrc 스크립트 파일에서 <strong>ROS_MASTER_URI</strong>, <strong>ROS_HOSTNAME</strong> 환경 변수를 설정합니다.</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
+
+# Add the following lines
+export ROS_MASTER_URI=http://&lt;ROBOT_IP&gt;:11311
+export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
+</pre></div>
+</div>
+<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IP 주소이고, <strong>&lt;REMOTE_IP&gt;</strong> 는 원격 PC의 IP 주소입니다.</p>
+<ol class="arabic simple" start="2">
+<li>Hostname과 IP 주소를 매핑하기 위하여 <strong>/etc/hosts</strong> 파일에 항목을 추가합니다.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
+
+# Add the following line
+&lt;ROBOT_IP&gt;    &lt;ROBOT_HOSTNAME&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IP 주소이고, <strong>&lt;ROBOT_HOSTNAME&gt;</strong> 는 로봇 PC의 Hostname 입니다.
+일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.</p>
+</div>
+<div class="section" id="visualize-data">
+<h2>Visualize Data<a class="headerlink" href="#visualize-data" title="Permalink to this headline">¶</a></h2>
+<p>ROS 네트워크 설정이 완료되면 원격 PC에서 rostopic 데이터를 확인할 수 있습니다.
+또한 <a class="reference external" href="http://wiki.ros.org/rviz">RViz</a> 를 이용하여 시각화된 데이터를 확인할 수 있습니다.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rviz
+</pre></div>
+</div>
+</div></blockquote>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/rviz1.png"><img alt="rviz" src="../_images/rviz1.png" style="width: 100%;" /></a>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
+</div>
 </div>
 </div>
 

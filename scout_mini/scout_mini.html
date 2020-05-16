@@ -96,12 +96,14 @@
 </ul>
 <p class="caption"><span class="caption-text">Mobile Robot</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../jackal/jackal.html">Jackal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../husky/husky.html">Husky</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rabbot/rabbot.html">Rabbot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../scout/scout.html">Scout</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Scout Mini</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#component-list">Component list</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tech-specifications">Tech specifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#component-list">Component List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tech-specifications">Tech Specifications</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
@@ -131,10 +133,19 @@
 <li class="toctree-l3"><a class="reference internal" href="#light-interface">Light Interface</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turn-on-scout-mini">Turn on Scout Mini</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-in">Log In</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros-network-setup">ROS Network Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visualize-data">Visualize Data</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../hunter/hunter.html">Hunter</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contact_us.html">Contact Us</a></li>
 </ul>
 
             
@@ -214,7 +225,7 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 <div class="line"><br /></div>
 </div>
 <div class="section" id="component-list">
-<h3>Component list<a class="headerlink" href="#component-list" title="Permalink to this headline">¶</a></h3>
+<h3>Component List<a class="headerlink" href="#component-list" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="74%" />
@@ -248,7 +259,7 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 </div>
 </div>
 <div class="section" id="tech-specifications">
-<h3>Tech specifications<a class="headerlink" href="#tech-specifications" title="Permalink to this headline">¶</a></h3>
+<h3>Tech Specifications<a class="headerlink" href="#tech-specifications" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="45%" />
@@ -416,15 +427,19 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <div class="section" id="light-control">
 <h3>Light Control<a class="headerlink" href="#light-control" title="Permalink to this headline">¶</a></h3>
 <p>로봇의 전면에 조명이 설치되어 있으며, 제어 인터페이스는 사용자에게 개방되어 있습니다.</p>
-<p><strong>NC Mode:</strong> 전면 조명은 항시 켜져 있습니다. 후면 조명은 로봇이 정지 중일 때만 켜집니다.</p>
-<p><strong>NO Mode:</strong> 전면 조명은 로봇이 이동 중일 때만 켜집니다. 후면 조명은 로봇이 정지 중일 때만 켜집니다.</p>
-<p><strong>BL Mode:</strong> 전면, 후면 조명은 점차적으로 켜졌다가 꺼졌다가를 반복합니다.</p>
+<p><strong>NC:</strong> 조명이 항시 꺼집니다.</p>
+<p><strong>NO:</strong> 조명이 항시 켜집니다.</p>
+<p><strong>BL:</strong> 조명이 점차적으로 켜졌다가 꺼졌다가를 반복합니다.</p>
+<p><strong>CUSTOM:</strong> 지정한 밝기로 조명이 켜집니다.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="coordinate-system">
 <h3>Coordinate System<a class="headerlink" href="#coordinate-system" title="Permalink to this headline">¶</a></h3>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/coordinate.png"><img alt="coordinate" src="../_images/coordinate.png" style="width: 90%;" /></a>
+</div>
 <p>Scout Mini의 기준 좌표계는 위와 같습니다. 로봇의 차체는 좌표계의 X축과 평행합니다.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -507,22 +522,22 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <div class="section" id="ros-api-overview">
 <h2>ROS API Overview<a class="headerlink" href="#ros-api-overview" title="Permalink to this headline">¶</a></h2>
 <p>사용자가 상위 어플리케이션을 쉽게 개발할 수 있도록 <strong>ROS</strong> 표준 인터페이스를 제공합니다.
-최대한 <a class="reference external" href="https://www.ros.org/reps/rep-0000.html">REPs(ROS Enhancement Proposals)</a> 를
+<a class="reference external" href="https://www.ros.org/reps/rep-0000.html">REPs(ROS Enhancement Proposals)</a> 를
 준수하여 호환성과 접근성을 높였습니다.</p>
 <div class="section" id="feedback-interface">
 <h3>Feedback Interface<a class="headerlink" href="#feedback-interface" title="Permalink to this headline">¶</a></h3>
 <p>로봇의 피드백 데이터에는 3가지가 있습니다. 로봇 베이스에 대한 피드백, 모터에 대한 피드백,
 조명 제어에 대한 피드백이 있습니다.</p>
-<p><strong>rostopic name: /scout_base/driver_feedback</strong></p>
+<p><strong>rostopic name: /scout_base/base_feedback</strong></p>
 <div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
 
 <span class="n">string</span> <span class="n">robot_name</span>
 
-<span class="n">DriverState</span> <span class="n">driver_state</span>
+<span class="n">BaseState</span> <span class="n">base_state</span>
   <span class="n">string</span> <span class="n">state</span>             <span class="c1"># NORMAL, STOP</span>
   <span class="n">string</span> <span class="n">control_mode</span>      <span class="c1"># REMOTE, CAN, SERIAL, NONE</span>
   <span class="n">float64</span> <span class="n">battery_voltage</span>  <span class="c1"># Actual voltage (V)</span>
-  <span class="n">string</span> <span class="n">battery_state</span>     <span class="c1"># under-voltage, over-voltage</span>
+  <span class="n">string</span> <span class="n">battery_state</span>     <span class="c1"># Under-voltage, Over-voltage</span>
 
 <span class="n">float64</span> <span class="n">linear_speed</span>   <span class="c1"># Linear speed (m/s)</span>
 <span class="n">float64</span> <span class="n">angular_speed</span>  <span class="c1"># Angular speed (rad/s)</span>
@@ -590,7 +605,7 @@ rqt gui를 실행시키는 명령어는 아래와 같습니다.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Scout Mini의 전면에만 조명이 설치되어 있기 때문에 후면 조명 인터페이스는
+<p class="last">Scout Mini의 경우에는, 조명이 로봇의 전면에만 조명이 설치되어 있기 때문에 후면 조명 인터페이스는
 동작하지 않습니다.</p>
 </div>
 <div class="line-block">
@@ -600,9 +615,66 @@ rqt gui를 실행시키는 명령어는 아래와 같습니다.</p>
 </div>
 <div class="section" id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
-<p><strong>Working now</strong></p>
+<div class="section" id="turn-on-scout-mini">
+<h3>Turn on Scout Mini<a class="headerlink" href="#turn-on-scout-mini" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="log-in">
+<h3>Log In<a class="headerlink" href="#log-in" title="Permalink to this headline">¶</a></h3>
+<p>로봇이 네트워크에 연결되면, ssh를 이용해서 원격으로 접속할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt install ssh
+$ ssh scout@&lt;ROBOT_IP&gt;
+</pre></div>
+</div>
+<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IPv4 네트워크 주소이고, 로봇 PC의 비밀번호는 <strong>onground</strong> 입니다.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">로봇을 네트워크에 연결하기 위해서 모니터가 필요합니다.</p>
+</div>
+</div>
+<div class="section" id="ros-network-setup">
+<h3>ROS Network Setup<a class="headerlink" href="#ros-network-setup" title="Permalink to this headline">¶</a></h3>
+<p>ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS 인터페이스에 접근할 수 있습니다.
+<a class="reference external" href="http://wiki.ros.org/ROS/NetworkSetup">ROS 네트워크 설정</a>  방법은 아래와 같습니다.</p>
+<ol class="arabic simple">
+<li>bashrc 스크립트 파일에서 <strong>ROS_MASTER_URI</strong>, <strong>ROS_HOSTNAME</strong> 환경 변수를 설정합니다.</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
+
+# Add the following lines
+export ROS_MASTER_URI=http://&lt;ROBOT_IP&gt;:11311
+export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
+</pre></div>
+</div>
+<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IP 주소이고, <strong>&lt;REMOTE_IP&gt;</strong> 는 원격 PC의 IP 주소입니다.</p>
+<ol class="arabic simple" start="2">
+<li>Hostname과 IP 주소를 매핑하기 위하여 <strong>/etc/hosts</strong> 파일에 항목을 추가합니다.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
+
+# Add the following line
+&lt;ROBOT_IP&gt;    &lt;ROBOT_HOSTNAME&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IP 주소이고, <strong>&lt;ROBOT_HOSTNAME&gt;</strong> 는 로봇 PC의 Hostname 입니다.
+일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.</p>
+</div>
+<div class="section" id="visualize-data">
+<h3>Visualize Data<a class="headerlink" href="#visualize-data" title="Permalink to this headline">¶</a></h3>
+<p>ROS 네트워크 설정이 완료되면 원격 PC에서 rostopic 데이터를 확인할 수 있습니다.
+또한 <a class="reference external" href="http://wiki.ros.org/rviz">RViz</a> 를 이용하여 시각화된 데이터를 확인할 수 있습니다.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rviz
+</pre></div>
+</div>
+</div></blockquote>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/rviz1.png"><img alt="rviz" src="../_images/rviz1.png" style="width: 100%;" /></a>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
+</div>
 </div>
 </div>
 </div>

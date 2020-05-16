@@ -88,17 +88,24 @@ Light Control
 
 로봇의 전면에 조명이 설치되어 있으며, 제어 인터페이스는 사용자에게 개방되어 있습니다.
 
-**NC Mode:** 전면 조명은 항시 켜져 있습니다. 후면 조명은 로봇이 정지 중일 때만 켜집니다.
+**NC:** 조명이 항시 꺼집니다.
 
+**NO:** 조명이 항시 켜집니다.
 
-**NO Mode:** 전면 조명은 로봇이 이동 중일 때만 켜집니다. 후면 조명은 로봇이 정지 중일 때만 켜집니다.
+**BL:** 조명이 점차적으로 켜졌다가 꺼졌다가를 반복합니다.
 
-**BL Mode:** 전면, 후면 조명은 점차적으로 켜졌다가 꺼졌다가를 반복합니다.
+**CUSTOM:** 지정한 밝기로 조명이 켜집니다.
 
 |
 
 Coordinate System
 ++++++++++++++++++
+
+.. figure:: _static/coordinate.png
+   :width: 90%
+   :align: center
+   :figclass: align-centered
+   :alt: coordinate
 
 Scout Mini의 기준 좌표계는 위와 같습니다. 로봇의 차체는 좌표계의 X축과 평행합니다.
 

@@ -96,11 +96,13 @@
 </ul>
 <p class="caption"><span class="caption-text">Mobile Robot</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../jackal/jackal.html">Jackal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../husky/husky.html">Husky</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rabbot/rabbot.html">Rabbot</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Scout</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#component-list">Component list</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tech-specifications">Tech specifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#component-list">Component List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tech-specifications">Tech Specifications</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
@@ -134,11 +136,20 @@
 <li class="toctree-l3"><a class="reference internal" href="#light-interface">Light Interface</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turn-on-scout">Turn on Scout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-in">Log In</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros-network-setup">ROS Network Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visualize-data">Visualize Data</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../scout_mini/scout_mini.html">Scout Mini</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hunter/hunter.html">Hunter</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contact_us.html">Contact Us</a></li>
 </ul>
 
             
@@ -220,7 +231,7 @@ Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar
 <div class="line"><br /></div>
 </div>
 <div class="section" id="component-list">
-<h3>Component list<a class="headerlink" href="#component-list" title="Permalink to this headline">¶</a></h3>
+<h3>Component List<a class="headerlink" href="#component-list" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="74%" />
@@ -254,7 +265,7 @@ Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar
 </div>
 </div>
 <div class="section" id="tech-specifications">
-<h3>Tech specifications<a class="headerlink" href="#tech-specifications" title="Permalink to this headline">¶</a></h3>
+<h3>Tech Specifications<a class="headerlink" href="#tech-specifications" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="45%" />
@@ -338,7 +349,7 @@ Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar
 <p>충돌 방지 펜스는 로봇 주위에 설치되어 충돌시 차체의 손상을 줄입니다.</p>
 <p>조명은 로봇의 전면과 후면에 설치되어 있습니다.
 전면에는 백색 조명이 설치되어 있고, 후면에는 적색 조명이 설치되어 있습니다.</p>
-<p>로봇 양쪽에 비상 정지 버튼이 설치되어 있습니다.
+<p>로봇 양쪽에 비상 정지 스위치가 설치되어 있습니다.
 로봇이 비정상적으로 동작 할 때 로봇의 전원을 즉시 차단할 수 있습니다.</p>
 <p>DC 전원 및 통신 인터페이스를 위한 방수 커넥터는 로봇의 상단과 후면에 있습니다.
 로봇과 외부 구성 요소를 유연하게 연결할 수 있고, 외부 요인으로부터 로봇 내부를 보호할 수 있습니다.
@@ -538,9 +549,10 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <div class="section" id="light-control">
 <h3>Light Control<a class="headerlink" href="#light-control" title="Permalink to this headline">¶</a></h3>
 <p>로봇의 전면과 후면에 조명이 설치되어 있으며, 제어 인터페이스는 사용자에게 개방되어 있습니다.</p>
-<p><strong>NC Mode:</strong> 전면 조명은 항시 켜져 있습니다. 후면 조명은 로봇이 정지 중일 때만 켜집니다.</p>
-<p><strong>NO Mode:</strong> 전면 조명은 로봇이 이동 중일 때만 켜집니다. 후면 조명은 로봇이 정지 중일 때만 켜집니다.</p>
-<p><strong>BL Mode:</strong> 전면, 후면 조명은 점차적으로 켜졌다가 꺼졌다가를 반복합니다.</p>
+<p><strong>NC:</strong> 조명이 항시 꺼집니다.</p>
+<p><strong>NO:</strong> 조명이 항시 켜집니다.</p>
+<p><strong>BL:</strong> 조명이 점차적으로 켜졌다가 꺼졌다가를 반복합니다.</p>
+<p><strong>CUSTOM:</strong> 지정한 밝기로 조명이 켜집니다.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -567,7 +579,7 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">현재 배터리의 전압이 22V인 경우, 완전히 재충전하는데 약 3~5시간이 필요합니다.
-완전 충전된 배터리의 전압은 29.2V 입니다.</p>
+완전 충전된 배터리의 전압은 26.5V 입니다.</p>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -633,22 +645,22 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <div class="section" id="ros-api-overview">
 <h2>ROS API Overview<a class="headerlink" href="#ros-api-overview" title="Permalink to this headline">¶</a></h2>
 <p>사용자가 상위 어플리케이션을 쉽게 개발할 수 있도록 <strong>ROS</strong> 표준 인터페이스를 제공합니다.
-최대한 <a class="reference external" href="https://www.ros.org/reps/rep-0000.html">REPs(ROS Enhancement Proposals)</a> 를
+<a class="reference external" href="https://www.ros.org/reps/rep-0000.html">REPs(ROS Enhancement Proposals)</a> 를
 준수하여 호환성과 접근성을 높였습니다.</p>
 <div class="section" id="feedback-interface">
 <h3>Feedback Interface<a class="headerlink" href="#feedback-interface" title="Permalink to this headline">¶</a></h3>
 <p>로봇의 피드백 데이터에는 3가지가 있습니다. 로봇 베이스에 대한 피드백, 모터에 대한 피드백,
 조명 제어에 대한 피드백이 있습니다.</p>
-<p><strong>rostopic name: /scout_base/driver_feedback</strong></p>
+<p><strong>rostopic name: /scout_base/base_feedback</strong></p>
 <div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
 
 <span class="n">string</span> <span class="n">robot_name</span>
 
-<span class="n">DriverState</span> <span class="n">driver_state</span>
+<span class="n">BaseState</span> <span class="n">base_state</span>
   <span class="n">string</span> <span class="n">state</span>             <span class="c1"># NORMAL, STOP</span>
   <span class="n">string</span> <span class="n">control_mode</span>      <span class="c1"># REMOTE, CAN, SERIAL, NONE</span>
   <span class="n">float64</span> <span class="n">battery_voltage</span>  <span class="c1"># Actual voltage (V)</span>
-  <span class="n">string</span> <span class="n">battery_state</span>     <span class="c1"># under-voltage, over-voltage</span>
+  <span class="n">string</span> <span class="n">battery_state</span>     <span class="c1"># Under-voltage, Over-voltage</span>
 
 <span class="n">float64</span> <span class="n">linear_speed</span>   <span class="c1"># Linear speed (m/s)</span>
 <span class="n">float64</span> <span class="n">angular_speed</span>  <span class="c1"># Angular speed (rad/s)</span>
@@ -721,9 +733,73 @@ rqt gui를 실행시키는 명령어는 아래와 같습니다.</p>
 </div>
 <div class="section" id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
-<p><strong>Working now</strong></p>
+<div class="section" id="turn-on-scout">
+<h3>Turn on Scout<a class="headerlink" href="#turn-on-scout" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>먼저 로봇 양쪽의 비상 정지 스위치가 눌러져 있는지 확인하고 해제하십시오.</li>
+<li>후면 패널의 <strong>Q3</strong> 버튼이 눌러져 있는지 확인하고 해제하십시오.</li>
+<li><strong>Q1</strong> 키 스위치를 켜십시오. 배터리 전압 디스플레이와 전면, 후면 조명이 켜집니다.</li>
+<li>배터리 전압을 확인하십시오. 배터리 잔량이 적을 경우에 경고음이 울립니다.</li>
+<li><strong>Q3</strong> 버튼을 누르십시오.</li>
+</ul>
+</div>
+<div class="section" id="log-in">
+<h3>Log In<a class="headerlink" href="#log-in" title="Permalink to this headline">¶</a></h3>
+<p>로봇이 네트워크에 연결되면, ssh를 이용해서 원격으로 접속할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt install ssh
+$ ssh scout@&lt;ROBOT_IP&gt;
+</pre></div>
+</div>
+<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IPv4 네트워크 주소이고, 로봇 PC의 비밀번호는 <strong>onground</strong> 입니다.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">로봇을 네트워크에 연결하기 위해서 모니터가 필요합니다.</p>
+</div>
+</div>
+<div class="section" id="ros-network-setup">
+<h3>ROS Network Setup<a class="headerlink" href="#ros-network-setup" title="Permalink to this headline">¶</a></h3>
+<p>ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS 인터페이스에 접근할 수 있습니다.
+<a class="reference external" href="http://wiki.ros.org/ROS/NetworkSetup">ROS 네트워크 설정</a>  방법은 아래와 같습니다.</p>
+<ol class="arabic simple">
+<li>bashrc 스크립트 파일에서 <strong>ROS_MASTER_URI</strong>, <strong>ROS_HOSTNAME</strong> 환경 변수를 설정합니다.</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
+
+# Add the following lines
+export ROS_MASTER_URI=http://&lt;ROBOT_IP&gt;:11311
+export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
+</pre></div>
+</div>
+<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IP 주소이고, <strong>&lt;REMOTE_IP&gt;</strong> 는 원격 PC의 IP 주소입니다.</p>
+<ol class="arabic simple" start="2">
+<li>Hostname과 IP 주소를 매핑하기 위하여 <strong>/etc/hosts</strong> 파일에 항목을 추가합니다.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
+
+# Add the following line
+&lt;ROBOT_IP&gt;    &lt;ROBOT_HOSTNAME&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IP 주소이고, <strong>&lt;ROBOT_HOSTNAME&gt;</strong> 는 로봇 PC의 Hostname 입니다.
+일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.</p>
+</div>
+<div class="section" id="visualize-data">
+<h3>Visualize Data<a class="headerlink" href="#visualize-data" title="Permalink to this headline">¶</a></h3>
+<p>ROS 네트워크 설정이 완료되면 원격 PC에서 rostopic 데이터를 확인할 수 있습니다.
+또한 <a class="reference external" href="http://wiki.ros.org/rviz">RViz</a> 를 이용하여 시각화된 데이터를 확인할 수 있습니다.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rviz
+</pre></div>
+</div>
+</div></blockquote>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="../_images/rviz.png"><img alt="rviz" src="../_images/rviz.png" style="width: 100%;" /></a>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
+</div>
 </div>
 </div>
 </div>

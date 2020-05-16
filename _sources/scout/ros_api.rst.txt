@@ -2,7 +2,7 @@ ROS API Overview
 ----------------
 
 사용자가 상위 어플리케이션을 쉽게 개발할 수 있도록 **ROS** 표준 인터페이스를 제공합니다.
-최대한 `REPs(ROS Enhancement Proposals) <https://www.ros.org/reps/rep-0000.html>`_ 를 
+`REPs(ROS Enhancement Proposals) <https://www.ros.org/reps/rep-0000.html>`_ 를 
 준수하여 호환성과 접근성을 높였습니다.
 
 Feedback Interface
@@ -11,7 +11,7 @@ Feedback Interface
 로봇의 피드백 데이터에는 3가지가 있습니다. 로봇 베이스에 대한 피드백, 모터에 대한 피드백,
 조명 제어에 대한 피드백이 있습니다.
 
-**rostopic name: /scout_base/driver_feedback**
+**rostopic name: /scout_base/base_feedback**
 
 .. code::
 
@@ -19,11 +19,11 @@ Feedback Interface
 
   string robot_name
 
-  DriverState driver_state
+  BaseState base_state
     string state             # NORMAL, STOP
     string control_mode      # REMOTE, CAN, SERIAL, NONE
     float64 battery_voltage  # Actual voltage (V)
-    string battery_state     # under-voltage, over-voltage
+    string battery_state     # Under-voltage, Over-voltage
 
   float64 linear_speed   # Linear speed (m/s)
   float64 angular_speed  # Angular speed (rad/s)
