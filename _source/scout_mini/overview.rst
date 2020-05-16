@@ -1,7 +1,7 @@
 Overview
 --------
 
-.. figure:: _static/overview.png
+.. figure:: _static/scout_mini_overview.png
    :width: 90%
    :align: center
    :figclass: align-centered
@@ -35,13 +35,13 @@ Electrical Interface
 Scout Mini의 전기 인터페이스는 모두 로봇 후면에 있습니다. 
 전압 디스플레이, 전원 단자, CAN 통신 단자, 충전 인터페이스 및 전원 스위치가 있습니다.
 
-.. figure:: _static/electrical_interface.png
+.. figure:: _static/scout_mini_electrical_interface.png
    :width: 100%
    :align: center
    :figclass: align-centered
    :alt: electrical interface
 
-.. figure:: _static/aviation_connector.png
+.. figure:: _static/scout_mini_aviation_connector.png
    :width: 25%
    :align: center
    :figclass: align-centered
@@ -64,7 +64,7 @@ Scout Mini의 전기 인터페이스는 모두 로봇 후면에 있습니다.
 Remote Control
 ++++++++++++++
 
-.. figure:: _static/rc_transmitter.png
+.. figure:: _static/scout_mini_rc_transmitter.png
    :width: 70%
    :align: center
    :figclass: align-centered
@@ -101,7 +101,7 @@ Light Control
 Coordinate System
 ++++++++++++++++++
 
-.. figure:: _static/coordinate.png
+.. figure:: _static/scout_mini_coordinate.png
    :width: 90%
    :align: center
    :figclass: align-centered
@@ -140,7 +140,7 @@ Scout Mini는 사용자가 개발할 수 있도록 **CAN, RS232** 통신 인터�
 Dimensions
 +++++++++++
 
-.. figure:: _static/dimensions.png
+.. figure:: _static/scout_mini_dimensions.png
    :width: 90%
    :align: center
    :figclass: align-centered

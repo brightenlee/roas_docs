@@ -59,7 +59,7 @@ ROS 네트워크 설정이 완료되면 원격 PC에서 rostopic 데이터를 �
 
     $ rviz
 
-.. figure:: _static/rviz.png
+.. figure:: _static/scout_mini_rviz.png
    :width: 100%
    :align: center
    :figclass: align-centered

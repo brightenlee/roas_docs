@@ -1,13 +1,13 @@
 Overview
 --------
 
-.. figure:: _static/front_view_v2.png
+.. figure:: _static/scout_front_view.png
    :width: 90%
    :align: center
    :figclass: align-centered
    :alt: front view
 
-.. figure:: _static/rear_view_v2.png
+.. figure:: _static/scout_rear_view.png
    :width: 100%
    :align: center
    :figclass: align-centered
@@ -58,13 +58,13 @@ Scout은 4핀 항공 커넥터 2개와 DB9(RS232) 커넥터 1개를 제공합니
 Top Electrical Interface
 ''''''''''''''''''''''''
 
-.. figure:: _static/top_electrical_interface_v2.png
+.. figure:: _static/scout_top_electrical_interface.png
    :width: 90%
    :align: center
    :figclass: align-centered
    :alt: top electrical interface
 
-.. figure:: _static/top_aviation_connector.png
+.. figure:: _static/scout_top_aviation_connector.png
    :width: 25%
    :align: center
    :figclass: align-centered
@@ -82,7 +82,7 @@ Top Electrical Interface
 | 4       | CAN      | CAN_L                   | CAN bus low                   |
 +---------+----------+-------------------------+-------------------------------+
 
-.. figure:: _static/top_db9_connector.png
+.. figure:: _static/scout_top_db9_connector.png
    :width: 25%
    :align: center
    :figclass: align-centered
@@ -101,7 +101,7 @@ Top Electrical Interface
 Rear Electrical Interface
 '''''''''''''''''''''''''
 
-.. figure:: _static/rear_electrical_interface.png
+.. figure:: _static/scout_rear_electrical_interface.png
    :width: 100%
    :align: center
    :figclass: align-centered
@@ -123,7 +123,7 @@ Rear Electrical Interface
 | Q6  | Display of battery voltage             |
 +-----+----------------------------------------+
 
-.. figure:: _static/rear_aviation_connector.png
+.. figure:: _static/scout_rear_aviation_connector.png
    :width: 25%
    :align: center
    :figclass: align-centered
@@ -146,7 +146,7 @@ Rear Electrical Interface
 Remote Control
 ++++++++++++++
 
-.. figure:: _static/rc_transmitter.png
+.. figure:: _static/scout_rc_transmitter.png
    :width: 70%
    :align: center
    :figclass: align-centered
@@ -179,7 +179,7 @@ Light Control
 Coordinate System
 ++++++++++++++++++
 
-.. figure:: _static/coordinate_v2.png
+.. figure:: _static/scout_coordinate.png
    :width: 90%
    :align: center
    :figclass: align-centered
@@ -217,7 +217,7 @@ Scout은 사용자가 개발할 수 있도록 **CAN, RS232** 통신 인터페이
 Dimensions
 +++++++++++
 
-.. figure:: _static/dimensions_v2.png
+.. figure:: _static/scout_dimensions.png
    :width: 90%
    :align: center
    :figclass: align-centered
