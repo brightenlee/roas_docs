@@ -21,7 +21,7 @@ Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar
 
 |
 
-Component list
+Component List
 ++++++++++++++
 
 +-----------------------------+----------+
@@ -40,7 +40,7 @@ Component list
 
 |
 
-Tech specifications
+Tech Specifications
 +++++++++++++++++++
 
 +---------------------------------------+-----------------------------------------------+

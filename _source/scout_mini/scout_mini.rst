@@ -1,5 +1,5 @@
 Scout Mini
-========================
+==========
 
 .. include:: introduction.rst
 .. include:: overview.rst
