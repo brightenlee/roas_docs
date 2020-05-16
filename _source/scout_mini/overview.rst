@@ -2,7 +2,7 @@ Overview
 --------
 
 .. figure:: _static/scout_mini_overview.png
-   :width: 90%
+   :width: 100%
    :align: center
    :figclass: align-centered
    :alt: overview
