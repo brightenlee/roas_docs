@@ -41,6 +41,7 @@ OnGround Robotics Tutorial Portal
 
 .. toctree::
    :maxdepth: 2
+   :caption: About
 
    contact_us
 
