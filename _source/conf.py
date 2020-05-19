@@ -87,7 +87,7 @@ html_show_sourcelink = False
 #
 html_theme_options = {
     'display_version': True,
-    'style_nav_header_background': '#008d62',
+    'style_nav_header_background': '#008d62'
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -104,6 +104,9 @@ html_context = {
   "source_suffix": source_suffix,
   "css_files": ['_static/custom.css']
 }
+
+#html_logo = '_static/ROAS.svg'
+#html_logo = '_static/Gaitech.png'
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
