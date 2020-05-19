@@ -101,7 +101,17 @@
 </ul>
 <p class="caption"><span class="caption-text">Mobile Robot</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Jackal</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Jackal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#technical-specifications">Technical Specifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-s-included">What’s Included</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hardware-overview">Hardware Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#system-architecture">System Architecture</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="husky.html">Husky</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rabbot.html">Rabbot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scout.html">Scout</a></li>
@@ -182,7 +192,152 @@
                 
   <div class="section" id="jackal">
 <h1>Jackal<a class="headerlink" href="#jackal" title="Permalink to this headline">¶</a></h1>
-<p><strong>Working now</strong></p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/jackal.png"><img alt="jackal" src="_images/jackal.png" style="width: 100%;" /></a>
+</div>
+<p>Jackal은 견고하고 가벼우며, 사용하기 쉬운 ROS 기반의 UGV입니다.
+Jackal에는 IMU, GPS, PC가 포함되어 있습니다. 또한 URDF, 시뮬레이션, 데모 어플리케이션을 포함한
+ROS 인터페이스를 제공하고 있습니다.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="technical-specifications">
+<h3>Technical Specifications<a class="headerlink" href="#technical-specifications" title="Permalink to this headline">¶</a></h3>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/specifications.png"><img alt="jackal" src="_images/specifications.png" style="width: 100%;" /></a>
+</div>
+</div>
+<div class="section" id="what-s-included">
+<h3>What’s Included<a class="headerlink" href="#what-s-included" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="78%" />
+<col width="22%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Quantity</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Jackal UGV</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>270 watt-hour lithium battery pack</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>110V/220V universal charger</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>Sony Bluetooth controller</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>Jackal User Manual</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="hardware-overview">
+<h3>Hardware Overview<a class="headerlink" href="#hardware-overview" title="Permalink to this headline">¶</a></h3>
+<p>로봇의 외부 구성 요소로는 직경 190mm 바퀴, HMI 패널, 마운팅 상판이 있습니다.
+HMI 패널은 아래 그림과 같으며, 왼쪽부터 모터 버튼, 통신, WiFi, 배터리 인디게이터 및
+전원 버튼이 있습니다.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/jackal_hmi.png"><img alt="hmi" src="_images/jackal_hmi.png" style="width: 70%;" /></a>
+</div>
+<p>로봇의 내부에 접근하려면 로봇 전면 아래에 있는 래치를 이용하여 상판 덮개를 열어야 합니다.
+Anderson Power Pole 커넥터는 로봇에 전원을 공급하기 위한 커넥터로, 로봇이 작동하려면 연결되어
+있어야 합니다. 흰색 Molex 커넥터는 배터리 충전을 위한 커넥터입니다. 로붓 후면에 있는 충전 단자를
+이용하거나, 배터리 충전기에 직접 연결하여 배터리를 충전할 수 있습니다.
+두 커넥터 모두 로봇과 연결되어 있어야 합니다.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/jackal_battery_area.png"><img alt="battery area" src="_images/jackal_battery_area.png" style="width: 90%;" /></a>
+</div>
+<p>로봇의 트레이를 고정하고 있는 나사를 풀면 트레이를 내릴 수 있습니다.
+로봇의 PC, 사용자를 위한 전원 보드, 추가 하드웨어 장착을 위한 공간을 확인할 수 있습니다.
+트레이의 구성 요소와 사용자 전원 보드에 대한 내용은 아래 그림을 참조하십시오.
+사용자 전원 보드는 4핀 Molex 단자와 스크류 터미널 단자로 제공됩니다.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/jackal_tray.png"><img alt="tray" src="_images/jackal_tray.png" style="width: 90%;" /></a>
+</div>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/jackal_user_power.png"><img alt="user power" src="_images/jackal_user_power.png" style="width: 90%;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="system-architecture">
+<h3>System Architecture<a class="headerlink" href="#system-architecture" title="Permalink to this headline">¶</a></h3>
+<p>Jackal은 32bit MCU와 Ubuntu가 설치된 x86 PC를 기반으로 구성되어 있습니다.
+MCU는 IMU, GPS로부터 데이터를 수신하고, IO 제어, 전원 공급 모니터링, 모터 제어 기능을 수행합니다.
+|</p>
+<p>MCU와 PC는 USB 연결을 이용하여 통신합니다. 통신 프로토콜으로는 rosserial을 사용하고,
+rosserial_server 노드는 jackal_base 노드에 포함되어 있습니다. 로봇이 제공하는 ROS API는 아래 표와 같습니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="9%" />
+<col width="13%" />
+<col width="78%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Topic</th>
+<th class="head">Message Type</th>
+<th class="head">Purpose</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>/cmd_vel</td>
+<td>geometry_msgs/Twist</td>
+<td>Input to Jackal’s kinematic controller. Publish here to make Jackal go.</td>
+</tr>
+<tr class="row-odd"><td>/odometry/filtered</td>
+<td>nav_msgs/Odometry</td>
+<td>Published by robot_localization , a filtered localization estimate based on wheel odometry (encoders), integrated IMU, and integrated GPS.</td>
+</tr>
+<tr class="row-even"><td>/imu/data</td>
+<td>sensor_msgs/IMU</td>
+<td>Published by imu_filter_madgwick , an orientation estimate based on Jackal’s internal gyroscope, accelerometer, and magnetometer.</td>
+</tr>
+<tr class="row-odd"><td>/navsat/fix</td>
+<td>geometry_msgs/TwistStamped</td>
+<td>Position fix from Jackal’s built in GPS receiver.</td>
+</tr>
+<tr class="row-even"><td>/navsat/vel</td>
+<td>geometry_msgs/TwistStamped</td>
+<td>Velocity over ground according to the integrated GPS receiver.</td>
+</tr>
+<tr class="row-odd"><td>/cmd_drive</td>
+<td>jackal_msgs/Drive</td>
+<td>Output from Jackal’s kinematic controller, input to the motor controllers. Subscribe here for a lower-level look at what’s going on.</td>
+</tr>
+<tr class="row-even"><td>/feedback</td>
+<td>jackal_msgs/Feedback</td>
+<td>High-frequency inputs from Jackal’s encoders and motor current sensors.</td>
+</tr>
+<tr class="row-odd"><td>/status</td>
+<td>jackal_msgs/Status</td>
+<td>Low-frequency status data for Jackal’s systems. This information is republished in human readable form on the diagnostics topic and is best consumed with the Robot Monitor</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
 </div>
 
 
