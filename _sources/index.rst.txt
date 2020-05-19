@@ -32,12 +32,12 @@ OnGround Robotics Tutorial Portal
    :maxdepth: 2
    :caption: Mobile Robot
 
-   jackal/jackal
-   husky/husky
-   rabbot/rabbot
-   scout/scout
-   scout_mini/scout_mini
-   hunter/hunter
+   jackal
+   husky
+   rabbot
+   scout
+   scout_mini
+   hunter
 
 .. toctree::
    :maxdepth: 2
