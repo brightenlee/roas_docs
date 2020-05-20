@@ -11,11 +11,6 @@ OnGround Robotics Tutorial Portal
 
 .. toctree::
    :maxdepth: 2
-
-   introduction
-
-.. toctree::
-   :maxdepth: 2
    :caption: Tutorial
 
    ros

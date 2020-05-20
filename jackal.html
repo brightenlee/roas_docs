@@ -86,10 +86,7 @@
           
           
           
-          <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorial</span></p>
+          <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ros.html">ROS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ros2.html">ROS2</a></li>
@@ -109,7 +106,17 @@
 <li class="toctree-l3"><a class="reference internal" href="#system-architecture">System Architecture</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wireless-access">Wireless Access</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#static-ip-configuration">Static IP Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connect-to-jackal-via-ssh-over-ethernet">Connect to Jackal via SSH over ethernet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connect-jackal-to-wireless-network">Connect Jackal to Wireless Network</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-ros-connectivity">Remote ROS Connectivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jackal-desktop-packages">Jackal Desktop Packages</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="husky.html">Husky</a></li>
@@ -200,6 +207,8 @@
 <p>Jackal은 견고하고 가벼우며, 사용하기 쉬운 ROS 기반의 UGV입니다.
 Jackal에는 IMU, GPS, PC가 포함되어 있습니다. 또한 URDF, 시뮬레이션, 데모 어플리케이션을 포함한
 ROS 인터페이스를 제공하고 있습니다.</p>
+<p><a class="reference download internal" download="" href="_downloads/267a61989672df5abea44690874249d3/Jackal_User_Manual.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jackal</span> <span class="pre">User</span> <span class="pre">Manual</span></code></a></p>
+<p><a class="reference download internal" download="" href="_downloads/f9dacb215a3665c9ea24ab8a7e58a194/Jackal_Data_Sheet.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jackal</span> <span class="pre">Data</span> <span class="pre">Sheet</span></code></a></p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -207,6 +216,9 @@ ROS 인터페이스를 제공하고 있습니다.</p>
 <h3>Technical Specifications<a class="headerlink" href="#technical-specifications" title="Permalink to this headline">¶</a></h3>
 <div class="align-centered figure align-center">
 <a class="reference internal image-reference" href="_images/specifications.png"><img alt="jackal" src="_images/specifications.png" style="width: 100%;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="what-s-included">
@@ -253,7 +265,7 @@ HMI 패널은 아래 그림과 같으며, 왼쪽부터 모터 버튼, 통신, Wi
 </div>
 <p>로봇의 내부에 접근하려면 로봇 전면 아래에 있는 래치를 이용하여 상판 덮개를 열어야 합니다.
 Anderson Power Pole 커넥터는 로봇에 전원을 공급하기 위한 커넥터로, 로봇이 작동하려면 연결되어
-있어야 합니다. 흰색 Molex 커넥터는 배터리 충전을 위한 커넥터입니다. 로붓 후면에 있는 충전 단자를
+있어야 합니다. 흰색 Molex 커넥터는 배터리 충전을 위한 커넥터입니다. 로봇 후면에 있는 충전 단자를
 이용하거나, 배터리 충전기에 직접 연결하여 배터리를 충전할 수 있습니다.
 두 커넥터 모두 로봇과 연결되어 있어야 합니다.</p>
 <div class="align-centered figure align-center">
@@ -276,8 +288,7 @@ Anderson Power Pole 커넥터는 로봇에 전원을 공급하기 위한 커넥�
 <div class="section" id="system-architecture">
 <h3>System Architecture<a class="headerlink" href="#system-architecture" title="Permalink to this headline">¶</a></h3>
 <p>Jackal은 32bit MCU와 Ubuntu가 설치된 x86 PC를 기반으로 구성되어 있습니다.
-MCU는 IMU, GPS로부터 데이터를 수신하고, IO 제어, 전원 공급 모니터링, 모터 제어 기능을 수행합니다.
-|</p>
+MCU는 IMU, GPS로부터 데이터를 수신하고, IO 제어, 전원 공급 모니터링, 모터 제어 기능을 수행합니다.</p>
 <p>MCU와 PC는 USB 연결을 이용하여 통신합니다. 통신 프로토콜으로는 rosserial을 사용하고,
 rosserial_server 노드는 jackal_base 노드에 포함되어 있습니다. 로봇이 제공하는 ROS API는 아래 표와 같습니다.</p>
 <table border="1" class="docutils">
@@ -334,8 +345,138 @@ rosserial_server 노드는 jackal_base 노드에 포함되어 있습니다. 로�
 </div>
 <div class="section" id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>첫번째 단계는 로봇의 전원을 켜고, 수동으로 조작하는 것입니다. 로봇의 포장을 처음으로 풀었다면,
+로봇의 상판 덮개를 열어서 배터리를 연결해야 합니다.</p>
+<p>로봇 HMI의 전원 버튼을 누르면 LED가 점등됩니다. PC 부팅이 완료되면 통신 인디게이터의 LED가
+점등됩니다. 부팅이 완료될 때까지 약 30초가 걸립니다.</p>
+<p>Sony Bluetooth 컨트롤러의 PS 로고 버튼을 눌러 컨트롤러와 로봇을 연결합니다. 페어링이 완료되면
+컨트롤러의 전면에 LED가 점등됩니다. L1 트리거 버튼(Deadman Switch)을 누른 상태에서,
+왼쪽 아날로그 스틱을 앞으로 밀면 로봇이 구동됩니다. R1 트리거 버튼(Turbo)을 누른 상태에서
+조작하면, 로봇의 최대 속도가 증가합니다. 컨트롤러의 구성은 아래와 같습니다.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/jackal_controller.png"><img alt="controller" src="_images/jackal_controller.png" style="width: 90%;" /></a>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
+</div>
+<div class="section" id="wireless-access">
+<h3>Wireless Access<a class="headerlink" href="#wireless-access" title="Permalink to this headline">¶</a></h3>
+<p>로봇을 로컬 WiFi에 연결하려면, 먼저 유선 연결을 사용하여 내부 PC에 접속해야 합니다.
+상판 덮개를 열고 트레이를 내린 다음, 이더넷 케이블을 PC의 LAN 포트에 연결하십시오.</p>
+<div class="section" id="static-ip-configuration">
+<h4>Static IP Configuration<a class="headerlink" href="#static-ip-configuration" title="Permalink to this headline">¶</a></h4>
+<p>사용자 PC의 IP 주소를 192.168.1.51과 같은 고정 IP로 설정하십시오. Ubuntu 환경에서의
+작업 과정을 아래와 같습니다.</p>
+<ol class="arabic simple">
+<li>오른쪽 상단의 아이콘들을 클릭하고, <code class="docutils literal notranslate"><span class="pre">Wired</span> <span class="pre">Connected</span></code> - <code class="docutils literal notranslate"><span class="pre">Wired</span> <span class="pre">Settings</span></code> 을 선택하십시오.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Wired</span></code> 항목에서 <code class="docutils literal notranslate"><span class="pre">+</span></code> 버튼을 눌러 새로운 항목을 추가하십시오.</li>
+<li><code class="docutils literal notranslate"><span class="pre">IPv4</span></code> 탭을 선택하고 <code class="docutils literal notranslate"><span class="pre">IPv4</span> <span class="pre">Method</span></code> 항목 중에서 <code class="docutils literal notranslate"><span class="pre">Manual</span></code> 을 선택하십시오.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Addresses</span></code> 항목에 아래와 같이 <code class="docutils literal notranslate"><span class="pre">Address</span></code> 와 <code class="docutils literal notranslate"><span class="pre">Netmask</span></code> 를 입력하십시오.</li>
+</ol>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/jackal_wired_connection.png"><img alt="wired connection" src="_images/jackal_wired_connection.png" style="width: 70%;" /></a>
+</div>
+</div>
+<div class="section" id="connect-to-jackal-via-ssh-over-ethernet">
+<h4>Connect to Jackal via SSH over ethernet<a class="headerlink" href="#connect-to-jackal-via-ssh-over-ethernet" title="Permalink to this headline">¶</a></h4>
+<p>다음 단계는 SSH를 이용하여 로봇에 연결하는 것입니다. 아래 명령어를 터미널 창에 입력하십시오.
+비밀번호는 <code class="docutils literal notranslate"><span class="pre">clearpath</span></code> 입니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh administrator@192.168.1.11
+</pre></div>
+</div>
+</div>
+<div class="section" id="connect-jackal-to-wireless-network">
+<h4>Connect Jackal to Wireless Network<a class="headerlink" href="#connect-jackal-to-wireless-network" title="Permalink to this headline">¶</a></h4>
+<p>SSH를 이용하여 로봇과 연결되면, 로컬 WiFi 네트워크를 설정할 수 있습니다. 이를 위해
+WICD(wireless interface configuration deamon)을 이용합니다. 아래 명령어를 터미널 창에
+입력하십시오.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wicd-curses
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">기본 옵션으로 제공되는 PC에는 우분투 서버 버전이 설치되어 있습니다. GUI를 지원하지 않으므로,
+터미널 창을 이용하여 모든 과정을 진행해야 합니다.</p>
+</div>
+<p>연결 가능한 네트워크들의 목록이 화면에 표시됩니다. 화살표 키를 이용하여 선택하고, 오른쪽 화살표 키를
+누르면 설정창으로 이동됩니다. 대부분의 최신 네트워크는 WPA1/2 암호화 체계를 사용하므로, 이 옵션을
+선택하고 비밀번호를 입력하십시오. 설정을 모두 마치면 <code class="docutils literal notranslate"><span class="pre">F10</span></code> 을 눌러 저장하고, <code class="docutils literal notranslate"><span class="pre">C</span></code> 를 눌러
+연결할 수 있습니다.</p>
+<p>이제 무선 네트워크 IP와 SSH를 이용하여 로봇과 연결할 수 있습니다. 먼저 아래 명령어를 이용하여
+IP 주소를 확인하십시오.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ifconfig
+</pre></div>
+</div>
+<p>확인된 무선 네트워크 IP와 SSH를 이용하여 다시 연결하십시오. 현재 연결된 SSH는 <code class="docutils literal notranslate"><span class="pre">exit</span></code> 명령어를
+이용하여 종료할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh administrator@&lt;IP_OF_JACKAL&gt;
+</pre></div>
+</div>
+<p>이제 SSH를 이용하여 로봇의 PC를 제어할 수 있습니다. 패키지 다운로드, 업데이트 실행,
+파일 전송, 제거 등을 수행할 수 있습니다.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="remote-ros-connectivity">
+<h3>Remote ROS Connectivity<a class="headerlink" href="#remote-ros-connectivity" title="Permalink to this headline">¶</a></h3>
+<p>ROS 인터페이스를 사용하기 위해서는, 원격 PC가 로봇의 ROS 마스터와 연결되어야 합니다.
+이를 통해 원격 PC에서 <code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">echo</span></code>, <code class="docutils literal notranslate"><span class="pre">rosnode</span> <span class="pre">list</span></code> 와 같은 ROS
+명령을 실행할 수 있습니다.</p>
+<p>이를 위한 <a class="reference external" href="http://wiki.ros.org/ROS/NetworkSetup">ROS 네트워크 설정</a>  방법은 아래와 같습니다.</p>
+<ol class="arabic simple">
+<li>bashrc 스크립트 파일에서 <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_HOSTNAME</span></code> 환경 변수를 설정합니다.</li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
+
+# Add the following lines
+export ROS_MASTER_URI=http://&lt;ROBOT_IP&gt;:11311
+export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;REMOTE_IP&gt;</span></code> 는 원격 PC의 IP 주소입니다.</p>
+<ol class="arabic simple" start="2">
+<li>Hostname과 IP 주소를 매핑하기 위하여 <code class="docutils literal notranslate"><span class="pre">/etc/hosts</span></code> 파일에 항목을 추가합니다.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
+
+# Add the following line
+&lt;ROBOT_IP&gt;    &lt;ROBOT_HOSTNAME&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_HOSTNAME&gt;</span></code> 는 로봇 PC의 Hostname 입니다.
+일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Hostname은 <code class="docutils literal notranslate"><span class="pre">hostname</span></code> 명령을 터미널 창에 입력해서 확인할 수 있습니다.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="jackal-desktop-packages">
+<h3>Jackal Desktop Packages<a class="headerlink" href="#jackal-desktop-packages" title="Permalink to this headline">¶</a></h3>
+<p>원격 PC에서 로봇을 제어하거나 모니터링하려면, 먼저 ROS를 설치해야 합니다.
+자세한 내용은 <a class="reference external" href="http://wiki.ros.org/melodic/Installation/Ubuntu">ROS Wiki</a> 를 참고하십시오.</p>
+<p>ROS를 설치한 후에, 아래 명령어를 이용하여 Jackal Desktop 패키지를 설치할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt install ros-melodic-jackal-desktop
+</pre></div>
+</div>
+<p>ROS 네트워크 설정을 마쳤으면 ROS에서 제공하는 시각화 도구인 <a class="reference external" href="http://wiki.ros.org/rviz">RViz</a>
+를 사용할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ roslaunch jackal_viz view_robot.launch
+</pre></div>
+</div>
+<p>또한 로봇의 상태를 진단, 감시할 수 있는 RQT Robot Monitor를 실행할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosrun rqt_robot_monitor rqt_robot_monitor
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </div>
 </div>
 </div>

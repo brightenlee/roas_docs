@@ -86,10 +86,7 @@
           
           
           
-          <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Tutorial</span></p>
+          <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ros.html">ROS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ros2.html">ROS2</a></li>
@@ -218,11 +215,11 @@
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/scout_mini1.png"><img alt="scout mini" src="_images/scout_mini1.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/scout_mini.png"><img alt="scout mini" src="_images/scout_mini.png" style="width: 100%;" /></a>
 </div>
 <p>Scout Mini는 강력한 오프로드 성능과 컴팩트한 크기를 가진 로봇입니다.
 Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능을 보여줍니다.
-<strong>CAN, RS232</strong> 통신을 지원하며, 2차 연구개발을 위하여 <strong>ROS, ROS2(Beta)</strong> 를 지원합니다.
+<code class="docutils literal notranslate"><span class="pre">CAN</span></code>, <code class="docutils literal notranslate"><span class="pre">RS232</span></code> 통신을 지원하며, 2차 연구개발을 위하여 <code class="docutils literal notranslate"><span class="pre">ROS</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS2(Beta)</span></code> 를 지원합니다.
 상위 어플리케이션 개발을 위하여 Stereo Camera, Lidar, GPS, IMU 등과 같은
 추가 구성 요소들을 Scout Mini에 설치할 수 있습니다.
 이를 바탕으로 자율 주행 교육 및 연구, 실내외 보안 순찰, 환경 모니터링 등의 목적으로 사용할 수 있습니다.</p>
@@ -338,7 +335,7 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/scout_mini_overview1.png"><img alt="overview" src="_images/scout_mini_overview1.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/scout_mini_overview.png"><img alt="overview" src="_images/scout_mini_overview.png" style="width: 100%;" /></a>
 </div>
 <p>로봇은 서스펜션과 허브 모터 모듈로 구성되어 있습니다.
 충돌 방지 펜스는 로봇의 전면에 설치되어 충돌시 전방을 보호하고 차체의 손상을 줄입니다.
@@ -352,10 +349,11 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 <div class="section" id="indication">
 <h3>Indication<a class="headerlink" href="#indication" title="Permalink to this headline">¶</a></h3>
 <p>사용자는 전압 디스플레이, 조명을 통해서 로봇의 상태를 확인할 수 있습니다.</p>
-<p><strong>Voltage:</strong>
-배터리의 현재 전압은 로봇 후면에 있는 인터페이스에서 확인할 수 있습니다.</p>
-<p><strong>Power on:</strong>
-로봇 전면의 조명이 켜집니다. 조명은 RC 조종기와 통신 명령을 통해서 제어할 수 있습니다.</p>
+<ul class="simple">
+<li><strong>Voltage:</strong> 배터리의 현재 전압은 로봇 후면에 있는 인터페이스에서 확인할 수 있습니다.</li>
+<li><strong>Power on:</strong> 로봇 전면의 조명이 켜집니다. 조명은 RC 조종기와 통신 명령을 통해서
+제어할 수 있습니다.</li>
+</ul>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -365,10 +363,10 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 <p>Scout Mini의 전기 인터페이스는 모두 로봇 후면에 있습니다.
 전압 디스플레이, 전원 단자, CAN 통신 단자, 충전 인터페이스 및 전원 스위치가 있습니다.</p>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/scout_mini_electrical_interface1.png"><img alt="electrical interface" src="_images/scout_mini_electrical_interface1.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/scout_mini_electrical_interface.png"><img alt="electrical interface" src="_images/scout_mini_electrical_interface.png" style="width: 100%;" /></a>
 </div>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/scout_mini_aviation_connector1.png"><img alt="aviation connector" src="_images/scout_mini_aviation_connector1.png" style="width: 25%;" /></a>
+<a class="reference internal image-reference" href="_images/scout_mini_aviation_connector.png"><img alt="aviation connector" src="_images/scout_mini_aviation_connector.png" style="width: 25%;" /></a>
 </div>
 <table border="1" class="docutils">
 <colgroup>
@@ -414,7 +412,7 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 <div class="section" id="remote-control">
 <h3>Remote Control<a class="headerlink" href="#remote-control" title="Permalink to this headline">¶</a></h3>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/scout_mini_rc_transmitter1.png"><img alt="rc transmitter" src="_images/scout_mini_rc_transmitter1.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="_images/scout_mini_rc_transmitter.png"><img alt="rc transmitter" src="_images/scout_mini_rc_transmitter.png" style="width: 70%;" /></a>
 </div>
 <p>RC 조종기를 이용하여 로봇을 수동으로 조작할 수 있습니다.
 모든 스위치를 중립 상태(상단으로 위치)로 두고, 두 개의 전원 버튼을 누르면 조종기를 켤 수 있습니다.
@@ -433,10 +431,12 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <div class="section" id="light-control">
 <h3>Light Control<a class="headerlink" href="#light-control" title="Permalink to this headline">¶</a></h3>
 <p>로봇의 전면에 조명이 설치되어 있으며, 제어 인터페이스는 사용자에게 개방되어 있습니다.</p>
-<p><strong>NC:</strong> 조명이 항시 꺼집니다.</p>
-<p><strong>NO:</strong> 조명이 항시 켜집니다.</p>
-<p><strong>BL:</strong> 조명이 점차적으로 켜졌다가 꺼졌다가를 반복합니다.</p>
-<p><strong>CUSTOM:</strong> 지정한 밝기로 조명이 켜집니다.</p>
+<ul class="simple">
+<li><strong>NC:</strong> 조명이 항시 꺼집니다.</li>
+<li><strong>NO:</strong> 조명이 항시 켜집니다.</li>
+<li><strong>BL:</strong> 조명이 점차적으로 켜졌다가 꺼졌다가를 반복합니다.</li>
+<li><strong>CUSTOM:</strong> 지정한 밝기로 조명이 켜집니다.</li>
+</ul>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -444,7 +444,7 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <div class="section" id="coordinate-system">
 <h3>Coordinate System<a class="headerlink" href="#coordinate-system" title="Permalink to this headline">¶</a></h3>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/scout_mini_coordinate1.png"><img alt="coordinate" src="_images/scout_mini_coordinate1.png" style="width: 90%;" /></a>
+<a class="reference internal image-reference" href="_images/scout_mini_coordinate.png"><img alt="coordinate" src="_images/scout_mini_coordinate.png" style="width: 90%;" /></a>
 </div>
 <p>Scout Mini의 기준 좌표계는 위와 같습니다. 로봇의 차체는 좌표계의 X축과 평행합니다.</p>
 <div class="line-block">
@@ -471,7 +471,7 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 </div>
 <div class="section" id="development">
 <h3>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h3>
-<p>Scout Mini는 사용자가 개발할 수 있도록 <strong>CAN, RS232</strong> 통신 인터페이스를 제공합니다.
+<p>Scout Mini는 사용자가 개발할 수 있도록 <code class="docutils literal notranslate"><span class="pre">CAN</span></code>, <code class="docutils literal notranslate"><span class="pre">RS232</span></code> 통신 인터페이스를 제공합니다.
 통신 인터페이스를 이용하여 사용자가 직접 로봇을 제어할 수 있습니다.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -480,7 +480,7 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <div class="section" id="dimensions">
 <h3>Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this headline">¶</a></h3>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/scout_mini_dimensions1.png"><img alt="dimensions" src="_images/scout_mini_dimensions1.png" style="width: 90%;" /></a>
+<a class="reference internal image-reference" href="_images/scout_mini_dimensions.png"><img alt="dimensions" src="_images/scout_mini_dimensions.png" style="width: 90%;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -489,7 +489,7 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 </div>
 <div class="section" id="ros-packages">
 <h2>ROS Packages<a class="headerlink" href="#ros-packages" title="Permalink to this headline">¶</a></h2>
-<p>Scout의 <strong>ROS</strong> 인터페이스를 구성하고 있는 패키지들은 다음과 같습니다.</p>
+<p>Scout의 <code class="docutils literal notranslate"><span class="pre">ROS</span></code> 인터페이스를 구성하고 있는 패키지들은 다음과 같습니다.</p>
 <p><strong>scout_base</strong></p>
 <ul class="simple">
 <li>로봇 MCU와의 시리얼 통신을 위한 패키지입니다.
@@ -506,8 +506,8 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">scout_bringup 패키지에 있는 실행 파일(<strong>scout_bringup.launch</strong>)을 이용해서
-전체 ROS 시스템을 실행 시킬 수 있습니다. 그리고 실행 파일의 <strong>robot_name</strong>
+<p class="last">scout_bringup 패키지에 있는 실행 파일(<code class="docutils literal notranslate"><span class="pre">scout_bringup.launch</span></code>)을 이용해서
+전체 ROS 시스템을 실행 시킬 수 있습니다. 그리고 실행 파일의 <code class="docutils literal notranslate"><span class="pre">robot_name</span></code>
 변수 설정틀 통해서 로봇의 모델(Scout V1, V2, Mini)을 선택할 수 있습니다.</p>
 </div>
 <p><strong>scout_description</strong></p>
@@ -528,7 +528,7 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 </div>
 <div class="section" id="ros-api-overview">
 <h2>ROS API Overview<a class="headerlink" href="#ros-api-overview" title="Permalink to this headline">¶</a></h2>
-<p>사용자가 상위 어플리케이션을 쉽게 개발할 수 있도록 <strong>ROS</strong> 표준 인터페이스를 제공합니다.
+<p>사용자가 상위 어플리케이션을 쉽게 개발할 수 있도록 <code class="docutils literal notranslate"><span class="pre">ROS</span></code> 표준 인터페이스를 제공합니다.
 <a class="reference external" href="https://www.ros.org/reps/rep-0000.html">REPs(ROS Enhancement Proposals)</a> 를
 준수하여 호환성과 접근성을 높였습니다.</p>
 <div class="section" id="feedback-interface">
@@ -536,7 +536,7 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <p>로봇의 피드백 데이터에는 3가지가 있습니다. 로봇 베이스에 대한 피드백, 모터에 대한 피드백,
 조명 제어에 대한 피드백이 있습니다.</p>
 <ul class="simple">
-<li><strong>rostopic name: /scout_base/base_feedback</strong></li>
+<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_base/base_feedback</span></code></li>
 </ul>
 <div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
 
@@ -553,7 +553,7 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 </pre></div>
 </div>
 <ul class="simple">
-<li><strong>rostopic name: /scout_base/motor_feedback</strong></li>
+<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_base/motor_feedback</span></code></li>
 </ul>
 <div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
 
@@ -569,7 +569,7 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 </pre></div>
 </div>
 <ul class="simple">
-<li><strong>rostopic name: /scout_base/light_feedback</strong></li>
+<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_base/light_feedback</span></code></li>
 </ul>
 <div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
 
@@ -594,7 +594,7 @@ rqt gui를 실행시키는 명령어는 아래와 같습니다.</p>
 <div class="section" id="base-interface">
 <h3>Base Interface<a class="headerlink" href="#base-interface" title="Permalink to this headline">¶</a></h3>
 <p>로봇은 <a class="reference external" href="http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html">geometry_msgs/Twist</a>
-메세지 타입의 <strong>/scout_base_controller/cmd_vel</strong> 토픽을 구독(subscribe)합니다.
+메세지 타입의 <code class="docutils literal notranslate"><span class="pre">/scout_base_controller/cmd_vel</span></code> 토픽을 구독(subscribe)합니다.
 사용자는 이 토픽을 이용해서 로봇을 제어할 수 있습니다.</p>
 <p>사용자는 /scout_base_controller/cmd_vel 토픽을 바로 이용할 수 있지만,
 일반적으로 어플리케이션은 /teleop/cmd_vel, /move_base/cmd_vel, /cmd_vel 토픽을 이용합니다.
@@ -605,7 +605,7 @@ rqt gui를 실행시키는 명령어는 아래와 같습니다.</p>
 <div class="section" id="light-interface">
 <h3>Light Interface<a class="headerlink" href="#light-interface" title="Permalink to this headline">¶</a></h3>
 <p>로봇의 전면과 후면에 설치되어 있는 조명의 제어 인터페이스는 사용자에게 개방되어 있습니다.
-사용자는 <strong>/scout_base/light_command</strong> 토픽을 이용해서 조명을 제어할 수 있습니다.</p>
+사용자는 <code class="docutils literal notranslate"><span class="pre">/scout_base/light_command</span></code> 토픽을 이용해서 조명을 제어할 수 있습니다.</p>
 <div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lighting Mode</span>
 <span class="c1"># 0: NC / 1: NO / 2: BL / 3: CUSTOM</span>
 
@@ -643,7 +643,7 @@ rqt gui를 실행시키는 명령어는 아래와 같습니다.</p>
 $ ssh scout@&lt;ROBOT_IP&gt;
 </pre></div>
 </div>
-<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IPv4 네트워크 주소이고, 로봇 PC의 비밀번호는 <strong>onground</strong> 입니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IPv4 네트워크 주소이고, 로봇 PC의 비밀번호는 <code class="docutils literal notranslate"><span class="pre">onground</span></code> 입니다.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">로봇을 네트워크에 연결하기 위해서 모니터가 필요합니다.</p>
@@ -654,7 +654,7 @@ $ ssh scout@&lt;ROBOT_IP&gt;
 <p>ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS 인터페이스에 접근할 수 있습니다.
 <a class="reference external" href="http://wiki.ros.org/ROS/NetworkSetup">ROS 네트워크 설정</a>  방법은 아래와 같습니다.</p>
 <ol class="arabic simple">
-<li>bashrc 스크립트 파일에서 <strong>ROS_MASTER_URI</strong>, <strong>ROS_HOSTNAME</strong> 환경 변수를 설정합니다.</li>
+<li>bashrc 스크립트 파일에서 <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_HOSTNAME</span></code> 환경 변수를 설정합니다.</li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
 
@@ -663,9 +663,9 @@ export ROS_MASTER_URI=http://&lt;ROBOT_IP&gt;:11311
 export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
 </pre></div>
 </div>
-<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IP 주소이고, <strong>&lt;REMOTE_IP&gt;</strong> 는 원격 PC의 IP 주소입니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;REMOTE_IP&gt;</span></code> 는 원격 PC의 IP 주소입니다.</p>
 <ol class="arabic simple" start="2">
-<li>Hostname과 IP 주소를 매핑하기 위하여 <strong>/etc/hosts</strong> 파일에 항목을 추가합니다.</li>
+<li>Hostname과 IP 주소를 매핑하기 위하여 <code class="docutils literal notranslate"><span class="pre">/etc/hosts</span></code> 파일에 항목을 추가합니다.</li>
 </ol>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
@@ -675,7 +675,7 @@ export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
 </pre></div>
 </div>
 </div></blockquote>
-<p><strong>&lt;ROBOT_IP&gt;</strong> 는 로봇 PC의 IP 주소이고, <strong>&lt;ROBOT_HOSTNAME&gt;</strong> 는 로봇 PC의 Hostname 입니다.
+<p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_HOSTNAME&gt;</span></code> 는 로봇 PC의 Hostname 입니다.
 일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.</p>
 </div>
 <div class="section" id="visualize-data">
@@ -688,7 +688,7 @@ export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
 </div>
 </div></blockquote>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/scout_mini_rviz1.png"><img alt="rviz" src="_images/scout_mini_rviz1.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/scout_mini_rviz.png"><img alt="rviz" src="_images/scout_mini_rviz.png" style="width: 100%;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
