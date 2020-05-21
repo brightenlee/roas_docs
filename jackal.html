@@ -101,11 +101,14 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Jackal</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#technical-specifications">Technical Specifications</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#what-s-included">What’s Included</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#hardware-overview">Hardware Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#system-architecture">System Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-s-included">What’s Included</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#expansions">Expansions</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-overview">Hardware Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-architecture">System Architecture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#wireless-access">Wireless Access</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#static-ip-configuration">Static IP Configuration</a></li>
@@ -215,7 +218,7 @@ ROS 인터페이스를 제공하고 있습니다.</p>
 <div class="section" id="technical-specifications">
 <h3>Technical Specifications<a class="headerlink" href="#technical-specifications" title="Permalink to this headline">¶</a></h3>
 <div class="align-centered figure align-center">
-<a class="reference internal image-reference" href="_images/specifications.png"><img alt="jackal" src="_images/specifications.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/jackal_specifications.png"><img alt="jackal specifications" src="_images/jackal_specifications.png" style="width: 100%;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -251,14 +254,28 @@ ROS 인터페이스를 제공하고 있습니다.</p>
 </tr>
 </tbody>
 </table>
+<div class="section" id="expansions">
+<h4>Expansions<a class="headerlink" href="#expansions" title="Permalink to this headline">¶</a></h4>
+<p>Jackal의 기능을 확장하려면 <strong>OnGround Robotics</strong> 에서 제공하는 다음 액세서리를 고려하십시오.</p>
+<ul class="simple">
+<li>Spare Battery</li>
+<li>IMU</li>
+<li>LIDAR</li>
+<li>Camera</li>
+<li>GPS</li>
+<li>Onboard PC</li>
+<li>NVIDIA Jetson</li>
+</ul>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </div>
+</div>
+</div>
 <div class="section" id="hardware-overview">
-<h3>Hardware Overview<a class="headerlink" href="#hardware-overview" title="Permalink to this headline">¶</a></h3>
+<h2>Hardware Overview<a class="headerlink" href="#hardware-overview" title="Permalink to this headline">¶</a></h2>
 <p>로봇의 외부 구성 요소로는 직경 190mm 바퀴, HMI 패널, 마운팅 상판이 있습니다.
-HMI 패널은 아래 그림과 같으며, 왼쪽부터 모터 버튼, 통신, WiFi, 배터리 인디게이터 및
+HMI 패널은 아래 그림과 같으며, 왼쪽부터 모터 버튼, 통신, WiFi, 배터리 표시기 및
 전원 버튼이 있습니다.</p>
 <div class="align-centered figure align-center">
 <a class="reference internal image-reference" href="_images/jackal_hmi.png"><img alt="hmi" src="_images/jackal_hmi.png" style="width: 70%;" /></a>
@@ -286,16 +303,16 @@ Anderson Power Pole 커넥터는 로봇에 전원을 공급하기 위한 커넥�
 </div>
 </div>
 <div class="section" id="system-architecture">
-<h3>System Architecture<a class="headerlink" href="#system-architecture" title="Permalink to this headline">¶</a></h3>
+<h2>System Architecture<a class="headerlink" href="#system-architecture" title="Permalink to this headline">¶</a></h2>
 <p>Jackal은 32bit MCU와 Ubuntu가 설치된 x86 PC를 기반으로 구성되어 있습니다.
 MCU는 IMU, GPS로부터 데이터를 수신하고, IO 제어, 전원 공급 모니터링, 모터 제어 기능을 수행합니다.</p>
 <p>MCU와 PC는 USB 연결을 이용하여 통신합니다. 통신 프로토콜으로는 rosserial을 사용하고,
 rosserial_server 노드는 jackal_base 노드에 포함되어 있습니다. 로봇이 제공하는 ROS API는 아래 표와 같습니다.</p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="9%" />
-<col width="13%" />
-<col width="78%" />
+<col width="22%" />
+<col width="29%" />
+<col width="49%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Topic</th>
@@ -304,37 +321,49 @@ rosserial_server 노드는 jackal_base 노드에 포함되어 있습니다. 로�
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>/cmd_vel</td>
-<td>geometry_msgs/Twist</td>
-<td>Input to Jackal’s kinematic controller. Publish here to make Jackal go.</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">geometry_msgs/Twist</span></code></td>
+<td>Input to Jackal’s kinematic controller.
+Publish here to make Jackal go.</td>
 </tr>
-<tr class="row-odd"><td>/odometry/filtered</td>
-<td>nav_msgs/Odometry</td>
-<td>Published by robot_localization , a filtered localization estimate based on wheel odometry (encoders), integrated IMU, and integrated GPS.</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/odometry/filtered</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">nav_msgs/Odometry</span></code></td>
+<td>Published by robot_localization, a filtered
+localization estimate based on wheel odometry
+(encoders), integrated IMU, and integrated GPS.</td>
 </tr>
-<tr class="row-even"><td>/imu/data</td>
-<td>sensor_msgs/IMU</td>
-<td>Published by imu_filter_madgwick , an orientation estimate based on Jackal’s internal gyroscope, accelerometer, and magnetometer.</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/imu/data</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">sensor_msgs/IMU</span></code></td>
+<td>Published by imu_filter_madgwick, an
+orientation estimate based on Jackal’s
+internal gyroscope, accelerometer, and magnetometer.</td>
 </tr>
-<tr class="row-odd"><td>/navsat/fix</td>
-<td>geometry_msgs/TwistStamped</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/navsat/fix</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">geometry_msgs/TwistStamped</span></code></td>
 <td>Position fix from Jackal’s built in GPS receiver.</td>
 </tr>
-<tr class="row-even"><td>/navsat/vel</td>
-<td>geometry_msgs/TwistStamped</td>
-<td>Velocity over ground according to the integrated GPS receiver.</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/navsat/vel</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">geometry_msgs/TwistStamped</span></code></td>
+<td>Velocity over ground according to the integrated
+GPS receiver.</td>
 </tr>
-<tr class="row-odd"><td>/cmd_drive</td>
-<td>jackal_msgs/Drive</td>
-<td>Output from Jackal’s kinematic controller, input to the motor controllers. Subscribe here for a lower-level look at what’s going on.</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/cmd_drive</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">jackal_msgs/Driv</span></code></td>
+<td>Output from Jackal’s kinematic controller, input
+to the motor controllers. Subscribe here for a
+lower-level look at what’s going on.</td>
 </tr>
-<tr class="row-even"><td>/feedback</td>
-<td>jackal_msgs/Feedback</td>
-<td>High-frequency inputs from Jackal’s encoders and motor current sensors.</td>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/feedback</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">jackal_msgs/Feedback</span></code></td>
+<td>High-frequency inputs from Jackal’s encoders and
+motor current sensors.</td>
 </tr>
-<tr class="row-odd"><td>/status</td>
-<td>jackal_msgs/Status</td>
-<td>Low-frequency status data for Jackal’s systems. This information is republished in human readable form on the diagnostics topic and is best consumed with the Robot Monitor</td>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/status</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">jackal_msgs/Status</span></code></td>
+<td>Low-frequency status data for Jackal’s systems.
+This information is republished in human readable
+from on the diagnostics topic and is best consumed
+with the Robot Monitor.</td>
 </tr>
 </tbody>
 </table>
@@ -342,12 +371,11 @@ rosserial_server 노드는 jackal_base 노드에 포함되어 있습니다. 로�
 <div class="line"><br /></div>
 </div>
 </div>
-</div>
 <div class="section" id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>첫번째 단계는 로봇의 전원을 켜고, 수동으로 조작하는 것입니다. 로봇의 포장을 처음으로 풀었다면,
 로봇의 상판 덮개를 열어서 배터리를 연결해야 합니다.</p>
-<p>로봇 HMI의 전원 버튼을 누르면 LED가 점등됩니다. PC 부팅이 완료되면 통신 인디게이터의 LED가
+<p>로봇 HMI의 전원 버튼을 누르면 LED가 점등됩니다. PC 부팅이 완료되면 통신 표시기의 LED가
 점등됩니다. 부팅이 완료될 때까지 약 30초가 걸립니다.</p>
 <p>Sony Bluetooth 컨트롤러의 PS 로고 버튼을 눌러 컨트롤러와 로봇을 연결합니다. 페어링이 완료되면
 컨트롤러의 전면에 LED가 점등됩니다. L1 트리거 버튼(Deadman Switch)을 누른 상태에서,

@@ -1,3 +1,7 @@
+.wy-table-responsive table td {
+  white-space: normal !important;
+}
+
 .wy-menu > .caption > span.caption-text {
   color: #008d62 !important;
 }
@@ -8,4 +12,8 @@ body{
 
 head{
   font-family:"Arial", Helvetica, sans-serif !important;
+}
+
+body > div.wy-grid-for-nav > nav > div > div.wy-side-nav-search > a::before {
+  content: "" !important;
 }
