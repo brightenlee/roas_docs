@@ -23,11 +23,11 @@ ROS 인터페이스를 제공하고 있습니다.
 Technical Specifications
 ++++++++++++++++++++++++
 
-.. figure:: _static/jackal/specifications.png
+.. figure:: _static/jackal/jackal_specifications.png
    :width: 100%
    :align: center
    :figclass: align-centered
-   :alt: jackal
+   :alt: jackal specifications
 
 |
 
@@ -48,13 +48,25 @@ What's Included
 | Jackal User Manual                 | 1        |
 +------------------------------------+----------+
 
+Expansions
+''''''''''
+Jackal의 기능을 확장하려면 **OnGround Robotics** 에서 제공하는 다음 액세서리를 고려하십시오.
+
+* Spare Battery
+* IMU
+* LIDAR
+* Camera
+* GPS
+* Onboard PC
+* NVIDIA Jetson
+
 |
 
 Hardware Overview
-++++++++++++++++++
+-----------------
 
 로봇의 외부 구성 요소로는 직경 190mm 바퀴, HMI 패널, 마운팅 상판이 있습니다.
-HMI 패널은 아래 그림과 같으며, 왼쪽부터 모터 버튼, 통신, WiFi, 배터리 인디게이터 및
+HMI 패널은 아래 그림과 같으며, 왼쪽부터 모터 버튼, 통신, WiFi, 배터리 표시기 및
 전원 버튼이 있습니다.
 
 .. figure:: _static/jackal/jackal_hmi.png
@@ -95,7 +107,7 @@ Anderson Power Pole 커넥터는 로봇에 전원을 공급하기 위한 커넥�
 |
 
 System Architecture
-+++++++++++++++++++
+-------------------
 
 Jackal은 32bit MCU와 Ubuntu가 설치된 x86 PC를 기반으로 구성되어 있습니다. 
 MCU는 IMU, GPS로부터 데이터를 수신하고, IO 제어, 전원 공급 모니터링, 모터 제어 기능을 수행합니다.
@@ -124,25 +136,37 @@ rosserial_server 노드는 jackal_base 노드에 포함되어 있습니다. 로�
   | /status            | jackal_msgs/Status          | 로봇의 전반적인 상태 데이터. diagnostics 노드로 전달                             |
   +--------------------+-----------------------------+----------------------------------------------------------------------------------+
 
-+--------------------+-----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Topic              | Message Type                | Purpose                                                                                                                                                                     |
-+====================+=============================+=============================================================================================================================================================================+
-| /cmd_vel           | geometry_msgs/Twist         | Input to Jackal’s kinematic controller. Publish here to make Jackal go.                                                                                                     |
-+--------------------+-----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| /odometry/filtered | nav_msgs/Odometry           | Published by robot_localization , a filtered localization estimate based on wheel odometry (encoders), integrated IMU, and integrated GPS.                                  |
-+--------------------+-----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| /imu/data          | sensor_msgs/IMU             | Published by imu_filter_madgwick , an orientation estimate based on Jackal’s internal gyroscope, accelerometer, and magnetometer.                                           |
-+--------------------+-----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| /navsat/fix        | geometry_msgs/TwistStamped  | Position fix from Jackal’s built in GPS receiver.                                                                                                                           |
-+--------------------+-----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| /navsat/vel        | geometry_msgs/TwistStamped  | Velocity over ground according to the integrated GPS receiver.                                                                                                              |
-+--------------------+-----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| /cmd_drive         | jackal_msgs/Drive           | Output from Jackal’s kinematic controller, input to the motor controllers. Subscribe here for a lower-level look at what’s going on.                                        |
-+--------------------+-----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| /feedback          | jackal_msgs/Feedback        | High-frequency inputs from Jackal’s encoders and motor current sensors.                                                                                                     |
-+--------------------+-----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| /status            | jackal_msgs/Status          | Low-frequency status data for Jackal’s systems. This information is republished in human readable form on the diagnostics topic and is best consumed with the Robot Monitor |
-+--------------------+-----------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------+--------------------------------+------------------------------------------------------+
+| Topic                  | Message Type                   | Purpose                                              |
++========================+================================+======================================================+
+| ``/cmd_vel``           | ``geometry_msgs/Twist``        | Input to Jackal’s kinematic controller.              |
+|                        |                                | Publish here to make Jackal go.                      |
++------------------------+--------------------------------+------------------------------------------------------+
+| ``/odometry/filtered`` | ``nav_msgs/Odometry``          | Published by robot_localization, a filtered          |                        
+|                        |                                | localization estimate based on wheel odometry        |
+|                        |                                | (encoders), integrated IMU, and integrated GPS.      |
++------------------------+--------------------------------+------------------------------------------------------+
+| ``/imu/data``          | ``sensor_msgs/IMU``            | Published by imu_filter_madgwick, an                 |
+|                        |                                | orientation estimate based on Jackal’s               |
+|                        |                                | internal gyroscope, accelerometer, and magnetometer. |
++------------------------+--------------------------------+------------------------------------------------------+
+| ``/navsat/fix``        | ``geometry_msgs/TwistStamped`` | Position fix from Jackal’s built in GPS receiver.    |
++------------------------+--------------------------------+------------------------------------------------------+
+| ``/navsat/vel``        | ``geometry_msgs/TwistStamped`` | Velocity over ground according to the integrated     |
+|                        |                                | GPS receiver.                                        |
++------------------------+--------------------------------+------------------------------------------------------+
+| ``/cmd_drive``         | ``jackal_msgs/Driv``           | Output from Jackal’s kinematic controller, input     |
+|                        |                                | to the motor controllers. Subscribe here for a       |
+|                        |                                | lower-level look at what’s going on.                 |
++------------------------+--------------------------------+------------------------------------------------------+
+| ``/feedback``          | ``jackal_msgs/Feedback``       | High-frequency inputs from Jackal’s encoders and     |
+|                        |                                | motor current sensors.                               |
++------------------------+--------------------------------+------------------------------------------------------+
+| ``/status``            | ``jackal_msgs/Status``         | Low-frequency status data for Jackal’s systems.      |
+|                        |                                | This information is republished in human readable    |
+|                        |                                | from on the diagnostics topic and is best consumed   |
+|                        |                                | with the Robot Monitor.                              |
++------------------------+--------------------------------+------------------------------------------------------+
 
 |
 
@@ -152,7 +176,7 @@ Getting Started
 첫번째 단계는 로봇의 전원을 켜고, 수동으로 조작하는 것입니다. 로봇의 포장을 처음으로 풀었다면,
 로봇의 상판 덮개를 열어서 배터리를 연결해야 합니다.
 
-로봇 HMI의 전원 버튼을 누르면 LED가 점등됩니다. PC 부팅이 완료되면 통신 인디게이터의 LED가 
+로봇 HMI의 전원 버튼을 누르면 LED가 점등됩니다. PC 부팅이 완료되면 통신 표시기의 LED가 
 점등됩니다. 부팅이 완료될 때까지 약 30초가 걸립니다.
 
 Sony Bluetooth 컨트롤러의 PS 로고 버튼을 눌러 컨트롤러와 로봇을 연결합니다. 페어링이 완료되면
