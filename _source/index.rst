@@ -11,25 +11,25 @@ OnGround Robotics Tutorial Portal
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tutorial
+   :caption: ROS Tutorial
 
-   ros
-   ros2
+   ros_basic
+   ros_demo
 
 .. toctree::
    :maxdepth: 2
-   :caption: Demo
+   :caption: ROS2 Tutorial
 
-   slam
-   navigation
+   ros2_basic
+   ros2_demo
 
 .. toctree::
    :maxdepth: 2
    :caption: Mobile Robot
 
+   rabbot
    jackal
    husky
-   rabbot
    scout
    scout_mini
    hunter

@@ -297,7 +297,7 @@ ROS 인터페이스를 사용하기 위해서는, 원격 PC가 로봇의 ROS 마
 ``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<ROBOT_HOSTNAME>`` 는 로봇 PC의 Hostname 입니다. 
 일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.
 
-.. note::
+.. hint::
    Hostname은 ``hostname`` 명령을 터미널 창에 입력해서 확인할 수 있습니다.
 
 |
