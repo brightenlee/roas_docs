@@ -39,7 +39,7 @@
   
   <link rel="index" title="Index" href="genindex.html" />
   <link rel="search" title="Search" href="search.html" />
-  <link rel="next" title="Rabbot" href="rabbot.html" />
+  <link rel="next" title="Scout" href="scout.html" />
   <link rel="prev" title="Jackal" href="jackal.html" /> 
 </head>
 
@@ -86,18 +86,19 @@
           
           
           
-          <p class="caption"><span class="caption-text">Tutorial</span></p>
+          <p class="caption"><span class="caption-text">ROS Tutorial</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ros.html">ROS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ros2.html">ROS2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros_basic.html">Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros_demo.html">Demo</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Demo</span></p>
+<p class="caption"><span class="caption-text">ROS2 Tutorial</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="slam.html">SLAM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros2_basic.html">Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros2_demo.html">Demo</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Mobile Robot</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rabbot.html">Rabbot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jackal.html">Jackal</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Husky</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
@@ -114,12 +115,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#pinout-refrences">Pinout Refrences</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#product-dimensions">Product Dimensions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#system-specifications">System Specifications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#safety">Safety</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#general-warnings">General Warnings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#e-stop-and-lockout">E-Stop and Lockout</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#electrical-system">Electrical System</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#lifting-and-transport">Lifting and transport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lifting-and-transport">Lifting and Transport</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#performance-recommendations">Performance Recommendations</a></li>
 </ul>
 </li>
@@ -129,10 +131,20 @@
 <li class="toctree-l3"><a class="reference internal" href="#user-bay-power-connections">User Bay Power Connections</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#using-ros">Using ROS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-ros">Using ROS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nodes">Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#topics">Topics</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rabbot.html">Rabbot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#battery-and-maintenance">Battery and Maintenance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#charging">Charging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#battery-care">Battery Care</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wheels">Wheels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chassis">Chassis</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="scout.html">Scout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scout_mini.html">Scout Mini</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hunter.html">Hunter</a></li>
@@ -216,7 +228,7 @@
 <div class="align-centered figure align-center">
 <a class="reference internal image-reference" href="_images/husky.png"><img alt="husky" src="_images/husky.png" style="width: 100%;" /></a>
 </div>
-<p>Husky는 견고하고 사용하기 쉬운 ROS 기반의 UGV입니다. Husky는 프로토 타입 개발과
+<p>Husky는 견고하고 사용하기 쉬운 ROS 기반의 UGV로써, 프로토 타입 개발과
 리서치 어플리케이션 개발에 적합합니다.</p>
 <p><a class="reference download internal" download="" href="_downloads/6a139e2725628947c2c557f49a8911d0/Husky_User_Manual.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Husky</span> <span class="pre">User</span> <span class="pre">Manual</span></code></a></p>
 <p><a class="reference download internal" download="" href="_downloads/6d68a070f80d3cf204cc42bdb934c88c/Husky_Data_Sheet.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Husky</span> <span class="pre">Data</span> <span class="pre">Sheet</span></code></a></p>
@@ -260,7 +272,7 @@
 <tr class="row-even"><td>Lockout Key</td>
 <td>2</td>
 </tr>
-<tr class="row-odd"><td>Power Connector</td>
+<tr class="row-odd"><td>User Power Connector</td>
 <td>3</td>
 </tr>
 </tbody>
@@ -351,7 +363,7 @@ externally.</td>
 </div>
 <div class="section" id="pinout-refrences">
 <h3>Pinout Refrences<a class="headerlink" href="#pinout-refrences" title="Permalink to this headline">¶</a></h3>
-<p>로봇은 호스트 장치와 통신하기 위해 DE-9 암 커넥터를 제공합니다. 이 커넥터의 핀 배치는 아래 그림과
+<p>로봇은 호스트 장치와 통신하기 위해 <strong>DE-9</strong> 암 커넥터를 제공합니다. 커넥터의 핀 배치는 아래 그림과
 같습니다.</p>
 <div class="align-centered figure align-center">
 <a class="reference internal image-reference" href="_images/husky_pinout.png"><img alt="husky pinout" src="_images/husky_pinout.png" style="width: 60%;" /></a>
@@ -391,6 +403,15 @@ externally.</td>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+</div>
+</div>
+<div class="section" id="product-dimensions">
+<h2>Product Dimensions<a class="headerlink" href="#product-dimensions" title="Permalink to this headline">¶</a></h2>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/husky_dimensions.png"><img alt="husky dimensions" src="_images/husky_dimensions.png" style="width: 100%;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="system-specifications">
@@ -524,8 +545,8 @@ externally.</td>
 <p>빨간색 비상 정지 버튼(E-Stop)와 잠금장치는 아래 그림과 같이 로봇 후면에 있습니다. 로봇 모터 드라이버의
 전원 공급 장치는 비상 정지 버튼와 연결된 릴레이와 연결되어 있습니다. 비상 정지 상태면 상태 패널의
 비상 정지 표시기가 빨간색으로 켜지고, 로봇은 움직이지 않습니다. 비상 정지 상태가 해제되기 전에
-명령이 중지되면 로봇은 움직이지 않습니다. 그러나 명령이 계속 전송되면, 로봇은 비상 정지 상태가
-해제되면 바로 구동됩니다.</p>
+명령이 중지되면 로봇은 움직이지 않습니다. 그러나 명령이 계속 전송되고 있으면, 비상 정지 상태가
+해제될 때 로봇이 바로 구동될 수 있습니다.</p>
 <p>항상 비상 정지 버튼에 접근할 수 있는지 확인하십시오. 로봇 상판에 물건을 탑재할 때
 비상 정비 버튼을 막지 않도록 주의하십시오.</p>
 <p>잠금장치 역시 로봇이 움직이지 못하도록 합니다. 잠금 상태일 때는 로봇의 전원이 켜져 있지만 모터는
@@ -539,7 +560,7 @@ externally.</td>
 </div>
 <div class="section" id="electrical-system">
 <h3>Electrical System<a class="headerlink" href="#electrical-system" title="Permalink to this headline">¶</a></h3>
-<p>로봇은 전동 휠체어, 골프 카트 등에서 사용되는 24V 납축전지 1개로 구동됩니다. 로봇 배터리는
+<p>로봇은 전동 휠체어, 골프 카트 등에서 사용되는 24V 납산 배터리 1개로 구동됩니다. 로봇 배터리는
 1800W를 공급할 수 있으며, 이로 인해 로봇의 모터는 뛰어난 성능을 발휘할 수 있습니다.
 그러나 상해를 입힐 수도 있으므로 다음 주의사항을 준수하십시오.</p>
 <ul class="simple">
@@ -547,25 +568,24 @@ externally.</td>
 <li>퓨즈를 확인 및 교체하고, 배터리 플러그를 연결 및 분리하는 것 외에는 퓨즈 패널을 함부로
 조작하지 마십시오.</li>
 <li>배터리 커버를 장착하지 않은 상태로 로봇을 구동하지 마십시오. 커버가 없으면
-배터리가 제자리에 고정되지 않으므로, 퓨즈 패널이 손상될 위험이 있습니다.</li>
+배터리가 제자리에 고정되지 않으므로 퓨즈 패널이 손상될 위험이 있습니다.</li>
 <li>당사에서 제공하는 충전기로만 배터리를 충전하십시오.</li>
 <li>배터리를 올바르게 폐기하십시오.</li>
 </ul>
 </div>
 <div class="section" id="lifting-and-transport">
-<h3>Lifting and transport<a class="headerlink" href="#lifting-and-transport" title="Permalink to this headline">¶</a></h3>
+<h3>Lifting and Transport<a class="headerlink" href="#lifting-and-transport" title="Permalink to this headline">¶</a></h3>
 <p>로봇을 수동으로 운반할 때, 사용자의 안전과 로봇의 수명을 보장하려면 다음 사항을 준수하십시오.</p>
 <ul class="simple">
 <li>두 사람이 로봇의 앞뒤 범퍼를 잡아 들어 올려야 합니다. 배터리를 제거하면 로봇의 무게를 줄일
 수 있습니다.</li>
-<li>단거리 운송 시에는 E-Stop 버튼을 이용하고, 장거리 운송 시에는 전원이 커졌는지 확인하십시오.</li>
+<li>단거리 운송 시에는 E-Stop 버튼을 이용하고, 장거리 운송 시에는 전원이 꺼졌는지 확인하십시오.</li>
 <li>모터가 손상될 수 있으므로 로봇을 수동으로 밀지 않는 것이 좋습니다.</li>
 </ul>
 </div>
 <div class="section" id="performance-recommendations">
 <h3>Performance Recommendations<a class="headerlink" href="#performance-recommendations" title="Permalink to this headline">¶</a></h3>
-<p>로봇에는 소프트웨어 점검과 보호를 위한 제한이 포함되어 있습니다. 그러나 로봇을 사용하는 동안
-‘’/status’’ 및 ‘’/diagnostics’’ rostopic을 모니터링하는 것이 좋습니다. 이 rostopic은
+<p>로봇에는 소프트웨어 점검을 위한 인터페이스가 있습니다. <code class="docutils literal notranslate"><span class="pre">/status</span></code> 및 <code class="docutils literal notranslate"><span class="pre">/diagnostics</span></code> rostopic은
 전압, 전류, 온도 및 시스템의 일반적인 상태에 관한 정보를 제공합니다.</p>
 <p>총 전류 소모량에는 모터 드라이버가 포함되어 있지 않고, MCU와 사용자 전원 단자에서 소비하는
 전류만 포함됩니다. 로봇의 모터의 전류 소모량은 약 8A 입니다. 그러나 거친 지형에서 구동할 때는
@@ -609,14 +629,14 @@ export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
 </div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_HOSTNAME&gt;</span></code> 는 로봇 PC의 Hostname 입니다.
 일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
 <p class="last">Hostname은 <code class="docutils literal notranslate"><span class="pre">hostname</span></code> 명령을 터미널 창에 입력해서 확인할 수 있습니다.</p>
 </div>
 </div>
 <div class="section" id="connecting-power">
 <h3>Connecting Power<a class="headerlink" href="#connecting-power" title="Permalink to this headline">¶</a></h3>
-<p>로봇의 배터리는 완전치 충전된 상태로 설치되어 있지만, 안전을 위해 운송 중에는 분리되어 있습니다.
+<p>로봇의 배터리는 완전히 충전된 상태로 설치되어 있지만, 안전을 위해 운송 중에는 분리되어 있습니다.
 배터리를 다시 연결하는 방법은 아래와 같습니다.</p>
 <ol class="arabic simple">
 <li>로봇의 주전원 버튼이 <strong>OFF</strong> 위치에 있고, 비상 정지가 활성화되어 있는지 확인하십시오.</li>
@@ -628,17 +648,21 @@ export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
 <div class="align-centered figure align-center">
 <a class="reference internal image-reference" href="_images/husky_battery_area.png"><img alt="husky battery area" src="_images/husky_battery_area.png" style="width: 90%;" /></a>
 </div>
-<p>로봇의 전원을 켜려면 상태 패널 위에 있는 전원 버튼을 누르십시오. 파란색 LED가 표시됩니다.
-PC와 로봇이 통신하게 되면 통신 상태 표시등이 초록색으로 바뀝니다. 비상 정지 버튼을 누르면서
-정지 상태 표시등이 빨간색으로 표시됩니다.</p>
+<p>로봇의 전원을 켜려면 상태 패널 위에 있는 전원 버튼을 누르십시오. 전원 버튼을 누르면
+파란색 LED가 표시됩니다. PC와 로봇이 통신하게 되면 통신 상태 표시등이 초록색으로 바뀝니다.
+비상 정지 버튼을 누르면 정지 상태 표시등이 빨간색으로 표시됩니다.</p>
 </div>
 <div class="section" id="user-bay-power-connections">
 <h3>User Bay Power Connections<a class="headerlink" href="#user-bay-power-connections" title="Permalink to this headline">¶</a></h3>
 <p>사용자 전원 단자는 최대 5A의 5V, 12V 및 24V 를 제공합니다. 각 터미널에는 탈부착식 커넥터가
 장착되어 있습니다. 2mm 폭의 일자 드라이버를 사각형 구멍에 삽입하면, 바로 옆에 있는 둥근 구멍이
-열립니다. 이 둥근 구멍에 전선을 밀어 넣은 다음, 드라이버를 제거하면 전선이 고정됩니다.</p>
+열립니다. 이 둥근 구멍에 전선을 밀어 넣고, 드라이버를 제거하면 전선이 고정됩니다.</p>
 <p><a class="reference internal" href="_images/husky_power_connector_01.png"><img alt="connector01" class="align-middle" src="_images/husky_power_connector_01.png" style="height: 230pt;" /></a> <a class="reference internal" href="_images/husky_power_connector_02.png"><img alt="connector02" class="align-middle" src="_images/husky_power_connector_02.png" style="height: 230pt;" /></a></p>
-<p>사용자 전원 단자를 사용할 때, 극성이 올바른지 확인하십시오. 그리고 최대 전류를 초과하자 마십시오.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">사용자 전원 단자를 사용할 때, 극성이 올바른지 확인하십시오.
+그리고 최대 전류(5A)를 초과하지 마십시오.</p>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -646,8 +670,182 @@ PC와 로봇이 통신하게 되면 통신 상태 표시등이 초록색으로 �
 </div>
 <div class="section" id="using-ros">
 <h2>Using ROS<a class="headerlink" href="#using-ros" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="nodes">
+<h3>Nodes<a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rosnode</span> <span class="pre">list</span></code> 명령어를 사용하면 로봇에서 실행중인 모든 노드들을 확인할 수 있습니다.
+기본적으로 실행되는 노드들은 아래와 같습니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Node</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/husky_node</span></code></td>
+<td>Provides control and communication between the Husky platform and ROS.
+Accepts velocity commands and provides system feedback on <code class="docutils literal notranslate"><span class="pre">/status</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/robot_state_publisher</span></code></td>
+<td>Subscribes to <code class="docutils literal notranslate"><span class="pre">/joint_states</span></code> and publishes the robot’s state to tf</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/bluetooth_teleop</span></code></td>
+<td>Publishes velocity commands from a joystick to <code class="docutils literal notranslate"><span class="pre">/twist_mux</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/twist_mux</span></code></td>
+<td>Takes in multiple sources of velocity commands, and prioritizes what
+actually gets sent to the controller</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/ekf_localization</span></code></td>
+<td>Part of the robot localization package, more information regarding
+this package can be found at <a class="reference external" href="http://wiki.ros.org/robot_localization">http://wiki.ros.org/robot_localization</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="topics">
+<h3>Topics<a class="headerlink" href="#topics" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">list</span></code> 명령어를 사용하면 로봇에서 활성화되어 있는 토픽들을 확인할 수 있습니다.
+기본적으로 활성화되어 있는 노드들은 아래와 같습니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="28%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Topic</th>
+<th class="head">Message type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/bluetooth_teleop/joy</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">sensor_msgs/Joy</span></code></td>
+<td>Receives joystick commands, echo this topic
+to verify your controller is publishing</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/tf</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">tf2_msgs/TFMessage</span></code></td>
+<td>Transforms between coordinate frames, this
+should always be publishing, and hence a good
+topic to echo to test your ROS connection</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/status</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">husky_msgs/HuskyStatus</span></code></td>
+<td>Displays system status information</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/estop</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">std_msgs/Bool</span></code></td>
+<td>Displays the estop status</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/odometry/filtered</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">nav_msgs/Odometry</span></code></td>
+<td>The odometry estimate of the robot from
+<code class="docutils literal notranslate"><span class="pre">/ekf_localization</span></code></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="39%" />
+<col width="23%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Motion Topics</th>
+<th class="head"><code class="docutils literal notranslate"><span class="pre">twist_mux</span></code> Priority</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">husky_velocity_controller/cmd_vel</span></code></td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>Receives motion commands from
+<code class="docutils literal notranslate"><span class="pre">twist_mux</span></code> based off their priority</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">joy_teleop/cmd_vel</span></code></td>
+<td><strong>10</strong></td>
+<td>Joystick teleop input</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">twist_marker_server/cmd_vel</span></code></td>
+<td><strong>8</strong></td>
+<td>Interactive marker teleop input</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">move_base/cmd_vel</span></code></td>
+<td><strong>2</strong></td>
+<td>Autonomous movement input, for the husky
+navigation packages</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code></td>
+<td><strong>1</strong></td>
+<td>Miscellaneous external input</td>
+</tr>
+</tbody>
+</table>
 <div class="line-block">
 <div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="battery-and-maintenance">
+<h2>Battery and Maintenance<a class="headerlink" href="#battery-and-maintenance" title="Permalink to this headline">¶</a></h2>
+<p>Husky는 장기간 사용할 수 있도록 견고하게 제작되었습니다. 다음 사항들은 로봇의 수명을 연장할 수 있는
+유지보수에 관한 사항들입니다.</p>
+<div class="section" id="charging">
+<h3>Charging<a class="headerlink" href="#charging" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">로봇과 함께 제공되는 배터리를 충전하기 위해서는 배터리를 로봇에서 분리해야 합니다.</p>
+</div>
+<ol class="arabic simple">
+<li>충전기의 DC 출력 단자를 배터리의 단자와 연결하십시오.</li>
+<li>충전기의 전원 코드를 콘센트와 연결하십시오.</li>
+<li>충전기의 LED가 켜집니다.</li>
+<li>배터리가 완전히 충전되면 충전기의 LED가 초록색으로 표시됩니다.</li>
+<li>충전기의 전원 코드를 분리한 다음에, 배터리와의 연결을 분리하십시오.</li>
+</ol>
+</div>
+<div class="section" id="battery-care">
+<h3>Battery Care<a class="headerlink" href="#battery-care" title="Permalink to this headline">¶</a></h3>
+<p>로봇은 24V 납산 배터리(lead–acid battery)를 사용합니다. 납산 배터리에 가장 치명적인 것은
+황화 현상입니다. 납산 배터리를 장시간동안 충전되지 않은 상태로 두면, 배터리의 전극에서 황산 결정이
+응고됩니다. 이 효과는 영구적으로 배터리의 용량을 감소시킵니다. 따라서 남은 용량에 상관없이
+배터리 사용을 마치자마자 충전하는 것이 중요합니다. 배터리 충전은 3단계(Constant current, topping charge,
+float charge)로 이루어집니다. 첫번째 단계에서 배터리 용량의 대부분(70%)이 충전됩니다.</p>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/husky_charging_chart.png"><img alt="husky charging chart" src="_images/husky_charging_chart.png" style="width: 100%;" /></a>
+</div>
+<p>다음 사항은 배터리의 수명을 최대화할 수 있는 사항입니다.</p>
+<ul class="simple">
+<li>배터리 사용을 마치면 항상 완전히 충전하십시오.</li>
+<li>실온에서 배터리를 충전하십시오. 섭씨 35도 이상의 온도에서 납산 배터리를 충전하지 마십시오.</li>
+<li>통풍이 잘되는 장소에서 배터리를 충전하십시오.</li>
+<li>배터리가 얼지 않도록 주의하십시오.</li>
+<li>보관 중인 배터리는 매달 충전시켜야 합니다. 4~6개월마다 배터리를 완전히 충전하십시오.</li>
+<li>방전율 50이 되는 시점이 지나면 용량이 줄어듭니다.</li>
+</ul>
+</div>
+<div class="section" id="wheels">
+<h3>Wheels<a class="headerlink" href="#wheels" title="Permalink to this headline">¶</a></h3>
+<p>타이어의 압력은 온도에 따라 변할 수 있으며, 압력계를 사용하여 주기적으로 점검해야 합니다.
+타이어의 압력은 20psi를 초과하지 않아야 하며, 지형에 따라 더 낮은 압력이 필요할 수 있습니다.
+타이어를 분리해야하는 경우에는, 먼저 휠을 차축 허브에 연결하는 M5 육각 렌치 볼트 4개를 풀어야
+합니다. 타이어를 교체할 때는 나사를 3.7 ft-lb [5 N-m] 토크로 조여야 합니다.</p>
+</div>
+<div class="section" id="chassis">
+<h3>Chassis<a class="headerlink" href="#chassis" title="Permalink to this headline">¶</a></h3>
+<p>기본 옵션의 Husky은 방수 기능이 없습니다. 차체가 물에 잠기지 않도록 주의해야 합니다. 차체에 물이
+들어간다면, 배터리를 제거하고 최소 24시간동안 완전히 건조시켜야 합니다.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </div>
 </div>
 </div>
@@ -660,7 +858,7 @@ PC와 로봇이 통신하게 되면 통신 상태 표시등이 초록색으로 �
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="rabbot.html" class="btn btn-neutral float-right" title="Rabbot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="scout.html" class="btn btn-neutral float-right" title="Scout" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="jackal.html" class="btn btn-neutral float-left" title="Jackal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
