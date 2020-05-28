@@ -50,8 +50,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" 
-          style="background: #008d62" >
+        <div class="wy-side-nav-search" >
           
 
           
@@ -174,9 +173,9 @@
 
       <div class="wy-nav-content">
         <div class="header-override">
-          <a href="http://www.roas.co.kr/"><img src="_static/ROAS_logo.png" height="80"
+          <a href="http://www.roas.co.kr/"><img src="_static/ROAS_logo.png" height="70"
               style="margin-top:0px;margin-bottom:15px;"></a>
-          <a href="http://www.gaitech.kr/"><img src="_static/Gaitech_logo.png" height="80"
+          <a href="http://www.gaitech.kr/"><img src="_static/Gaitech_logo.png" height="70"
               style="margin-top:0px;margin-bottom:15px;margin-left:20px;"></a>
         </div>
         
@@ -298,14 +297,13 @@
 </div>
 <div class="section" id="hardware-overview">
 <h2>Hardware Overview<a class="headerlink" href="#hardware-overview" title="Permalink to this headline">¶</a></h2>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id3">
 <a class="reference internal image-reference" href="_images/husky_front.png"><img alt="husky front" src="_images/husky_front.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Husky front view</span></p>
 </div>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id4">
 <a class="reference internal image-reference" href="_images/husky_rear.png"><img alt="husky rear" src="_images/husky_rear.png" style="width: 100%;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
+<p class="caption"><span class="caption-text">Husky rear view</span></p>
 </div>
 <div class="section" id="status-panel">
 <h3>Status Panel<a class="headerlink" href="#status-panel" title="Permalink to this headline">¶</a></h3>
@@ -354,19 +352,18 @@ externally.</td>
 <h3>Orientation References<a class="headerlink" href="#orientation-references" title="Permalink to this headline">¶</a></h3>
 <p>로봇의 기준 좌표계는 아래 그림과 같이 ISO 8855를 기반으로 합니다. 로봇이 양의 선속도 값을 명령으로
 받으면, 양의 X축 방향으로 이동합니다.</p>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id5">
 <a class="reference internal image-reference" href="_images/husky_frame.png"><img alt="husky frame" src="_images/husky_frame.png" style="width: 100%;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
+<p class="caption"><span class="caption-text">Huksy frame</span></p>
 </div>
 </div>
 <div class="section" id="pinout-refrences">
 <h3>Pinout Refrences<a class="headerlink" href="#pinout-refrences" title="Permalink to this headline">¶</a></h3>
 <p>로봇은 호스트 장치와 통신하기 위해 <strong>DE-9</strong> 암 커넥터를 제공합니다. 커넥터의 핀 배치는 아래 그림과
 같습니다.</p>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id6">
 <a class="reference internal image-reference" href="_images/husky_pinout.png"><img alt="husky pinout" src="_images/husky_pinout.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-text">DE-9 pinout</span></p>
 </div>
 <table border="1" class="docutils">
 <colgroup>
@@ -407,11 +404,9 @@ externally.</td>
 </div>
 <div class="section" id="product-dimensions">
 <h2>Product Dimensions<a class="headerlink" href="#product-dimensions" title="Permalink to this headline">¶</a></h2>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id7">
 <a class="reference internal image-reference" href="_images/husky_dimensions.png"><img alt="husky dimensions" src="_images/husky_dimensions.png" style="width: 100%;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
+<p class="caption"><span class="caption-text">Husky dimensions</span></p>
 </div>
 </div>
 <div class="section" id="system-specifications">
@@ -551,11 +546,9 @@ externally.</td>
 비상 정비 버튼을 막지 않도록 주의하십시오.</p>
 <p>잠금장치 역시 로봇이 움직이지 못하도록 합니다. 잠금 상태일 때는 로봇의 전원이 켜져 있지만 모터는
 구동되지 않습니다.</p>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id8">
 <a class="reference internal image-reference" href="_images/husky_estop_lockout.png"><img alt="husky estop lockout" src="_images/husky_estop_lockout.png" style="width: 90%;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
+<p class="caption"><span class="caption-text">Estop and lockout</span></p>
 </div>
 </div>
 <div class="section" id="electrical-system">
@@ -608,29 +601,27 @@ externally.</td>
 <ol class="arabic simple">
 <li>bashrc 스크립트 파일에서 <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_HOSTNAME</span></code> 환경 변수를 설정합니다.</li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
 
-# Add the following lines
-export ROS_MASTER_URI=http://&lt;ROBOT_IP&gt;:11311
-export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
+<span class="c1"># Add the following lines</span>
+<span class="nb">export</span> <span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://&lt;ROBOT_IP&gt;:11311
+<span class="nb">export</span> <span class="nv">ROS_HOSTNAME</span><span class="o">=</span>&lt;REMOTE_IP&gt;
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;REMOTE_IP&gt;</span></code> 는 원격 PC의 IP 주소입니다.</p>
 <ol class="arabic simple" start="2">
 <li>Hostname과 IP 주소를 매핑하기 위하여 <code class="docutils literal notranslate"><span class="pre">/etc/hosts</span></code> 파일에 항목을 추가합니다.</li>
 </ol>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
 
-# Add the following line
+<span class="c1"># Add the following line</span>
 &lt;ROBOT_IP&gt;    &lt;ROBOT_HOSTNAME&gt;
 </pre></div>
 </div>
-</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_HOSTNAME&gt;</span></code> 는 로봇 PC의 Hostname 입니다.
 일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.</p>
-<div class="admonition hint">
-<p class="first admonition-title">Hint</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
 <p class="last">Hostname은 <code class="docutils literal notranslate"><span class="pre">hostname</span></code> 명령을 터미널 창에 입력해서 확인할 수 있습니다.</p>
 </div>
 </div>
@@ -645,8 +636,9 @@ export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
 단단히 고정하십시오.</li>
 <li>배터리 커버를 제자리에 장착하십시오.</li>
 </ol>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id9">
 <a class="reference internal image-reference" href="_images/husky_battery_area.png"><img alt="husky battery area" src="_images/husky_battery_area.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-text">Husky battery area</span></p>
 </div>
 <p>로봇의 전원을 켜려면 상태 패널 위에 있는 전원 버튼을 누르십시오. 전원 버튼을 누르면
 파란색 LED가 표시됩니다. PC와 로봇이 통신하게 되면 통신 상태 표시등이 초록색으로 바뀝니다.
@@ -800,8 +792,8 @@ navigation packages</td>
 유지보수에 관한 사항들입니다.</p>
 <div class="section" id="charging">
 <h3>Charging<a class="headerlink" href="#charging" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
 <p class="last">로봇과 함께 제공되는 배터리를 충전하기 위해서는 배터리를 로봇에서 분리해야 합니다.</p>
 </div>
 <ol class="arabic simple">
@@ -819,8 +811,9 @@ navigation packages</td>
 응고됩니다. 이 효과는 영구적으로 배터리의 용량을 감소시킵니다. 따라서 남은 용량에 상관없이
 배터리 사용을 마치자마자 충전하는 것이 중요합니다. 배터리 충전은 3단계(Constant current, topping charge,
 float charge)로 이루어집니다. 첫번째 단계에서 배터리 용량의 대부분(70%)이 충전됩니다.</p>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id10">
 <a class="reference internal image-reference" href="_images/husky_charging_chart.png"><img alt="husky charging chart" src="_images/husky_charging_chart.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Charging chart</span></p>
 </div>
 <p>다음 사항은 배터리의 수명을 최대화할 수 있는 사항입니다.</p>
 <ul class="simple">

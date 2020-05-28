@@ -50,8 +50,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" 
-          style="background: #008d62" >
+        <div class="wy-side-nav-search" >
           
 
           
@@ -153,9 +152,9 @@
 
       <div class="wy-nav-content">
         <div class="header-override">
-          <a href="http://www.roas.co.kr/"><img src="_static/ROAS_logo.png" height="80"
+          <a href="http://www.roas.co.kr/"><img src="_static/ROAS_logo.png" height="70"
               style="margin-top:0px;margin-bottom:15px;"></a>
-          <a href="http://www.gaitech.kr/"><img src="_static/Gaitech_logo.png" height="80"
+          <a href="http://www.gaitech.kr/"><img src="_static/Gaitech_logo.png" height="70"
               style="margin-top:0px;margin-bottom:15px;margin-left:20px;"></a>
         </div>
         
@@ -277,29 +276,30 @@ ROS 인터페이스를 제공하고 있습니다.</p>
 <p>로봇의 외부 구성 요소로는 직경 190mm 바퀴, HMI 패널, 마운팅 상판이 있습니다.
 HMI 패널은 아래 그림과 같으며, 왼쪽부터 모터 버튼, 통신, WiFi, 배터리 표시기 및
 전원 버튼이 있습니다.</p>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id1">
 <a class="reference internal image-reference" href="_images/jackal_hmi.png"><img alt="hmi" src="_images/jackal_hmi.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-text">Jackal HMI</span></p>
 </div>
 <p>로봇의 내부에 접근하려면 로봇 전면 아래에 있는 래치를 이용하여 상판 덮개를 열어야 합니다.
 Anderson Power Pole 커넥터는 로봇에 전원을 공급하기 위한 커넥터로, 로봇이 작동하려면 연결되어
 있어야 합니다. 흰색 Molex 커넥터는 배터리 충전을 위한 커넥터입니다. 로봇 후면에 있는 충전 단자를
 이용하거나, 배터리 충전기에 직접 연결하여 배터리를 충전할 수 있습니다.
 두 커넥터 모두 로봇과 연결되어 있어야 합니다.</p>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id2">
 <a class="reference internal image-reference" href="_images/jackal_battery_area.png"><img alt="battery area" src="_images/jackal_battery_area.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-text">Jackal battery area</span></p>
 </div>
 <p>로봇의 트레이를 고정하고 있는 나사를 풀면 트레이를 내릴 수 있습니다.
 로봇의 PC, 사용자를 위한 전원 보드, 추가 하드웨어 장착을 위한 공간을 확인할 수 있습니다.
 트레이의 구성 요소와 사용자 전원 보드에 대한 내용은 아래 그림을 참조하십시오.
 사용자 전원 보드는 4핀 Molex 단자와 스크류 터미널 단자로 제공됩니다.</p>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id3">
 <a class="reference internal image-reference" href="_images/jackal_tray.png"><img alt="tray" src="_images/jackal_tray.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-text">Jackal tray</span></p>
 </div>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id4">
 <a class="reference internal image-reference" href="_images/jackal_user_power.png"><img alt="user power" src="_images/jackal_user_power.png" style="width: 90%;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
+<p class="caption"><span class="caption-text">User power</span></p>
 </div>
 </div>
 <div class="section" id="system-architecture">
@@ -381,11 +381,9 @@ with the Robot Monitor.</td>
 컨트롤러의 전면에 LED가 점등됩니다. L1 트리거 버튼(Deadman Switch)을 누른 상태에서,
 왼쪽 아날로그 스틱을 앞으로 밀면 로봇이 구동됩니다. R1 트리거 버튼(Turbo)을 누른 상태에서
 조작하면, 로봇의 최대 속도가 증가합니다. 컨트롤러의 구성은 아래와 같습니다.</p>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id5">
 <a class="reference internal image-reference" href="_images/jackal_controller.png"><img alt="controller" src="_images/jackal_controller.png" style="width: 90%;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
+<p class="caption"><span class="caption-text">Sony bluetooth controller</span></p>
 </div>
 <div class="section" id="wireless-access">
 <h3>Wireless Access<a class="headerlink" href="#wireless-access" title="Permalink to this headline">¶</a></h3>
@@ -401,8 +399,9 @@ with the Robot Monitor.</td>
 <li><code class="docutils literal notranslate"><span class="pre">IPv4</span></code> 탭을 선택하고 <code class="docutils literal notranslate"><span class="pre">IPv4</span> <span class="pre">Method</span></code> 항목 중에서 <code class="docutils literal notranslate"><span class="pre">Manual</span></code> 을 선택하십시오.</li>
 <li><code class="docutils literal notranslate"><span class="pre">Addresses</span></code> 항목에 아래와 같이 <code class="docutils literal notranslate"><span class="pre">Address</span></code> 와 <code class="docutils literal notranslate"><span class="pre">Netmask</span></code> 를 입력하십시오.</li>
 </ol>
-<div class="align-centered figure align-center">
+<div class="align-centered figure align-center" id="id6">
 <a class="reference internal image-reference" href="_images/jackal_wired_connection.png"><img alt="wired connection" src="_images/jackal_wired_connection.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-text">Wired connection setup</span></p>
 </div>
 </div>
 <div class="section" id="connect-to-jackal-via-ssh-over-ethernet">
@@ -456,29 +455,27 @@ IP 주소를 확인하십시오.</p>
 <ol class="arabic simple">
 <li>bashrc 스크립트 파일에서 <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_HOSTNAME</span></code> 환경 변수를 설정합니다.</li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
 
-# Add the following lines
-export ROS_MASTER_URI=http://&lt;ROBOT_IP&gt;:11311
-export ROS_HOSTNAME=&lt;REMOTE_IP&gt;
+<span class="c1"># Add the following lines</span>
+<span class="nb">export</span> <span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://&lt;ROBOT_IP&gt;:11311
+<span class="nb">export</span> <span class="nv">ROS_HOSTNAME</span><span class="o">=</span>&lt;REMOTE_IP&gt;
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;REMOTE_IP&gt;</span></code> 는 원격 PC의 IP 주소입니다.</p>
 <ol class="arabic simple" start="2">
 <li>Hostname과 IP 주소를 매핑하기 위하여 <code class="docutils literal notranslate"><span class="pre">/etc/hosts</span></code> 파일에 항목을 추가합니다.</li>
 </ol>
-<blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
 
-# Add the following line
+<span class="c1"># Add the following line</span>
 &lt;ROBOT_IP&gt;    &lt;ROBOT_HOSTNAME&gt;
 </pre></div>
 </div>
-</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_HOSTNAME&gt;</span></code> 는 로봇 PC의 Hostname 입니다.
 일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.</p>
-<div class="admonition hint">
-<p class="first admonition-title">Hint</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
 <p class="last">Hostname은 <code class="docutils literal notranslate"><span class="pre">hostname</span></code> 명령을 터미널 창에 입력해서 확인할 수 있습니다.</p>
 </div>
 <div class="line-block">

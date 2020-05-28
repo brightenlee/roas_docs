@@ -1,19 +1,29 @@
+.rst-content .toctree-wrapper p.caption, h1, h2 h3, h4, h5, h6, legend {
+  font-family:"Arial", Helvetica, sans-serif !important;
+}
+
+.wy-menu > .caption > span.caption-text {
+  color: #00b07b !important;
+}
+
 .wy-table-responsive table td {
   white-space: normal !important;
 }
 
-.wy-menu > .caption > span.caption-text {
-  color: #008d62 !important;
-}
-
-body{
-  font-family:"Arial", Helvetica, sans-serif !important;
-}
-
-head{
-  font-family:"Arial", Helvetica, sans-serif !important;
-}
-
 body > div.wy-grid-for-nav > nav > div > div.wy-side-nav-search > a::before {
   content: "" !important;
+}
+
+.wy-side-nav-search input[type="text"] {
+  width: 90% !important;
+  border: 0 !important;
+  border-radius: 5px !important;
+}
+
+.wy-side-nav-search {
+  background-color: #009f69 !important;
+}
+
+.wy-nav-side {
+  background-color: #1d1919 !important;
 }
