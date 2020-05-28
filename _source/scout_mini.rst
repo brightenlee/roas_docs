@@ -5,10 +5,10 @@ Introduction
 ------------
 
 .. figure:: _static/scout_mini/scout_mini.png
-   :width: 100%
-   :align: center
-   :figclass: align-centered
-   :alt: scout mini
+  :width: 100%
+  :align: center
+  :figclass: align-centered
+  :alt: scout mini
 
 Scout Mini는 강력한 오프로드 성능과 컴팩트한 크기를 가진 로봇입니다. 
 Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능을 보여줍니다.
@@ -87,10 +87,12 @@ Overview
 --------
 
 .. figure:: _static/scout_mini/scout_mini_overview.png
-   :width: 100%
-   :align: center
-   :figclass: align-centered
-   :alt: overview
+  :width: 100%
+  :align: center
+  :figclass: align-centered
+  :alt: overview
+  
+  Overview
 
 로봇은 서스펜션과 허브 모터 모듈로 구성되어 있습니다.
 충돌 방지 펜스는 로봇의 전면에 설치되어 충돌시 전방을 보호하고 차체의 손상을 줄입니다. 
@@ -120,16 +122,19 @@ Scout Mini의 전기 인터페이스는 모두 로봇 후면에 있습니다.
 전압 디스플레이, 전원 단자, CAN 통신 단자, 충전 인터페이스 및 전원 스위치가 있습니다.
 
 .. figure:: _static/scout_mini/scout_mini_electrical_interface.png
-   :width: 100%
-   :align: center
-   :figclass: align-centered
-   :alt: electrical interface
+  :width: 100%
+  :align: center
+  :figclass: align-centered
+  :alt: electrical interface
 
-.. figure:: _static/scout_mini/scout_mini_aviation_connector.png
-   :width: 25%
-   :align: center
-   :figclass: align-centered
-   :alt: aviation connector
+  Electrical interface
+
+.. image:: _static/scout_mini/scout_mini_aviation_connector.png
+  :width: 25%
+  :align: left
+  :alt: aviation connector
+
+* Aviation connector
 
 +---------+----------+-------------------------+-------------------------------+
 | Pin No. | Pin Type | Function and Definition | Remarks                       |
@@ -149,10 +154,12 @@ Remote Control
 ++++++++++++++
 
 .. figure:: _static/scout_mini/scout_mini_rc_transmitter.png
-   :width: 70%
-   :align: center
-   :figclass: align-centered
-   :alt: rc transmitter
+  :width: 70%
+  :align: center
+  :figclass: align-centered
+  :alt: rc transmitter
+
+  RC transmitter
 
 RC 조종기를 이용하여 로봇을 수동으로 조작할 수 있습니다. 
 모든 스위치를 중립 상태(상단으로 위치)로 두고, 두 개의 전원 버튼을 누르면 조종기를 켤 수 있습니다.
@@ -161,7 +168,7 @@ SWB 스위치를 중간 위치에 있으면 원격 제어 모드가 활성화되
 활성화됩니다.
 SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 있습니다.
 
-.. note::
+.. important::
 
    RS232 통신을 사용하기 위해서는 SWB 스위치를 하단 위치로 변경해야합니다.
 
@@ -186,10 +193,12 @@ Coordinate System
 ++++++++++++++++++
 
 .. figure:: _static/scout_mini/scout_mini_coordinate.png
-   :width: 90%
-   :align: center
-   :figclass: align-centered
-   :alt: coordinate
+  :width: 90%
+  :align: center
+  :figclass: align-centered
+  :alt: coordinate
+
+  Coordinate
 
 Scout Mini의 기준 좌표계는 위와 같습니다. 로봇의 차체는 좌표계의 X축과 평행합니다.
 
@@ -225,31 +234,27 @@ Dimensions
 +++++++++++
 
 .. figure:: _static/scout_mini/scout_mini_dimensions.png
-   :width: 90%
-   :align: center
-   :figclass: align-centered
-   :alt: dimensions
+  :width: 90%
+  :align: center
+  :figclass: align-centered
+  :alt: dimensions
 
-|
+  Dimensions
 
 ROS Packages
 ------------
 
-Scout의 ``ROS`` 인터페이스를 구성하고 있는 패키지들은 다음과 같습니다.
+Scout Mini의 ``ROS`` 인터페이스를 구성하고 있는 패키지들은 다음과 같습니다.
 
-**scout_base**
-
-* 로봇 MCU와의 시리얼 통신을 위한 패키지입니다. 
+* ``scout_base`` :
+  로봇 MCU와의 시리얼 통신을 위한 패키지입니다. 
   그리고 피드백 데이터를 바탕으로 구현된 진단(diagnostic) 노드를 포함하고 있습니다. 
 
-**scout_base_controller**
+* ``scout_base_controller`` :
+  Differential drive controller를 구현한 패키지입니다.
 
-* Differential drive controller를 구현한 패키지입니다.
-
-**scout_bringup**
-
-* 로봇의 전체 ROS 시스템을 실행시키는 실행(launch) 파일과 
-  설정 파일을 포함하고 있습니다.
+* ``scout_bringup`` :
+  로봇의 전체 ROS 시스템을 실행시키는 실행(launch) 파일과 설정 파일을 포함하고 있습니다.
 
 .. note::
 
@@ -257,17 +262,14 @@ Scout의 ``ROS`` 인터페이스를 구성하고 있는 패키지들은 다음�
   전체 ROS 시스템을 실행 시킬 수 있습니다. 그리고 실행 파일의 ``robot_name`` 
   변수 설정틀 통해서 로봇의 모델(Scout V1, V2, Mini)을 선택할 수 있습니다.
 
-**scout_description**
+* ``scout_description`` :
+  로봇의 좌표 체계를 정의한 URDF 파일과 시각화를 위한 3D mesh 파일을 포함하고 있습니다.
 
-* 로봇의 좌표 체계를 정의한 URDF 파일과 시각화를 위한 3D mesh 파일을 포함하고 있습니다.
+* ``scout_navigation`` :
+  SLAM, Navigation 기능에 대한 설정, 실행 파일을 포함하고 있습니다.
 
-**scout_navigation**
-
-* SLAM, Navigation 기능에 대한 설정, 실행 파일을 포함하고 있습니다.
-
-**scout_teleop**
-
-* 블루투스 컨트롤러를 이용해서 로봇을 원격 조작할 수 있는 패키지입니다.
+* ``scout_teleop`` :
+  블루투스 컨트롤러를 이용해서 로봇을 원격 조작할 수 있는 패키지입니다.
 
 |
 
@@ -411,7 +413,7 @@ ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS
 
 1. bashrc 스크립트 파일에서 ``ROS_MASTER_URI``, ``ROS_HOSTNAME`` 환경 변수를 설정합니다. 
 
-::
+.. code-block:: bash
 
   $ vim ~/.bashrc
 
@@ -423,12 +425,12 @@ ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS
 
 2. Hostname과 IP 주소를 매핑하기 위하여 ``/etc/hosts`` 파일에 항목을 추가합니다.
 
-  ::
+.. code-block:: bash
 
-    $ sudo vim ~/.bashrc
+  $ sudo vim ~/.bashrc
 
-    # Add the following line
-    <ROBOT_IP>    <ROBOT_HOSTNAME>
+  # Add the following line
+  <ROBOT_IP>    <ROBOT_HOSTNAME>
 
 ``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<ROBOT_HOSTNAME>`` 는 로봇 PC의 Hostname 입니다. 
 일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.
@@ -439,14 +441,16 @@ Visualize Data
 ROS 네트워크 설정이 완료되면 원격 PC에서 rostopic 데이터를 확인할 수 있습니다. 
 또한 `RViz <http://wiki.ros.org/rviz>`_ 를 이용하여 시각화된 데이터를 확인할 수 있습니다.
 
-  ::
+::
 
-    $ rviz
+  $ rviz
 
 .. figure:: _static/scout_mini/scout_mini_rviz.png
-   :width: 100%
-   :align: center
-   :figclass: align-centered
-   :alt: rviz
+  :width: 100%
+  :align: center
+  :figclass: align-centered
+  :alt: rviz
+
+  RViz
 
 |

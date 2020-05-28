@@ -86,8 +86,8 @@ html_show_sourcelink = False
 # documentation.
 #
 html_theme_options = {
-    'display_version': True,
-    'style_nav_header_background': '#008d62'
+    'display_version': True
+#    'style_nav_header_background': '#009f69'
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

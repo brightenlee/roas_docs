@@ -1,4 +1,4 @@
 Rabbot
 ====================
 
-**Developing, Coming soon**
+**Coming soon**

@@ -73,13 +73,15 @@ Hardware Overview
    :figclass: align-centered
    :alt: husky front
 
+   Husky front view
+
 .. figure:: _static/husky/husky_rear.png
    :width: 100%
    :align: center
    :figclass: align-centered
    :alt: husky rear
 
-|
+   Husky rear view
 
 Status Panel
 ++++++++++++
@@ -142,7 +144,7 @@ Orientation References
    :figclass: align-centered
    :alt: husky frame
 
-|
+   Huksy frame
 
 Pinout Refrences
 ++++++++++++++++
@@ -155,6 +157,8 @@ Pinout Refrences
    :align: center
    :figclass: align-centered
    :alt: husky pinout
+
+   DE-9 pinout
 
 +-----+------+-----+--------------------+
 | Pin | Name | Dir | Description        |
@@ -177,7 +181,7 @@ Product Dimensions
    :figclass: align-centered
    :alt: husky dimensions
 
-|
+   Husky dimensions
 
 System Specifications
 ---------------------
@@ -276,7 +280,7 @@ E-Stop and Lockout
    :figclass: align-centered
    :alt: husky estop lockout
 
-|
+   Estop and lockout
 
 Electrical System
 +++++++++++++++++
@@ -338,7 +342,7 @@ ROS 인터페이스를 사용하기 위해서는, 원격 PC가 로봇의 ROS 마
 
 1. bashrc 스크립트 파일에서 ``ROS_MASTER_URI``, ``ROS_HOSTNAME`` 환경 변수를 설정합니다. 
 
-::
+.. code-block:: bash
 
   $ vim ~/.bashrc
 
@@ -350,17 +354,17 @@ ROS 인터페이스를 사용하기 위해서는, 원격 PC가 로봇의 ROS 마
 
 2. Hostname과 IP 주소를 매핑하기 위하여 ``/etc/hosts`` 파일에 항목을 추가합니다.
 
-  ::
+.. code-block:: bash
 
-    $ sudo vim ~/.bashrc
+   $ sudo vim ~/.bashrc
 
-    # Add the following line
-    <ROBOT_IP>    <ROBOT_HOSTNAME>
+   # Add the following line
+   <ROBOT_IP>    <ROBOT_HOSTNAME>
 
 ``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<ROBOT_HOSTNAME>`` 는 로봇 PC의 Hostname 입니다. 
 일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.
 
-.. hint::
+.. tip::
    Hostname은 ``hostname`` 명령을 터미널 창에 입력해서 확인할 수 있습니다.
 
 Connecting Power
@@ -383,6 +387,8 @@ Connecting Power
    :align: center
    :figclass: align-centered
    :alt: husky battery area
+
+   Husky battery area
 
 로봇의 전원을 켜려면 상태 패널 위에 있는 전원 버튼을 누르십시오. 전원 버튼을 누르면 
 파란색 LED가 표시됩니다. PC와 로봇이 통신하게 되면 통신 상태 표시등이 초록색으로 바뀝니다. 
@@ -488,7 +494,7 @@ Husky는 장기간 사용할 수 있도록 견고하게 제작되었습니다. �
 Charging
 ++++++++
 
-.. note::
+.. important::
    로봇과 함께 제공되는 배터리를 충전하기 위해서는 배터리를 로봇에서 분리해야 합니다.
 
 1. 충전기의 DC 출력 단자를 배터리의 단자와 연결하십시오.
@@ -515,6 +521,8 @@ float charge)로 이루어집니다. 첫번째 단계에서 배터리 용량의 
    :align: center
    :figclass: align-centered
    :alt: husky charging chart
+
+   Charging chart
 
 다음 사항은 배터리의 수명을 최대화할 수 있는 사항입니다.
 

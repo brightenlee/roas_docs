@@ -75,6 +75,8 @@ HMI 패널은 아래 그림과 같으며, 왼쪽부터 모터 버튼, 통신, Wi
    :figclass: align-centered
    :alt: hmi
 
+   Jackal HMI
+
 로봇의 내부에 접근하려면 로봇 전면 아래에 있는 래치를 이용하여 상판 덮개를 열어야 합니다.
 Anderson Power Pole 커넥터는 로봇에 전원을 공급하기 위한 커넥터로, 로봇이 작동하려면 연결되어 
 있어야 합니다. 흰색 Molex 커넥터는 배터리 충전을 위한 커넥터입니다. 로봇 후면에 있는 충전 단자를 
@@ -87,6 +89,8 @@ Anderson Power Pole 커넥터는 로봇에 전원을 공급하기 위한 커넥�
    :figclass: align-centered
    :alt: battery area
 
+   Jackal battery area
+
 로봇의 트레이를 고정하고 있는 나사를 풀면 트레이를 내릴 수 있습니다. 
 로봇의 PC, 사용자를 위한 전원 보드, 추가 하드웨어 장착을 위한 공간을 확인할 수 있습니다.
 트레이의 구성 요소와 사용자 전원 보드에 대한 내용은 아래 그림을 참조하십시오.
@@ -98,13 +102,15 @@ Anderson Power Pole 커넥터는 로봇에 전원을 공급하기 위한 커넥�
    :figclass: align-centered
    :alt: tray
 
+   Jackal tray
+
 .. figure:: _static/jackal/jackal_user_power.png
    :width: 90%
    :align: center
    :figclass: align-centered
    :alt: user power
 
-|
+   User power
 
 System Architecture
 -------------------
@@ -190,7 +196,7 @@ Sony Bluetooth 컨트롤러의 PS 로고 버튼을 눌러 컨트롤러와 로봇
    :figclass: align-centered
    :alt: controller
 
-|
+   Sony bluetooth controller
 
 Wireless Access
 +++++++++++++++
@@ -214,6 +220,8 @@ Static IP Configuration
    :align: center
    :figclass: align-centered
    :alt: wired connection
+
+   Wired connection setup
 
 Connect to Jackal via SSH over ethernet
 '''''''''''''''''''''''''''''''''''''''
@@ -275,7 +283,7 @@ ROS 인터페이스를 사용하기 위해서는, 원격 PC가 로봇의 ROS 마
 
 1. bashrc 스크립트 파일에서 ``ROS_MASTER_URI``, ``ROS_HOSTNAME`` 환경 변수를 설정합니다. 
 
-::
+.. code-block:: bash
 
   $ vim ~/.bashrc
 
@@ -287,17 +295,17 @@ ROS 인터페이스를 사용하기 위해서는, 원격 PC가 로봇의 ROS 마
 
 2. Hostname과 IP 주소를 매핑하기 위하여 ``/etc/hosts`` 파일에 항목을 추가합니다.
 
-  ::
+.. code-block:: bash
 
-    $ sudo vim ~/.bashrc
+   $ sudo vim ~/.bashrc
 
-    # Add the following line
-    <ROBOT_IP>    <ROBOT_HOSTNAME>
+   # Add the following line
+   <ROBOT_IP>    <ROBOT_HOSTNAME>
 
 ``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<ROBOT_HOSTNAME>`` 는 로봇 PC의 Hostname 입니다. 
 일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.
 
-.. hint::
+.. tip::
    Hostname은 ``hostname`` 명령을 터미널 창에 입력해서 확인할 수 있습니다.
 
 |
