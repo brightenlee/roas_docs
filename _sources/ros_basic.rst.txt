@@ -69,11 +69,10 @@ ROS는 Ubuntu, Linux Mint, Windows, Mac OS 등과 같은 운영체제에서 지�
 
   ROS 버전: `ROS Melodic Morenia <http://wiki.ros.org/melodic>`_
 
-Using ROS
----------
+Installing Ubuntu and ROS
++++++++++++++++++++++++++
 
-ROS 설치 및 사용은 아래와 같습니다.
- 
+Ubuntu와 ROS 설치 방법은 아래의 링크를 참고하십시오.
 
 * `Ubuntu 설치 <https://ubuntu.com/tutorials/tutorial-guidelines#1-overview>`_
 
@@ -84,10 +83,75 @@ ROS 설치 및 사용은 아래와 같습니다.
 
 * `ROS 설치 <http://wiki.ros.org/melodic/Installation/Ubuntu>`_
 
+Configuring Environment
++++++++++++++++++++++++
 
-* `ROS 환경 설정 <http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment>`_
+ROS를 사용하기 위해서 필요한 `환경 설정 <http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment>`_
+들은 아래와 같습니다.
 
+* **Create ROS Workspace**
 
-* `ROS 튜토리얼 <http://wiki.ros.org/ROS/Tutorials>`_
+  `catkin <http://wiki.ros.org/catkin/conceptual_overview>`_ 은 ROS의 공식 빌드 시스템입니다. 
+  사용자는 이를 사용하여 직접 프로젝트를 빌드할 수 있습니다. catkin을 사용하기 위해 아래와
+  같이 작업 공간을 설정하십시오.
+
+  .. code-block:: bash
+
+    $ mkdir -p ~/catkin_ws/src
+    $ cd ~/catkin_ws/src
+    $ catkin_init_workspace
+
+    $ cd ~/catkin_ws/
+    $ catkin_make
+
+* **Environment setup**
+
+  ROS를 사용하기 위해서는 ``source`` 명령어를 이용하여 환경 설정 파일을 불러와야 합니다. 터미널 창을
+  새로 열 때마다 자동으로 환경 설정 파일을 불러올 수 있도록 ``.bashrc`` 파일을 수정하십시오.
+
+  .. code-block:: bash
+
+    $ vim ~/.bashrc
+
+  자동으로 ROS의 환경 설정 파일과 catkin 작업 공간의 환경 설정 파일을 불러올 수 있도록 ``.bashrc`` 
+  파일에 아래의 내용을 추가하십시오.
+
+  .. code-block:: bash
+
+    source /opt/ros/melodic/setup.bash
+    source ~/catkin_ws/devel/setup.bash
+
+* **ROS network setup**
+
+  ROS는 분산 컴퓨팅 환경을 제공합니다. 네트워크 구성을 통해서 Master와 다수의 Host의 연결이 
+  가능합니다. 이를 위한 `네트워크 설정 <http://wiki.ros.org/ROS/NetworkSetup>`_  방법은 아래와 
+  같습니다.
+
+  1. bashrc 스크립트 파일에서 ``ROS_MASTER_URI``, ``ROS_HOSTNAME`` 환경 변수를 설정하십시오. 
+
+  .. code-block:: bash
+
+    $ vim ~/.bashrc
+
+    # Add the following lines
+    export ROS_MASTER_URI=http://<MASTER_IP>>:11311
+    export ROS_HOSTNAME=<REMOTE_IP>
+
+  2. Hostname과 IP 주소를 매핑하기 위하여 ``/etc/hosts`` 파일에 아래의 내용을 추가합니다.
+
+  .. code-block:: bash
+
+    $ sudo vim ~/.bashrc
+
+    # Add the following line
+    <MASTER_IP>    <ROBOT_HOSTNAME>
+
+  .. tip::
+    Hostname은 ``hostname`` 명령을 터미널 창에 입력해서 확인할 수 있습니다.
+  
+Using ROS
+---------
+
+* `ROS Tutorials <http://wiki.ros.org/ROS/Tutorials>`_
 
 |

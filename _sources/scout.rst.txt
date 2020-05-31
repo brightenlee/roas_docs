@@ -506,7 +506,7 @@ ROS Network Setup
 ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS 인터페이스에 접근할 수 있습니다.
 `ROS 네트워크 설정 <http://wiki.ros.org/ROS/NetworkSetup>`_  방법은 아래와 같습니다.
 
-1. bashrc 스크립트 파일에서 ``ROS_MASTER_URI``, ``ROS_HOSTNAME`` 환경 변수를 설정합니다. 
+1. bashrc 스크립트 파일에서 ``ROS_MASTER_URI``, ``ROS_HOSTNAME`` 환경 변수를 설정하십시오. 
 
 .. code-block:: bash
 
@@ -518,7 +518,7 @@ ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS
 
 ``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<REMOTE_IP>`` 는 원격 PC의 IP 주소입니다.
 
-2. Hostname과 IP 주소를 매핑하기 위하여 ``/etc/hosts`` 파일에 항목을 추가합니다.
+2. Hostname과 IP 주소를 매핑하기 위하여 ``/etc/hosts`` 파일에 아래의 내용을 추가하십시오.
 
 .. code-block:: bash
 

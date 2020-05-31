@@ -95,6 +95,11 @@
 <li class="toctree-l1"><a class="reference internal" href="ros2_basic.html">Basic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ros2_demo.html">Demo</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="slam.html">SLAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a></li>
+</ul>
 <p class="caption"><span class="caption-text">Mobile Robot</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="rabbot.html">Rabbot</a></li>
@@ -350,7 +355,7 @@ externally.</td>
 </div>
 <div class="section" id="orientation-references">
 <h3>Orientation References<a class="headerlink" href="#orientation-references" title="Permalink to this headline">¶</a></h3>
-<p>로봇의 기준 좌표계는 아래 그림과 같이 ISO 8855를 기반으로 합니다. 로봇이 양의 선속도 값을 명령으로
+<p>로봇의 기준 좌표계는 아래의 그림과 같이 ISO 8855를 기반으로 합니다. 로봇이 양의 선속도 값을 명령으로
 받으면, 양의 X축 방향으로 이동합니다.</p>
 <div class="align-centered figure align-center" id="id5">
 <a class="reference internal image-reference" href="_images/husky_frame.png"><img alt="husky frame" src="_images/husky_frame.png" style="width: 100%;" /></a>
@@ -359,7 +364,7 @@ externally.</td>
 </div>
 <div class="section" id="pinout-refrences">
 <h3>Pinout Refrences<a class="headerlink" href="#pinout-refrences" title="Permalink to this headline">¶</a></h3>
-<p>로봇은 호스트 장치와 통신하기 위해 <strong>DE-9</strong> 암 커넥터를 제공합니다. 커넥터의 핀 배치는 아래 그림과
+<p>로봇은 호스트 장치와 통신하기 위해 <strong>DE-9</strong> 암 커넥터를 제공합니다. 커넥터의 핀 배치는 아래의 그림과
 같습니다.</p>
 <div class="align-centered figure align-center" id="id6">
 <a class="reference internal image-reference" href="_images/husky_pinout.png"><img alt="husky pinout" src="_images/husky_pinout.png" style="width: 60%;" /></a>
@@ -537,7 +542,7 @@ externally.</td>
 </div>
 <div class="section" id="e-stop-and-lockout">
 <h3>E-Stop and Lockout<a class="headerlink" href="#e-stop-and-lockout" title="Permalink to this headline">¶</a></h3>
-<p>빨간색 비상 정지 버튼(E-Stop)와 잠금장치는 아래 그림과 같이 로봇 후면에 있습니다. 로봇 모터 드라이버의
+<p>빨간색 비상 정지 버튼(E-Stop)와 잠금장치는 아래의 그림과 같이 로봇 후면에 있습니다. 로봇 모터 드라이버의
 전원 공급 장치는 비상 정지 버튼와 연결된 릴레이와 연결되어 있습니다. 비상 정지 상태면 상태 패널의
 비상 정지 표시기가 빨간색으로 켜지고, 로봇은 움직이지 않습니다. 비상 정지 상태가 해제되기 전에
 명령이 중지되면 로봇은 움직이지 않습니다. 그러나 명령이 계속 전송되고 있으면, 비상 정지 상태가
@@ -599,7 +604,7 @@ externally.</td>
 명령을 실행할 수 있습니다.</p>
 <p>이를 위한 <a class="reference external" href="http://wiki.ros.org/ROS/NetworkSetup">ROS 네트워크 설정</a>  방법은 아래와 같습니다.</p>
 <ol class="arabic simple">
-<li>bashrc 스크립트 파일에서 <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_HOSTNAME</span></code> 환경 변수를 설정합니다.</li>
+<li>bashrc 스크립트 파일에서 <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_HOSTNAME</span></code> 환경 변수를 설정하십시오.</li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
 
@@ -610,7 +615,7 @@ externally.</td>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;REMOTE_IP&gt;</span></code> 는 원격 PC의 IP 주소입니다.</p>
 <ol class="arabic simple" start="2">
-<li>Hostname과 IP 주소를 매핑하기 위하여 <code class="docutils literal notranslate"><span class="pre">/etc/hosts</span></code> 파일에 항목을 추가합니다.</li>
+<li>Hostname과 IP 주소를 매핑하기 위하여 <code class="docutils literal notranslate"><span class="pre">/etc/hosts</span></code> 파일에 아래의 내용을 추가하십시오.</li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
 

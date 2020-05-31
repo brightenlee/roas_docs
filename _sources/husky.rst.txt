@@ -135,7 +135,7 @@ Status Panel
 Orientation References
 ++++++++++++++++++++++
 
-로봇의 기준 좌표계는 아래 그림과 같이 ISO 8855를 기반으로 합니다. 로봇이 양의 선속도 값을 명령으로
+로봇의 기준 좌표계는 아래의 그림과 같이 ISO 8855를 기반으로 합니다. 로봇이 양의 선속도 값을 명령으로
 받으면, 양의 X축 방향으로 이동합니다.
 
 .. figure:: _static/husky/husky_frame.png
@@ -149,7 +149,7 @@ Orientation References
 Pinout Refrences
 ++++++++++++++++
 
-로봇은 호스트 장치와 통신하기 위해 **DE-9** 암 커넥터를 제공합니다. 커넥터의 핀 배치는 아래 그림과
+로봇은 호스트 장치와 통신하기 위해 **DE-9** 암 커넥터를 제공합니다. 커넥터의 핀 배치는 아래의 그림과
 같습니다.
 
 .. figure:: _static/husky/husky_pinout.png
@@ -262,7 +262,7 @@ General Warnings
 E-Stop and Lockout
 ++++++++++++++++++
 
-빨간색 비상 정지 버튼(E-Stop)와 잠금장치는 아래 그림과 같이 로봇 후면에 있습니다. 로봇 모터 드라이버의 
+빨간색 비상 정지 버튼(E-Stop)와 잠금장치는 아래의 그림과 같이 로봇 후면에 있습니다. 로봇 모터 드라이버의 
 전원 공급 장치는 비상 정지 버튼와 연결된 릴레이와 연결되어 있습니다. 비상 정지 상태면 상태 패널의 
 비상 정지 표시기가 빨간색으로 켜지고, 로봇은 움직이지 않습니다. 비상 정지 상태가 해제되기 전에 
 명령이 중지되면 로봇은 움직이지 않습니다. 그러나 명령이 계속 전송되고 있으면, 비상 정지 상태가
@@ -340,7 +340,7 @@ ROS 인터페이스를 사용하기 위해서는, 원격 PC가 로봇의 ROS 마
 
 이를 위한 `ROS 네트워크 설정 <http://wiki.ros.org/ROS/NetworkSetup>`_  방법은 아래와 같습니다.
 
-1. bashrc 스크립트 파일에서 ``ROS_MASTER_URI``, ``ROS_HOSTNAME`` 환경 변수를 설정합니다. 
+1. bashrc 스크립트 파일에서 ``ROS_MASTER_URI``, ``ROS_HOSTNAME`` 환경 변수를 설정하십시오. 
 
 .. code-block:: bash
 
@@ -352,7 +352,7 @@ ROS 인터페이스를 사용하기 위해서는, 원격 PC가 로봇의 ROS 마
 
 ``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<REMOTE_IP>`` 는 원격 PC의 IP 주소입니다.
 
-2. Hostname과 IP 주소를 매핑하기 위하여 ``/etc/hosts`` 파일에 항목을 추가합니다.
+2. Hostname과 IP 주소를 매핑하기 위하여 ``/etc/hosts`` 파일에 아래의 내용을 추가하십시오.
 
 .. code-block:: bash
 
