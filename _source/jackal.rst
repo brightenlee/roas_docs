@@ -66,7 +66,7 @@ Hardware Overview
 -----------------
 
 로봇의 외부 구성 요소로는 직경 190mm 바퀴, HMI 패널, 마운팅 상판이 있습니다.
-HMI 패널은 아래 그림과 같으며, 왼쪽부터 모터 버튼, 통신, WiFi, 배터리 표시기 및
+HMI 패널은 아래의 그림과 같으며, 왼쪽부터 모터 버튼, 통신, WiFi, 배터리 표시기 및
 전원 버튼이 있습니다.
 
 .. figure:: _static/jackal/jackal_hmi.png
@@ -93,7 +93,7 @@ Anderson Power Pole 커넥터는 로봇에 전원을 공급하기 위한 커넥�
 
 로봇의 트레이를 고정하고 있는 나사를 풀면 트레이를 내릴 수 있습니다. 
 로봇의 PC, 사용자를 위한 전원 보드, 추가 하드웨어 장착을 위한 공간을 확인할 수 있습니다.
-트레이의 구성 요소와 사용자 전원 보드에 대한 내용은 아래 그림을 참조하십시오.
+트레이의 구성 요소와 사용자 전원 보드에 대한 내용은 아래의 그림을 참조하십시오.
 사용자 전원 보드는 4핀 Molex 단자와 스크류 터미널 단자로 제공됩니다.
 
 .. figure:: _static/jackal/jackal_tray.png
@@ -119,7 +119,7 @@ Jackal은 32bit MCU와 Ubuntu가 설치된 x86 PC를 기반으로 구성되어 �
 MCU는 IMU, GPS로부터 데이터를 수신하고, IO 제어, 전원 공급 모니터링, 모터 제어 기능을 수행합니다.
 
 MCU와 PC는 USB 연결을 이용하여 통신합니다. 통신 프로토콜으로는 rosserial을 사용하고,
-rosserial_server 노드는 jackal_base 노드에 포함되어 있습니다. 로봇이 제공하는 ROS API는 아래 표와 같습니다.
+rosserial_server 노드는 jackal_base 노드에 포함되어 있습니다. 로봇이 제공하는 ROS API는 아래의 표와 같습니다.
 
 .. 
   +--------------------+-----------------------------+----------------------------------------------------------------------------------+
@@ -226,7 +226,7 @@ Static IP Configuration
 Connect to Jackal via SSH over ethernet
 '''''''''''''''''''''''''''''''''''''''
 
-다음 단계는 SSH를 이용하여 로봇에 연결하는 것입니다. 아래 명령어를 터미널 창에 입력하십시오.
+다음 단계는 SSH를 이용하여 로봇에 연결하는 것입니다. 아래의 명령어를 터미널 창에 입력하십시오.
 비밀번호는 ``clearpath`` 입니다.
 
 ::
@@ -237,7 +237,7 @@ Connect Jackal to Wireless Network
 ''''''''''''''''''''''''''''''''''
 
 SSH를 이용하여 로봇과 연결되면, 로컬 WiFi 네트워크를 설정할 수 있습니다. 이를 위해
-WICD(wireless interface configuration deamon)을 이용합니다. 아래 명령어를 터미널 창에
+WICD(wireless interface configuration deamon)을 이용합니다. 아래의 명령어를 터미널 창에
 입력하십시오.
 
 ::
@@ -253,7 +253,7 @@ WICD(wireless interface configuration deamon)을 이용합니다. 아래 명령�
 선택하고 비밀번호를 입력하십시오. 설정을 모두 마치면 ``F10`` 을 눌러 저장하고, ``C`` 를 눌러 
 연결할 수 있습니다.
 
-이제 무선 네트워크 IP와 SSH를 이용하여 로봇과 연결할 수 있습니다. 먼저 아래 명령어를 이용하여
+이제 무선 네트워크 IP와 SSH를 이용하여 로봇과 연결할 수 있습니다. 먼저 아래의 명령어를 이용하여
 IP 주소를 확인하십시오.
 
 ::
@@ -281,7 +281,7 @@ ROS 인터페이스를 사용하기 위해서는, 원격 PC가 로봇의 ROS 마
 
 이를 위한 `ROS 네트워크 설정 <http://wiki.ros.org/ROS/NetworkSetup>`_  방법은 아래와 같습니다.
 
-1. bashrc 스크립트 파일에서 ``ROS_MASTER_URI``, ``ROS_HOSTNAME`` 환경 변수를 설정합니다. 
+1. bashrc 스크립트 파일에서 ``ROS_MASTER_URI``, ``ROS_HOSTNAME`` 환경 변수를 설정하십시오. 
 
 .. code-block:: bash
 
@@ -293,7 +293,7 @@ ROS 인터페이스를 사용하기 위해서는, 원격 PC가 로봇의 ROS 마
 
 ``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<REMOTE_IP>`` 는 원격 PC의 IP 주소입니다.
 
-2. Hostname과 IP 주소를 매핑하기 위하여 ``/etc/hosts`` 파일에 항목을 추가합니다.
+2. Hostname과 IP 주소를 매핑하기 위하여 ``/etc/hosts`` 파일에 아래의 내용을 추가하십시오.
 
 .. code-block:: bash
 
@@ -316,7 +316,7 @@ Jackal Desktop Packages
 원격 PC에서 로봇을 제어하거나 모니터링하려면, 먼저 ROS를 설치해야 합니다.
 자세한 내용은 `ROS Wiki <http://wiki.ros.org/melodic/Installation/Ubuntu>`_ 를 참고하십시오.
 
-ROS를 설치한 후에, 아래 명령어를 이용하여 Jackal Desktop 패키지를 설치할 수 있습니다.
+ROS를 설치한 후에, 아래의 명령어를 이용하여 Jackal Desktop 패키지를 설치할 수 있습니다.
 
 ::
 

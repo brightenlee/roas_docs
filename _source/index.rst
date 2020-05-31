@@ -66,6 +66,14 @@ Mobile Robot
 .. toctree::
    :hidden:
    :maxdepth: 2
+   :caption: Application
+
+   slam
+   navigation
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
    :caption: Mobile Robot
 
    rabbot
