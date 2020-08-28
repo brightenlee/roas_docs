@@ -19,8 +19,8 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = u'OnGround Robotics Tutorial'
-copyright = u'2020, OnGround Robotics'
+project = u'ROAS Tutorial'
+copyright = u'2020, ROAS Inc.'
 author = u'Brighten Lee'
 
 # The short X.Y version
@@ -105,8 +105,7 @@ html_context = {
   "css_files": ['_static/custom.css']
 }
 
-#html_logo = '_static/ROAS.svg'
-#html_logo = '_static/Gaitech.png'
+#html_logo = '_static/ROAS_logo.png'
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -143,6 +142,12 @@ latex_elements = {
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
+
+    # kotex config
+    #
+    'fontpkg': r'''
+    \usepackage{kotex}
+    ''',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
