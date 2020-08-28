@@ -1,13 +1,13 @@
-.. OnGround Tutorial documentation master file, created by
+.. ROAS Tutorial documentation master file, created by
    sphinx-quickstart on Mon Mar 16 17:22:23 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-OnGround Robotics Tutorial
+ROAS Tutorial
 ==========================
 
 환영합니다! 이 곳에서는 **ROS, ROS2** 에 대해서 학습할 수 있으며, 
-**OnGround Robotics** 에서 제공하는 모바일 로봇을 만나볼 수 있습니다.
+**ROAS** 에서 제공하는 모바일 로봇을 만나볼 수 있습니다.
 
 .. figure:: _static/ros_ros2.png
    :width: 80%
@@ -76,7 +76,7 @@ Mobile Robot
    :maxdepth: 2
    :caption: Mobile Robot
 
-   rabbot
+   former
    jackal
    husky
    scout
