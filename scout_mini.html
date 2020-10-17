@@ -1,0 +1,752 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Scout Mini &mdash; ROAS Tutorial 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+  
+  <script type="text/javascript" id="documentation_options" data-url_root="./"
+    src="_static/documentation_options.js"></script>
+  <script type="text/javascript" src="_static/jquery.js"></script>
+  <script type="text/javascript" src="_static/underscore.js"></script>
+  <script type="text/javascript" src="_static/doctools.js"></script>
+  <script type="text/javascript" src="_static/language_data.js"></script>
+  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Hunter" href="hunter.html" />
+  <link rel="prev" title="Scout" href="scout.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> ROAS Tutorial
+              
+
+              
+            </a>
+
+            
+            
+            
+            
+
+            
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+            
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+          
+          
+          
+          
+          
+          <p class="caption"><span class="caption-text">ROS Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ros_basic.html">Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros_demo.html">Demo</a></li>
+</ul>
+<p class="caption"><span class="caption-text">ROS2 Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ros2_basic.html">Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros2_demo.html">Demo</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Application</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="slam.html">SLAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Mobile Robot</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="former.html">Former</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jackal.html">Jackal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="husky.html">Husky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scout.html">Scout</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Scout Mini</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#component-list">Component List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tech-specifications">Tech Specifications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#indication">Indication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#electrical-interface">Electrical Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-control">Remote Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#light-control">Light Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coordinate-system">Coordinate System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#charging">Charging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#development">Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dimensions">Dimensions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ros-packages">ROS Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ros-api-overview">ROS API Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#feedback-interface">Feedback Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diagnostic-interface">Diagnostic Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#base-interface">Base Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#light-interface">Light Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turn-on-scout-mini">Turn on Scout Mini</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#log-in">Log In</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ros-network-setup">ROS Network Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#visualize-data">Visualize Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hunter.html">Hunter</a></li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+</ul>
+
+          
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ROAS Tutorial</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        <div class="header-override">
+          <a href="http://www.roas.co.kr/"><img src="_static/ROAS_logo.png" height="70"
+              style="margin-top:0px;margin-bottom:15px;"></a>
+          <!--a href="http://www.gaitech.kr/"><img src="_static/Gaitech_logo.png" height="70"
+              style="margin-top:0px;margin-bottom:15px;margin-left:20px;"></a-->
+        </div>
+        
+          <div class="rst-content">
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Scout Mini</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+            <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+              <div itemprop="articleBody">
+                
+  <div class="section" id="scout-mini">
+<h1>Scout Mini<a class="headerlink" href="#scout-mini" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/scout_mini.png"><img alt="scout mini" src="_images/scout_mini.png" style="width: 100%;" /></a>
+</div>
+<p>Scout Mini는 강력한 오프로드 성능과 컴팩트한 크기를 가진 로봇입니다.
+Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능을 보여줍니다.
+<code class="docutils literal notranslate"><span class="pre">CAN</span></code>, <code class="docutils literal notranslate"><span class="pre">RS232</span></code> 통신을 지원하며, 2차 연구개발을 위하여 <code class="docutils literal notranslate"><span class="pre">ROS</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS2(Beta)</span></code> 를 지원합니다.
+상위 어플리케이션 개발을 위하여 Stereo Camera, Lidar, GPS, IMU 등과 같은
+추가 구성 요소들을 Scout Mini에 설치할 수 있습니다.
+이를 바탕으로 자율 주행 교육 및 연구, 실내외 보안 순찰, 환경 모니터링 등의 목적으로 사용할 수 있습니다.</p>
+<p><a class="reference download internal" download="" href="_downloads/f8d09aa47bf69d8487a7767b7027c557/Scout_Mini_User_Manual.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Scout</span> <span class="pre">Mini</span> <span class="pre">User</span> <span class="pre">Manual</span></code></a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="component-list">
+<h3>Component List<a class="headerlink" href="#component-list" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="74%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Quantity</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Robot body</td>
+<td>x 1</td>
+</tr>
+<tr class="row-odd"><td>Battery charger (AC 220V)</td>
+<td>x 1</td>
+</tr>
+<tr class="row-even"><td>Aviation plug (male, 4-pin)</td>
+<td>x 2</td>
+</tr>
+<tr class="row-odd"><td>USB to RS232 cable</td>
+<td>x 1</td>
+</tr>
+<tr class="row-even"><td>Remote control transmitter</td>
+<td>x 1</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="tech-specifications">
+<h3>Tech Specifications<a class="headerlink" href="#tech-specifications" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Specs</th>
+<th class="head">Values</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>L × W × H (mm)</td>
+<td>627 x 550 x 252</td>
+</tr>
+<tr class="row-odd"><td>Front and rear wheels separation (mm)</td>
+<td>460</td>
+</tr>
+<tr class="row-even"><td>Right and left wheels separation (mm)</td>
+<td>450</td>
+</tr>
+<tr class="row-odd"><td>Weight of vehicle body (kg)</td>
+<td>20</td>
+</tr>
+<tr class="row-even"><td>Battery type</td>
+<td>Lithium battery 24V 15aH</td>
+</tr>
+<tr class="row-odd"><td>Motor</td>
+<td>DC brushless 4 X 150W</td>
+</tr>
+<tr class="row-even"><td>Drive type</td>
+<td>Independent four-wheel drive</td>
+</tr>
+<tr class="row-odd"><td>Suspension</td>
+<td>Independent suspension with single rocker arm</td>
+</tr>
+<tr class="row-even"><td>Steering</td>
+<td>Four-wheel differential steering</td>
+</tr>
+<tr class="row-odd"><td>Safety equipment</td>
+<td>Servo brake/anti-collision tube</td>
+</tr>
+<tr class="row-even"><td>No-load highest speed (km/h)</td>
+<td>≤ 20</td>
+</tr>
+<tr class="row-odd"><td>Minimum turning radius</td>
+<td>Be able to turn on a pivot</td>
+</tr>
+<tr class="row-even"><td>Maximum climbing capacity</td>
+<td>≥ 30°</td>
+</tr>
+<tr class="row-odd"><td>Minimum ground clearance (mm)</td>
+<td>107</td>
+</tr>
+<tr class="row-even"><td>Control mode</td>
+<td>Remote control / Control command mode</td>
+</tr>
+<tr class="row-odd"><td>RC transmitter</td>
+<td>2.4G/extreme distance 1km</td>
+</tr>
+<tr class="row-even"><td>Communication interface</td>
+<td>CAN / RS232</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<div class="align-centered figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/scout_mini_overview.png"><img alt="overview" src="_images/scout_mini_overview.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Overview</span></p>
+</div>
+<p>로봇은 서스펜션과 허브 모터 모듈로 구성되어 있습니다.
+충돌 방지 펜스는 로봇의 전면에 설치되어 충돌시 전방을 보호하고 차체의 손상을 줄입니다.
+로봇의 전면에는 흰색 조명이 설치되어 있습니다.
+로봇의 후면에는 DC 전원 및 통신 인터페이스를 위한 방수 커넥터가 있습니다.
+로봇과 외부 구성 요소를 유연하게 연결할 수 있고, 외부 요인으로부터 로봇 내부를 보호할 수 있습니다.
+로봇의 상단에는 알루미늄 프로파일이 설치되어 있어, 추가 디바이스들을 쉽게 설치할 수 있습니다.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="indication">
+<h3>Indication<a class="headerlink" href="#indication" title="Permalink to this headline">¶</a></h3>
+<p>사용자는 전압 디스플레이, 조명을 통해서 로봇의 상태를 확인할 수 있습니다.</p>
+<ul class="simple">
+<li><strong>Voltage:</strong> 배터리의 현재 전압은 로봇 후면에 있는 인터페이스에서 확인할 수 있습니다.</li>
+<li><strong>Power on:</strong> 로봇 전면의 조명이 켜집니다. 조명은 RC 조종기와 통신 명령을 통해서
+제어할 수 있습니다.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="electrical-interface">
+<h3>Electrical Interface<a class="headerlink" href="#electrical-interface" title="Permalink to this headline">¶</a></h3>
+<p>Scout Mini의 전기 인터페이스는 모두 로봇 후면에 있습니다.
+전압 디스플레이, 전원 단자, CAN 통신 단자, 충전 인터페이스 및 전원 스위치가 있습니다.</p>
+<div class="align-centered figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/scout_mini_electrical_interface.png"><img alt="electrical interface" src="_images/scout_mini_electrical_interface.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Electrical interface</span></p>
+</div>
+<a class="reference internal image-reference" href="_images/scout_mini_aviation_connector.png"><img alt="aviation connector" class="align-left" src="_images/scout_mini_aviation_connector.png" style="width: 25%;" /></a>
+<ul class="simple">
+<li>Aviation connector</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="13%" />
+<col width="33%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Pin No.</th>
+<th class="head">Pin Type</th>
+<th class="head">Function and Definition</th>
+<th class="head">Remarks</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>Power</td>
+<td>VCC</td>
+<td>Power positive, 23-29.2V, 5A</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>Power</td>
+<td>GND</td>
+<td>Power negative</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>CAN</td>
+<td>CAN_H</td>
+<td>CAN bus high</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>CAN</td>
+<td>CAN_L</td>
+<td>CAN bus low</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="remote-control">
+<h3>Remote Control<a class="headerlink" href="#remote-control" title="Permalink to this headline">¶</a></h3>
+<div class="align-centered figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/scout_mini_rc_transmitter.png"><img alt="rc transmitter" src="_images/scout_mini_rc_transmitter.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-text">RC transmitter</span></p>
+</div>
+<p>RC 조종기를 이용하여 로봇을 수동으로 조작할 수 있습니다.
+모든 스위치를 중립 상태(상단으로 위치)로 두고, 두 개의 전원 버튼을 누르면 조종기를 켤 수 있습니다.
+조종기에는 2개의 스로틀이 있습니다. S1과 S2를 이용하여 각각 선속도과 각속도 명령을 보낼 수 있습니다.
+SWB 스위치를 중간 위치에 있으면 원격 제어 모드가 활성화되고, 상단 위치에 있으면 명령 모드가
+활성화됩니다.
+SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 있습니다.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">RS232, CAN 통신을 사용하기 위해서는 SWB 스위치를 상단 위치로 변경해야합니다.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="light-control">
+<h3>Light Control<a class="headerlink" href="#light-control" title="Permalink to this headline">¶</a></h3>
+<p>로봇의 전면에 조명이 설치되어 있으며, 제어 인터페이스는 사용자에게 개방되어 있습니다.</p>
+<ul class="simple">
+<li><strong>NC:</strong> 조명이 항시 꺼집니다.</li>
+<li><strong>NO:</strong> 조명이 항시 켜집니다.</li>
+<li><strong>BL:</strong> 조명이 점차적으로 켜졌다가 꺼졌다가를 반복합니다.</li>
+<li><strong>CUSTOM:</strong> 지정한 밝기로 조명이 켜집니다.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="coordinate-system">
+<h3>Coordinate System<a class="headerlink" href="#coordinate-system" title="Permalink to this headline">¶</a></h3>
+<div class="align-centered figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/scout_mini_coordinate.png"><img alt="coordinate" src="_images/scout_mini_coordinate.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-text">Coordinate</span></p>
+</div>
+<p>Scout Mini의 기준 좌표계는 위와 같습니다. 로봇의 차체는 좌표계의 X축과 평행합니다.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="charging">
+<h3>Charging<a class="headerlink" href="#charging" title="Permalink to this headline">¶</a></h3>
+<p>사용자에게 로봇과 함께 10A 배터리 충전기를 제공합니다.
+충전 절차는 아래와 같습니다.</p>
+<ol class="arabic simple">
+<li>로봇의 전원이 꺼져 있는지 확인하십시오.</li>
+<li>로봇 후면의 충전 인터페이스와 배터리 충전기의 플러그를 연결하십시오.</li>
+<li>배터리 충전기의 전원을 켜십시오.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">현재 배터리의 전압이 22V인 경우, 완전히 재충전하는데 약 1.5시간이 필요합니다.
+완전 충전된 배터리의 전압은 29.2V 입니다.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="development">
+<h3>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h3>
+<p>Scout Mini는 사용자가 개발할 수 있도록 <code class="docutils literal notranslate"><span class="pre">CAN</span></code>, <code class="docutils literal notranslate"><span class="pre">RS232</span></code> 통신 인터페이스를 제공합니다.
+통신 인터페이스를 이용하여 사용자가 직접 로봇을 제어할 수 있습니다.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="dimensions">
+<h3>Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this headline">¶</a></h3>
+<div class="align-centered figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/scout_mini_dimensions.png"><img alt="dimensions" src="_images/scout_mini_dimensions.png" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-text">Dimensions</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="ros-packages">
+<h2>ROS Packages<a class="headerlink" href="#ros-packages" title="Permalink to this headline">¶</a></h2>
+<p>Scout Mini의 <code class="docutils literal notranslate"><span class="pre">ROS</span></code> 인터페이스를 구성하고 있는 패키지들은 다음과 같습니다.</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">scout_base</span></code> :
+로봇 MCU와의 시리얼 통신을 위한 패키지입니다.
+그리고 피드백 데이터를 바탕으로 구현된 진단(diagnostic) 노드를 포함하고 있습니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">scout_base_controller</span></code> :
+Differential drive controller를 구현한 패키지입니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">scout_bringup</span></code> :
+로봇의 전체 ROS 시스템을 실행시키는 실행(launch) 파일과 설정 파일을 포함하고 있습니다.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">scout_bringup 패키지에 있는 실행 파일(<code class="docutils literal notranslate"><span class="pre">scout_bringup.launch</span></code>)을 이용해서
+전체 ROS 시스템을 실행 시킬 수 있습니다. 그리고 실행 파일의 <code class="docutils literal notranslate"><span class="pre">robot_name</span></code>
+변수 설정틀 통해서 로봇의 모델(Scout V1, V2, Mini)을 선택할 수 있습니다.</p>
+</div>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">scout_description</span></code> :
+로봇의 좌표 체계를 정의한 URDF 파일과 시각화를 위한 3D mesh 파일을 포함하고 있습니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">scout_navigation</span></code> :
+SLAM, Navigation 기능에 대한 설정, 실행 파일을 포함하고 있습니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">scout_teleop</span></code> :
+블루투스 컨트롤러를 이용해서 로봇을 원격 조작할 수 있는 패키지입니다.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="ros-api-overview">
+<h2>ROS API Overview<a class="headerlink" href="#ros-api-overview" title="Permalink to this headline">¶</a></h2>
+<p>사용자가 상위 어플리케이션을 쉽게 개발할 수 있도록 <code class="docutils literal notranslate"><span class="pre">ROS</span></code> 표준 인터페이스를 제공합니다.
+<a class="reference external" href="https://www.ros.org/reps/rep-0000.html">REPs(ROS Enhancement Proposals)</a> 를
+준수하여 호환성과 접근성을 높였습니다.</p>
+<div class="section" id="feedback-interface">
+<h3>Feedback Interface<a class="headerlink" href="#feedback-interface" title="Permalink to this headline">¶</a></h3>
+<p>로봇의 피드백 데이터에는 3가지가 있습니다. 로봇 베이스에 대한 피드백, 모터에 대한 피드백,
+조명 제어에 대한 피드백이 있습니다.</p>
+<ul class="simple">
+<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_base/base_feedback</span></code></li>
+</ul>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
+
+<span class="n">string</span> <span class="n">robot_name</span>
+
+<span class="n">BaseState</span> <span class="n">base_state</span>
+  <span class="n">string</span> <span class="n">state</span>             <span class="c1"># NORMAL, STOP</span>
+  <span class="n">string</span> <span class="n">control_mode</span>      <span class="c1"># REMOTE, CAN, SERIAL, NONE</span>
+  <span class="n">float64</span> <span class="n">battery_voltage</span>  <span class="c1"># Actual voltage (V)</span>
+  <span class="n">string</span> <span class="n">battery_state</span>     <span class="c1"># Under-voltage, Over-voltage</span>
+
+<span class="n">float64</span> <span class="n">linear_speed</span>   <span class="c1"># Linear speed (m/s)</span>
+<span class="n">float64</span> <span class="n">angular_speed</span>  <span class="c1"># Angular speed (rad/s)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_base/motor_feedback</span></code></li>
+</ul>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
+
+<span class="n">MotorState</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">motor_states</span>
+  <span class="n">string</span> <span class="nb">id</span>             <span class="c1"># front_right, front_left, rear_left, rear_right</span>
+  <span class="n">float64</span> <span class="n">current</span>       <span class="c1"># Actual current (A)</span>
+  <span class="n">float64</span> <span class="n">velocity</span>      <span class="c1"># Actual speed of motor (rad/s)</span>
+  <span class="n">float64</span> <span class="n">temperature</span>   <span class="c1"># Actual temperature of motor (C)</span>
+  <span class="n">string</span> <span class="n">communication</span>  <span class="c1"># Communication state with motor</span>
+
+<span class="n">string</span> <span class="n">current_state</span>      <span class="c1"># Current state of motors</span>
+<span class="n">string</span> <span class="n">temperature_state</span>  <span class="c1"># Temperature state of motors</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_base/light_feedback</span></code></li>
+</ul>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
+
+<span class="nb">bool</span> <span class="n">control_enable</span>  <span class="c1"># Lighting control enable flag</span>
+
+<span class="n">LightState</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">light_states</span>
+  <span class="n">string</span> <span class="nb">id</span>         <span class="c1"># FRONG, REAR</span>
+  <span class="n">string</span> <span class="n">mode</span>       <span class="c1"># The current mode (NC, NO, BL, CUSTOM)</span>
+  <span class="n">uint8</span> <span class="n">brightness</span>  <span class="c1"># The current brightness of light (0 - 100)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="diagnostic-interface">
+<h3>Diagnostic Interface<a class="headerlink" href="#diagnostic-interface" title="Permalink to this headline">¶</a></h3>
+<p>사용자가 로봇의 상태를 모니터링할 수 있도록 진단(diagnostic) 정보를 제공합니다.
+진단 정보는 topic과 rqt gui를 이용해서 확인할 수 있습니다.
+rqt gui를 실행시키는 명령어는 아래와 같습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosrun rqt_robot_monitor rqt_robot_monitor
+</pre></div>
+</div>
+</div>
+<div class="section" id="base-interface">
+<h3>Base Interface<a class="headerlink" href="#base-interface" title="Permalink to this headline">¶</a></h3>
+<p>로봇은 <a class="reference external" href="http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html">geometry_msgs/Twist</a>
+메세지 타입의 <code class="docutils literal notranslate"><span class="pre">/scout_base_controller/cmd_vel</span></code> 토픽을 구독(subscribe)합니다.
+사용자는 이 토픽을 이용해서 로봇을 제어할 수 있습니다.</p>
+<p>사용자는 /scout_base_controller/cmd_vel 토픽을 바로 이용할 수 있지만,
+일반적으로 어플리케이션은 /teleop/cmd_vel, /move_base/cmd_vel, /cmd_vel 토픽을 이용합니다.
+이 토픽들의 데이터는 설정된 우선 순위에 따라 /scout_base_controller/cmd_vel 토픽으로 전달됩니다.
+이와 같은 mux 시스템은 <a class="reference external" href="http://wiki.ros.org/twist_mux">twist_mux</a> 패키지를 이용하여
+구현되어 있습니다.</p>
+</div>
+<div class="section" id="light-interface">
+<h3>Light Interface<a class="headerlink" href="#light-interface" title="Permalink to this headline">¶</a></h3>
+<p>로봇의 전면과 후면에 설치되어 있는 조명의 제어 인터페이스는 사용자에게 개방되어 있습니다.
+사용자는 <code class="docutils literal notranslate"><span class="pre">/scout_base/light_command</span></code> 토픽을 이용해서 조명을 제어할 수 있습니다.</p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lighting Mode</span>
+<span class="c1"># 0: NC / 1: NO / 2: BL / 3: CUSTOM</span>
+
+<span class="n">uint8</span> <span class="n">front_mode</span>        <span class="c1"># Lighting Mode</span>
+<span class="n">uint8</span> <span class="n">front_brightness</span>  <span class="c1"># Only for CUSTOM mode</span>
+
+<span class="n">uint8</span> <span class="n">rear_mode</span>         <span class="c1"># Lighting Mode</span>
+<span class="n">uint8</span> <span class="n">rear_brighteness</span>  <span class="c1"># Only for CUSTOM mode</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Scout Mini의 경우에는, 조명이 로봇의 전면에만 조명이 설치되어 있기 때문에 후면 조명 인터페이스는
+동작하지 않습니다.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="turn-on-scout-mini">
+<h3>Turn on Scout Mini<a class="headerlink" href="#turn-on-scout-mini" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>로봇의 후면에 있는 전원 스위치를 누르십시오.</li>
+<li>로봇의 전원이 켜지면, 배터리 잔량 디스플레이와 전면 조명이 켜집니다.</li>
+<li>RC 조종기의 SWB 스위치를 이용하여 Remote 또는 Serial 모드로 변경하십시오.</li>
+</ul>
+</div>
+<div class="section" id="log-in">
+<h3>Log In<a class="headerlink" href="#log-in" title="Permalink to this headline">¶</a></h3>
+<p>로봇이 네트워크에 연결되면, ssh를 이용해서 원격으로 접속할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt install ssh
+$ ssh scout@&lt;ROBOT_IP&gt;
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IPv4 네트워크 주소이고, 로봇 PC의 비밀번호는 <code class="docutils literal notranslate"><span class="pre">onground</span></code> 입니다.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">로봇을 네트워크에 연결하기 위해서 모니터가 필요합니다.</p>
+</div>
+</div>
+<div class="section" id="ros-network-setup">
+<h3>ROS Network Setup<a class="headerlink" href="#ros-network-setup" title="Permalink to this headline">¶</a></h3>
+<p>ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS 인터페이스에 접근할 수 있습니다.
+<a class="reference external" href="http://wiki.ros.org/ROS/NetworkSetup">ROS 네트워크 설정</a>  방법은 아래와 같습니다.</p>
+<ol class="arabic simple">
+<li>bashrc 스크립트 파일에서 <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_HOSTNAME</span></code> 환경 변수를 설정하십시오.</li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
+
+<span class="c1"># Add the following lines</span>
+<span class="nb">export</span> <span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://&lt;ROBOT_IP&gt;:11311
+<span class="nb">export</span> <span class="nv">ROS_HOSTNAME</span><span class="o">=</span>&lt;REMOTE_IP&gt;
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;REMOTE_IP&gt;</span></code> 는 원격 PC의 IP 주소입니다.</p>
+<ol class="arabic simple" start="2">
+<li>Hostname과 IP 주소를 매핑하기 위하여 <code class="docutils literal notranslate"><span class="pre">/etc/hosts</span></code> 파일에 아래의 내용을 추가하십시오.</li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
+
+<span class="c1"># Add the following line</span>
+&lt;ROBOT_IP&gt;    &lt;ROBOT_HOSTNAME&gt;
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_HOSTNAME&gt;</span></code> 는 로봇 PC의 Hostname 입니다.
+일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.</p>
+</div>
+<div class="section" id="visualize-data">
+<h3>Visualize Data<a class="headerlink" href="#visualize-data" title="Permalink to this headline">¶</a></h3>
+<p>ROS 네트워크 설정이 완료되면 원격 PC에서 rostopic 데이터를 확인할 수 있습니다.
+또한 <a class="reference external" href="http://wiki.ros.org/rviz">RViz</a> 를 이용하여 시각화된 데이터를 확인할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rviz
+</pre></div>
+</div>
+<div class="align-centered figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/scout_mini_rviz.png"><img alt="rviz" src="_images/scout_mini_rviz.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">RViz</span></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            </div>
+            <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="hunter.html" class="btn btn-neutral float-right" title="Hunter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="scout.html" class="btn btn-neutral float-left" title="Scout" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, ROAS Inc.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+          </div>
+        </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+  
+   
+
+</body>
+
+</html>
