@@ -7,7 +7,7 @@ Building new releases
 ------------------------------------------
 
 ```
-git clone https://github.com/brightenlee/docs.git html
+git clone https://github.com/brightenlee/roas_docs.git html
 ```
 
 
@@ -29,7 +29,7 @@ sphinx-quickstart
 ```
 rm -rf _build/html
 cd _build
-git clone https://github.com/brightenlee/docs.git html
+git clone https://github.com/brightenlee/roas_docs.git html
 cd html
 git branch gh-pages
 git symbolic-ref HEAD refs/heads/gh-pages
