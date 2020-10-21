@@ -419,30 +419,30 @@ ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS
 
 1. bashrc 스크립트 파일에서 ``ROS_MASTER_URI``, ``ROS_HOSTNAME`` 환경 변수를 설정하십시오. 
 
-.. code-block:: bash
+  .. code-block:: bash
 
-  $ vim ~/.bashrc
+    $ vim ~/.bashrc
 
-  # Add the following lines
-  export ROS_MASTER_URI=http://<ROBOT_IP>:11311
-  export ROS_HOSTNAME=<REMOTE_IP>
+    # Add the following lines
+    export ROS_MASTER_URI=http://<ROBOT_IP>:11311
+    export ROS_HOSTNAME=<REMOTE_IP>
 
-``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<REMOTE_IP>`` 는 원격 PC의 IP 주소입니다.
+  ``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<REMOTE_IP>`` 는 원격 PC의 IP 주소입니다.
 
 2. Hostname과 IP 주소를 매핑하기 위하여 ``/etc/hosts`` 파일에 아래의 내용을 추가하십시오.
 
-.. code-block:: bash
+  .. code-block:: bash
 
-  $ sudo vim ~/.bashrc
+    $ sudo vim ~/.bashrc
 
-  # Add the following line
-  <ROBOT_IP>    <ROBOT_HOSTNAME>
+    # Add the following line
+    <ROBOT_IP>    <ROBOT_HOSTNAME>
 
-``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<ROBOT_HOSTNAME>`` 는 로봇 PC의 Hostname 입니다. 
-일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.
+  ``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<ROBOT_HOSTNAME>`` 는 로봇 PC의 Hostname 입니다. 
+  일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.
 
-.. tip::
-    Hostname은 ``hostname`` 명령을 터미널 창에 입력해서 확인할 수 있습니다.
+  .. tip::
+      Hostname은 ``hostname`` 명령을 터미널 창에 입력해서 확인할 수 있습니다.
 
 Visualize Data
 ++++++++++++++
