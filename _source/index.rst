@@ -20,6 +20,11 @@ ROAS Tutorial
 Mobile Robot
 ------------
 
+.. image:: _static/former/former.png
+  :width: 100%
+  :align: center
+  :alt: jackal
+
 .. image:: _static/jackal/jackal.png
   :width: 100%
   :align: center
@@ -50,33 +55,23 @@ Mobile Robot
 .. toctree::
    :hidden:
    :maxdepth: 2
-   :caption: ROS Tutorial
+   :caption: Tutorial
 
    ros_basic
-   ros_demo
-
-.. toctree::
-   :hidden:
-   :maxdepth: 2
-   :caption: ROS2 Tutorial
-
    ros2_basic
-   ros2_demo
 
 .. toctree::
    :hidden:
    :maxdepth: 2
-   :caption: Application
-
-   slam
-   navigation
-
-.. toctree::
-   :hidden:
-   :maxdepth: 2
-   :caption: Mobile Robot
+   :caption: Indoor Mobile Robot
 
    former
+
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+   :caption: Outdoor Mobile Robot
+
    jackal
    husky
    scout

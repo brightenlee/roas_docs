@@ -105,7 +105,7 @@ html_context = {
   "css_files": ['_static/custom.css']
 }
 
-#html_logo = '_static/ROAS_logo.png'
+html_logo = '_static/ROAS_logo_white.png'
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -121,7 +121,7 @@ html_context = {
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'OnGroundTutorialdoc'
+htmlhelp_basename = 'ROASTutorialdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -154,7 +154,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'OnGroundTutorial.tex', u'OnGround Tutorial Documentation',
+    (master_doc, 'ROASTutorial.tex', u'ROAS Tutorial Documentation',
      u'Brighten Lee', 'manual'),
 ]
 
@@ -164,7 +164,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'ongroundtutorial', u'OnGround Tutorial Documentation',
+    (master_doc, 'roastutorial', u'ROAS Tutorial Documentation',
      [author], 1)
 ]
 
@@ -175,8 +175,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'OnGroundTutorial', u'OnGround Tutorial Documentation',
-     author, 'OnGroundTutorial', 'One line description of project.',
+    (master_doc, 'ROASTutorial', u'ROAS Tutorial Documentation',
+     author, 'ROASTutorial', 'One line description of project.',
      'Miscellaneous'),
 ]
 
