@@ -40,7 +40,7 @@
   <link rel="index" title="Index" href="genindex.html" />
   <link rel="search" title="Search" href="search.html" />
   <link rel="next" title="Jackal" href="jackal.html" />
-  <link rel="prev" title="Navigation" href="navigation.html" /> 
+  <link rel="prev" title="ROS2 Basic" href="ros2_basic.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -57,6 +57,9 @@
             <a href="index.html" class="icon icon-home" alt="Documentation Home"> ROAS Tutorial
               
 
+              
+              
+              <img src="_static/ROAS_logo_white.png" class="logo" alt="Logo" />
               
             </a>
 
@@ -85,24 +88,53 @@
           
           
           
-          <p class="caption"><span class="caption-text">ROS Tutorial</span></p>
+          <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ros_basic.html">Basic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ros_demo.html">Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros_basic.html">ROS Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros2_basic.html">ROS2 Basic</a></li>
 </ul>
-<p class="caption"><span class="caption-text">ROS2 Tutorial</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="ros2_basic.html">Basic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ros2_demo.html">Demo</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Application</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="slam.html">SLAM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Mobile Robot</span></p>
+<p class="caption"><span class="caption-text">Indoor Mobile Robot</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Former</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Former</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-items-are-included">What items are included</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#technical-specifications">Technical Specifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dimensions">Dimensions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#robot-overview">Robot Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#electrical-overview">Electrical Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#component-overview">Component Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#d-lidar-sensor">2D Lidar Sensor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rgbd-camera">RGBD Camera</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#imu-sensor">IMU Sensor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#range-sensor">Range Sensor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#computer-overview">Computer Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#network">Network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#upstart">Upstart</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ros-system-overview">ROS System Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ros-environment">ROS Environment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ros-workspace-setup">ROS Workspace Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ros-network-setup">ROS Network Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#teleoperation">Teleoperation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#contact">Contact</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Outdoor Mobile Robot</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="jackal.html">Jackal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="husky.html">Husky</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scout.html">Scout</a></li>
@@ -134,8 +166,8 @@
 
       <div class="wy-nav-content">
         <div class="header-override">
-          <a href="http://www.roas.co.kr/"><img src="_static/ROAS_logo.png" height="70"
-              style="margin-top:0px;margin-bottom:15px;"></a>
+          <!---a href="http://www.roas.co.kr/"><img src="_static/ROAS_logo.png" height="70"
+              style="margin-top:0px;margin-bottom:15px;"></a-->
           <!--a href="http://www.gaitech.kr/"><img src="_static/Gaitech_logo.png" height="70"
               style="margin-top:0px;margin-bottom:15px;margin-left:20px;"></a-->
         </div>
@@ -183,7 +215,519 @@
                 
   <div class="section" id="former">
 <h1>Former<a class="headerlink" href="#former" title="Permalink to this headline">¶</a></h1>
-<p><strong>Coming soon</strong></p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/former.png"><img alt="former" src="_images/former.png" style="width: 100%;" /></a>
+</div>
+<p><strong>포머(Former)</strong> 는 ROS 기반의 모바일 플랫폼으로, 컴퓨터와 라이더 센서, 카메라, IMU 센서,
+초음파 센서 등이 포함되어 있습니다. 사용자는 이를 바탕으로 SLAM 및 Navigation 등 다양한 데모
+어플리케이션을 바로 사용할 수 있고, 추가 개발이 가능합니다.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="what-items-are-included">
+<h3>What items are included<a class="headerlink" href="#what-items-are-included" title="Permalink to this headline">¶</a></h3>
+<p>포머와 함께 포함되어 있는 기본 구성 요소들은 아래와 같습니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="72%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Item Name</th>
+<th class="head">Quantity</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><dl class="first last docutils">
+<dt>Former mobile platform</dt>
+<dd><ul class="first last simple">
+<li>Intel i5 computer</li>
+<li>SICK TiM571</li>
+<li>Intel RealSense D435</li>
+<li>IMU</li>
+<li>Ultrasonic sensor x 2</li>
+</ul>
+</dd>
+</dl>
+</td>
+<td>x 1</td>
+</tr>
+<tr class="row-odd"><td>Lithium battery</td>
+<td>x 1</td>
+</tr>
+<tr class="row-even"><td>Battery charger</td>
+<td>x 1</td>
+</tr>
+<tr class="row-odd"><td>Bluetooth controller</td>
+<td>x 1</td>
+</tr>
+<tr class="row-even"><td>User manual</td>
+<td>x 1</td>
+</tr>
+</tbody>
+</table>
+<p>추가로 선택할 수 있는 옵션은 아래와 같습니다.</p>
+<ul class="simple">
+<li>리튬이온(Li-ion) 배터리 업그레이드</li>
+<li>자동 충전을 위한 도킹 스테이션</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="technical-specifications">
+<h3>Technical Specifications<a class="headerlink" href="#technical-specifications" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Mechanics</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Dimensions (L x W x H)</td>
+<td>404 x 404 x 308 mm</td>
+</tr>
+<tr class="row-odd"><td>Weight</td>
+<td>35 kg</td>
+</tr>
+<tr class="row-even"><td>Ground Clearance</td>
+<td>60 mm</td>
+</tr>
+<tr class="row-odd"><td colspan="2">Performance</td>
+</tr>
+<tr class="row-even"><td>Max. Speed</td>
+<td>1.5 m/s</td>
+</tr>
+<tr class="row-odd"><td>Max. Payload</td>
+<td>70 kg</td>
+</tr>
+<tr class="row-even"><td>Type of Drive</td>
+<td>Two wheels differential drive</td>
+</tr>
+<tr class="row-odd"><td>Drive Power</td>
+<td>300 W</td>
+</tr>
+<tr class="row-even"><td>Working Environment</td>
+<td>Indoor</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="41%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">Battery and Power</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Battery Type</td>
+<td colspan="2">LiFePo4 (default)                        | Li-ion</td>
+</tr>
+<tr class="row-odd"><td>Capacity</td>
+<td>25.6 V 15 Ah</td>
+<td>25.9 V 31.2 Ah</td>
+</tr>
+<tr class="row-even"><td>Run Time</td>
+<td>2 hours</td>
+<td>4 hours</td>
+</tr>
+<tr class="row-odd"><td>Charge Time</td>
+<td>1.5 hours</td>
+<td>2.5 hours</td>
+</tr>
+<tr class="row-even"><td>Charging Interface</td>
+<td colspan="2">Battery charger, Docking station (optional)</td>
+</tr>
+<tr class="row-odd"><td>User Power</td>
+<td colspan="2">5 V at 3 A, 12 V at 5 A, 24 V at 5 A (total 195 W)</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">System</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Communication</td>
+<td>Ethernet, USB</td>
+</tr>
+<tr class="row-odd"><td>Feedback</td>
+<td>Odometry, motor velocity and current, battery voltage, controller temperature</td>
+</tr>
+<tr class="row-even"><td>System environment</td>
+<td>Ubuntu, ROS, ROS2</td>
+</tr>
+<tr class="row-odd"><td>Computer</td>
+<td>Intel i5, 8GB RAM, 120GB SSD, Wi-Fi Adapter</td>
+</tr>
+<tr class="row-even"><td>Controller</td>
+<td>Bluetooth controller</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Sensors</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2D Lidar Sensor</td>
+<td>SICK TiM571</td>
+</tr>
+<tr class="row-odd"><td>RGBD Camera</td>
+<td>Intel RealSense D435</td>
+</tr>
+<tr class="row-even"><td>IMU</td>
+<td>Triaxial accelerometer, rate gyro and magnetometer</td>
+</tr>
+<tr class="row-odd"><td>Range Sensor</td>
+<td>Ultrasonic sensor x 2</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="dimensions">
+<h3>Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this headline">¶</a></h3>
+<div class="align-centered figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/former_dimensions.png"><img alt="dimensions" src="_images/former_dimensions.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Dimensions</span></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="robot-overview">
+<h3>Robot Overview<a class="headerlink" href="#robot-overview" title="Permalink to this headline">¶</a></h3>
+<div class="align-centered figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/former_front_view.png"><img alt="front view" src="_images/former_front_view.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Former front view</span></p>
+</div>
+<div class="align-centered figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/former_rear_view.png"><img alt="rear view" src="_images/former_rear_view.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Former rear view</span></p>
+</div>
+<p>포머는 2개의 BLDC 모터를 이용하여 차동 구동(Differential drive) 방식으로 제어됩니다.
+로봇의 전면에는 라이더 센서, RGBD 카메라, 초음파 센서와 도킹을 위한 충전 단자가
+있습니다. 로봇의 후면에는 비상 정지 스위치와 인터페이스 패널이 있습니다.</p>
+<div class="align-centered figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/former_interface_panel.jpg"><img alt="interface panel" src="_images/former_interface_panel.jpg" style="width: 90%;" /></a>
+<p class="caption"><span class="caption-text">Former interface panel</span></p>
+</div>
+<p>인터페이스 패널에는 배터리 충전기와 연결할 수 있는 충전 커넥터(Anderson connector)와
+전원 스위치, 내부 컴퓨터와 연결되는 USB, HDMI, LAN 포트가 포함되어 있습니다.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="electrical-overview">
+<h3>Electrical Overview<a class="headerlink" href="#electrical-overview" title="Permalink to this headline">¶</a></h3>
+<div class="align-centered figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/former_power_diagram.png"><img alt="power diagram" src="_images/former_power_diagram.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Former power diagram</span></p>
+</div>
+<p>로봇 내부에 있는 전원 보드(Power Distribution Board)는 24V 배터리와 연결됩니다.
+보드는 배터리의 전압을 24V, 12V, 5V로 강압하여 로봇의 구성 요소에 공급합니다.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">사용자는 Molex 커넥터(5557-02)를 이용하여 User Power와 추가 디바이스를 연결할 수 있습니다.</p>
+</div>
+<div class="align-centered figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/former_communication_diagram.png"><img alt="communication diagram" src="_images/former_communication_diagram.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Former communication diagram</span></p>
+</div>
+<p>로봇의 전체 시스템은 <strong>ROS(Robot Operating System)</strong> 를 기반으로 통합되어 있으며, 로봇 내부의
+컴퓨터에서 제어할 수 있습니다. 컴퓨터는 Serial 통신을 이용하여 모터 컨트롤러와 통신합니다.
+LAN 포트를 이용하여 TiM571 라이더 센서와 연결되고, USB 포트를 이용하여 D435 카메라,
+IMU 센서와 연결됩니다.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="component-overview">
+<h3>Component Overview<a class="headerlink" href="#component-overview" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="d-lidar-sensor">
+<h4>2D Lidar Sensor<a class="headerlink" href="#d-lidar-sensor" title="Permalink to this headline">¶</a></h4>
+<p>포머의 전면에는 SICK TiM571 2D 라이더 센서가 설치되어 있습니다. 라이더 센서의 특징은 220°의 측정각,
+25m의 측정거리, 15hz의 스캔 주파수, 0.33°의 분해능입니다. 라이더 센서는 TCP/IP 통신 인터페이스를
+사용합니다.</p>
+</div>
+<div class="section" id="rgbd-camera">
+<h4>RGBD Camera<a class="headerlink" href="#rgbd-camera" title="Permalink to this headline">¶</a></h4>
+<p>포머의 전면에는 Intel RealSense D435 RGBD 카메라가 설치되어 있습니다. 카메라의 RGB 특징은 1920×1080의
+해상도, 69.4°×42.5°×77°(H×V×D)의 FOV, 30 fps의 프레임입니다. 카메라의 depth 특징은 1280×720의 해상도,
+86°×57°의 FOV, 90 fps의 프레임입니다. 카메라에는 통신을 위한 USB-C 타입 커넥터가 있습니다.</p>
+</div>
+<div class="section" id="imu-sensor">
+<h4>IMU Sensor<a class="headerlink" href="#imu-sensor" title="Permalink to this headline">¶</a></h4>
+<p>포머의 내부에는 9축 IMU 센서가 설치되어 있습니다. 센서는 확장 칼만 필터를 사용하여 결합된 가속도계,
+자이로 속도, 자력계 데이터를 제공합니다. 센서의 특징은 ±2000°/s의 자이로 측정 범위, ±8 g의 가속도
+측정 범위, ±12 gauss의 자력계 측정 범위입니다. 센서는 통신 TTL serial과 SPI 통신 인터페이스를
+지원합니다.</p>
+</div>
+<div class="section" id="range-sensor">
+<h4>Range Sensor<a class="headerlink" href="#range-sensor" title="Permalink to this headline">¶</a></h4>
+<p>포머의 전면에는 2개의 초음파 센서가 설치되어 있습니다. 센서의 특징은 0.3m-5m의 측정 거리,
+1mm의 분해능입니다.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="computer-overview">
+<h3>Computer Overview<a class="headerlink" href="#computer-overview" title="Permalink to this headline">¶</a></h3>
+<p>포머 내부에 설치된 컴퓨터의 기본 사용자 이름은 <code class="docutils literal notranslate"><span class="pre">former</span></code> 이고, 비밀번호는 <code class="docutils literal notranslate"><span class="pre">roas</span></code> 입니다.
+설치되어 있는 운영체제는 Ubuntu 18.04 입니다.</p>
+<div class="section" id="network">
+<h4>Network<a class="headerlink" href="#network" title="Permalink to this headline">¶</a></h4>
+<p>포머 내부에는 이더넷 포트의 확장을 위해 이더넷 허브가 설치되어 있습니다. 기본적으로 이더넷
+허브에는 컴퓨터와 라이더 센서, 인터페이스 패널의 LAN 포트가 연결되어 있습니다. 사용자는
+<code class="docutils literal notranslate"><span class="pre">192.168.10.x</span></code> 대역의 IP를 이용하여 인터페이스 패널의 LAN 포트를 사용할 수 있습니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Device Name</th>
+<th class="head">IP Address</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Computer</td>
+<td><code class="docutils literal notranslate"><span class="pre">192.168.10.10</span></code></td>
+</tr>
+<tr class="row-odd"><td>2D Lidar sensor</td>
+<td><code class="docutils literal notranslate"><span class="pre">192.168.10.11</span></code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="upstart">
+<h4>Upstart<a class="headerlink" href="#upstart" title="Permalink to this headline">¶</a></h4>
+<p>포머는 systemd를 사용하여, 컴퓨터가 부팅됐을 때 자동으로 ROS 시스템을 실행합니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Service Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">former</span></code></td>
+<td>포머의 기본 시스템을 실행 (모터 컨트롤러와 통신, 차동 구동 컨트롤러, 오도메트리 계산 등)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">sensors</span></code></td>
+<td>포머에 설치되어 있는 센서들을 실행 (라이더 센서, RGBD 카메라, IMU, 초음파 센서 등)</td>
+</tr>
+</tbody>
+</table>
+<p>Upstart 기능은 아래의 명령어를 이용하여 수동으로 정지 및 시작할 수 있습니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo service former stop
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo service former start
+$ sudo service sensors start
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="ros-system-overview">
+<h3>ROS System Overview<a class="headerlink" href="#ros-system-overview" title="Permalink to this headline">¶</a></h3>
+<div class="align-centered figure align-center">
+<a class="reference internal image-reference" href="_images/former_ros.png"><img alt="ros" src="_images/former_ros.png" style="width: 100%;" /></a>
+</div>
+<p>로봇 응용 프로그램 개발을 위한 오픈 소스, 메타 운영체제인 ROS는, 로봇 응용 프로그램을 개발할 때 필요한
+하드웨어 추상화, 하위 디바이스 제어, 일반적으로 사용되는 기능의 구현, 프로세스 간의 메시지 전달,
+패키지 관리, 개발 환경에 필요한 라이브러리와 다양한 개발 및 디버깅 도구를 제공합니다.</p>
+<p>ROS는 공식 지원 운영체제로 Ubuntu LTS를 지원합니다. 지원하는 Ubuntu 버전은 2년에 한 번씩 공개되는
+Ubuntu LTS(Long Term Support) 주기에 맞추기로 하였고, 현재 Ubuntu 20.04 버전에 맞춰서 ROS Noetic
+버전까지 공개되어 있습니다.</p>
+<p>포머의 소프트웨어는 Ubuntu 18.04와 ROS Melodic 기반으로 합니다. 필수 라이브러리와 소프트웨어 패키지들은
+포머 내부의 컴퓨터에 설치되어 있습니다. 소스 파일은 기본 워크스페이스로 설정된 폴더(~/catkin_ws/src)
+안에 설치되어 있습니다.</p>
+<p>포머가 제공하는 ROS API는 아래의 표와 같습니다.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="21%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Topic Name Name</th>
+<th class="head">Message Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">geometry_msgs/Twist</span></code></td>
+<td>포머를 구동시킬 수 있는 속도 명령</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/odometry/filtered</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">nav_msgs/Odometry</span></code></td>
+<td>바퀴의 엔코더와 IMU 데이터를 결합하여 계산된 odometry</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/former/feedback</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">forme_msgs/Feedback</span></code></td>
+<td>모터 컨트롤러부터 받은 피드백</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/scan</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">sensor_msgs/LaserScan</span></code></td>
+<td>2D 라이더 센서의 데이터</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/camera/color/image_raw</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">sensor_msgs/Image</span></code></td>
+<td>RGBD 카메라의 RGB 데이터</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/camera/depth/image_rect_raw</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">sensor_msgs/Image</span></code></td>
+<td>RGBD 카메라의 depth 데이터 (2D)</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/camera/depth_registered/points</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">sensor_msgs/PointCloud2</span></code></td>
+<td>RGBD 카메라의 depth 데이터 (3D)</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/imu/data</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">sensor_msgs/IMU</span></code></td>
+<td>가속도계, 자이로 속도 및 자력계 데이터를 기반으로 추정된 위치 데이터</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/former/left_ultrasonic</span></code></td>
+<td rowspan="2"><code class="docutils literal notranslate"><span class="pre">sensor_msgs/Range</span></code></td>
+<td rowspan="2">초음파 센서의 데이터</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/former/right_ultrasonic</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>첫 번째 단계는 포머의 전원을 켜는 것입니다. 포머의 후면에 있는 인터페이스 패널의 전원 버튼을 누르십시오.
+ROS는 분산 컴퓨팅 환경으로, 사용자의 컴퓨터에서 원격으로 포머의 ROS 인터페이스와 연결할 수 있습니다.
+이를 위해서 먼저 포머의 컴퓨터와 사용자의 컴퓨터를 같은 네트워크에 연결하고, 작업 환경 설정과
+ROS 네트워크 설정이 필요합니다.</p>
+<div class="section" id="ros-environment">
+<h3>ROS Environment<a class="headerlink" href="#ros-environment" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ros-workspace-setup">
+<h4>ROS Workspace Setup<a class="headerlink" href="#ros-workspace-setup" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>포머의 컴퓨터에 설치된 패키지들(~/catkin_ws/src/former_ros)을 사용자 컴퓨터의 워크스페이스로 복사하십시오.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd former_ros/ ~/catkin_ws/src/
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>former_base 패키지의 lib 폴더 안에 있는 deb 파일들을 설치한 뒤에 패키지들을 빌드하십시오.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd ~/catkin_ws/src/former_ros/former_base/lib
+$ sudo dpkg -i ros-melodic-roas-base-*
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="ros-network-setup">
+<h4>ROS Network Setup<a class="headerlink" href="#ros-network-setup" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li>bashrc 스크립트 파일에서 <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_HOSTNAME</span></code> 환경 변수를 설정하십시오.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
+
+<span class="c1"># Add the following lines</span>
+<span class="nb">export</span> <span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://&lt;FORMER_IP&gt;:11311
+<span class="nb">export</span> <span class="nv">ROS_HOSTNAME</span><span class="o">=</span>&lt;USER_COMPUTER_IP&gt;
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;FORMER_IP&gt;</span></code> 는 포머 컴퓨터의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;USER_COMPUTER_IP&gt;</span></code> 는 사용자 컴퓨터의 IP 주소입니다.</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li>Hostname과 IP 주소를 매핑하기 위하여 <code class="docutils literal notranslate"><span class="pre">/etc/hosts</span></code> 파일에 아래의 내용을 추가하십시오.</li>
+</ol>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
+
+<span class="c1"># Add the following line</span>
+&lt;FORMER_IP&gt;    &lt;FORMER_HOSTNAME&gt;
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;FORMER_IP&gt;</span></code> 는 포머 컴퓨터의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;FORMER_HOSTNAME&gt;</span></code> 는 포머 컴퓨터의 Hostname 입니다.
+일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Hostname은 <code class="docutils literal notranslate"><span class="pre">hostname</span></code> 명령을 터미널 창에 입력해서 확인할 수 있습니다.</p>
+</div>
+</div></blockquote>
+<p>위 설정 과정을 마치면 사용자의 컴퓨터와 포머의 ROS 인터페이스를 연결할 수 있습니다. 그리고 ssh를
+이용하여 사용자의 컴퓨터에서 포머의 컴퓨터로 원격 접속이 가능합니다.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt install ssh
+$ ssh former@&lt;FORMER_IP&gt;
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="teleoperation">
+<h3>Teleoperation<a class="headerlink" href="#teleoperation" title="Permalink to this headline">¶</a></h3>
+<p>함께 제공되는 블루투스 컨트롤러를 이용하여 포머를 수동으로 조작할 수 있습니다. 컨트롤러의
+가운데에 있는 PS4 로고 버튼을 누르면, 컨트롤러의 라이트가 점멸되면서 전원이 켜집니다.
+포머의 컴퓨터와 페어링이 완료되면 컨트롤러의 라이트가 파란색으로 점등됩니다. 페어링을 다시
+하기 위해서는 <code class="docutils literal notranslate"><span class="pre">SHARE</span></code> 버튼과 <code class="docutils literal notranslate"><span class="pre">PS4</span></code> 로고 버튼을 함께 눌러줘야 합니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">L1</span></code> (Deadman Switch)와 좌우 스틱을 이용하여 로봇을 조작할 수 있습니다. <code class="docutils literal notranslate"><span class="pre">L1</span></code> 와 <code class="docutils literal notranslate"><span class="pre">△</span></code> , <code class="docutils literal notranslate"><span class="pre">X</span></code>
+버튼을 이용해서 속도를 조절할 수 있습니다. <code class="docutils literal notranslate"><span class="pre">L1</span></code> 와 <code class="docutils literal notranslate"><span class="pre">△</span></code> 버튼을 누르면 속도 20%(최대 속도 기준)
+증가하며, <code class="docutils literal notranslate"><span class="pre">L1</span></code> 와 <code class="docutils literal notranslate"><span class="pre">X</span></code> 버튼을 누르면 속도가 20% 감소합니다.</p>
+<div class="align-centered figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/former_teleoperation.png"><img alt="teleoperation" src="_images/former_teleoperation.png" style="width: 100%;" /></a>
+<p class="caption"><span class="caption-text">Teleoperation</span></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
+<p>로아스는 사용자가 포머를 원활하게 사용할 수 있도록 적극적으로 지원하고 있습니다. 포머와 관련된
+기술 문의는 메일을 보내주시면 신속하게 대응해드리겠습니다. <a class="reference external" href="mailto:support&#37;&#52;&#48;roas&#46;co&#46;kr">support<span>&#64;</span>roas<span>&#46;</span>co<span>&#46;</span>kr</a></p>
+<p>포머나 기타 로아스의 제품과 관련된 문의는 <a class="reference external" href="mailto:sales&#37;&#52;&#48;roas&#46;co&#46;kr">sales<span>&#64;</span>roas<span>&#46;</span>co<span>&#46;</span>kr</a> 로 메일을 보내주십시오.</p>
+</div>
 </div>
 
 
@@ -197,7 +741,7 @@
         <a href="jackal.html" class="btn btn-neutral float-right" title="Jackal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="navigation.html" class="btn btn-neutral float-left" title="Navigation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ros2_basic.html" class="btn btn-neutral float-left" title="ROS2 Basic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

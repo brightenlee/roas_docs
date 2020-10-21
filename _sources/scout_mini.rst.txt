@@ -17,26 +17,28 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 추가 구성 요소들을 Scout Mini에 설치할 수 있습니다.
 이를 바탕으로 자율 주행 교육 및 연구, 실내외 보안 순찰, 환경 모니터링 등의 목적으로 사용할 수 있습니다.
 
-:download:`Download Scout Mini User Manual <_static/scout_mini/Scout_Mini_User_Manual.pdf>`
+:download:`Download Scout Mini (Differential) User Manual <_static/scout_mini/Scout_Mini(diff)_User_Manual.pdf>`
 
 |
 
 Component List
 ++++++++++++++
 
-+-----------------------------+----------+
-| Name                        | Quantity |
-+=============================+==========+
-| Robot body                  | x 1      |
-+-----------------------------+----------+
-| Battery charger (AC 220V)   | x 1      |
-+-----------------------------+----------+
-| Aviation plug (male, 4-pin) | x 2      |
-+-----------------------------+----------+
-| USB to RS232 cable          | x 1      |
-+-----------------------------+----------+
-| Remote control transmitter  | x 1      |
-+-----------------------------+----------+
++---------------------------------+----------+
+| Name                            | Quantity |
++=================================+==========+
+| Robot body                      | x 1      |
++---------------------------------+----------+
+| Battery charger (AC 220V)       | x 1      |
++---------------------------------+----------+
+| Aviation plug (male, 4-pin)     | x 2      |
++---------------------------------+----------+
+| USB to RS232 cable              | x 1      |
++---------------------------------+----------+
+| USB to CAN communication module | x 1      |
++---------------------------------+----------+
+| Remote control transmitter      | x 1      |
++---------------------------------+----------+
 
 |
 
@@ -46,7 +48,7 @@ Tech Specifications
 +---------------------------------------+-----------------------------------------------+
 | Specs                                 | Values                                        |
 +=======================================+===============================================+
-| L × W × H (mm)                        | 627 x 550 x 252                               |
+| L × W × H (mm)                        | 627 x 549 x 248                               |
 +---------------------------------------+-----------------------------------------------+
 | Front and rear wheels separation (mm) | 460                                           |
 +---------------------------------------+-----------------------------------------------+
@@ -54,7 +56,7 @@ Tech Specifications
 +---------------------------------------+-----------------------------------------------+
 | Weight of vehicle body (kg)           | 20                                            |
 +---------------------------------------+-----------------------------------------------+
-| Battery type                          | Lithium battery 24V 15aH                      |
+| Battery type                          | Lithium battery 24V 15Ah                      |
 +---------------------------------------+-----------------------------------------------+
 | Motor                                 | DC brushless 4 X 150W                         |
 +---------------------------------------+-----------------------------------------------+
@@ -66,11 +68,11 @@ Tech Specifications
 +---------------------------------------+-----------------------------------------------+
 | Safety equipment                      | Servo brake/anti-collision tube               |
 +---------------------------------------+-----------------------------------------------+
-| No-load highest speed (km/h)          | ≤ 20                                          |
+| No-load highest speed (km/h)          | 10.8                                          |
 +---------------------------------------+-----------------------------------------------+
 | Minimum turning radius                | Be able to turn on a pivot                    |
 +---------------------------------------+-----------------------------------------------+
-| Maximum climbing capacity             | ≥ 30°                                         |
+| Maximum climbing capacity             | 30°                                           |
 +---------------------------------------+-----------------------------------------------+
 | Minimum ground clearance (mm)         | 107                                           |
 +---------------------------------------+-----------------------------------------------+
@@ -136,17 +138,17 @@ Scout Mini의 전기 인터페이스는 모두 로봇 후면에 있습니다.
 
 * Aviation connector
 
-+---------+----------+-------------------------+-------------------------------+
-| Pin No. | Pin Type | Function and Definition | Remarks                       |
-+=========+==========+=========================+===============================+
-| 1       | Power    | VCC                     | Power positive, 23-29.2V, 5A  |
-+---------+----------+-------------------------+-------------------------------+
-| 2       | Power    | GND                     | Power negative                |
-+---------+----------+-------------------------+-------------------------------+
-| 3       | CAN      | CAN_H                   | CAN bus high                  |
-+---------+----------+-------------------------+-------------------------------+
-| 4       | CAN      | CAN_L                   | CAN bus low                   |
-+---------+----------+-------------------------+-------------------------------+
++---------+----------+------------+----------------------------------+
+| Pin No. | Pin Type | Definition | Remarks                          |
++=========+==========+============+==================================+
+| 1       | Power    | VCC        | Power positive, 23-29.2V, Max 5A |
++---------+----------+------------+----------------------------------+
+| 2       | Power    | GND        | Power negative                   |
++---------+----------+------------+----------------------------------+
+| 3       | CAN      | CAN_H      | CAN bus high                     |
++---------+----------+------------+----------------------------------+
+| 4       | CAN      | CAN_L      | CAN bus low                      |
++---------+----------+------------+----------------------------------+
 
 |
 
@@ -154,7 +156,7 @@ Remote Control
 ++++++++++++++
 
 .. figure:: _static/scout_mini/scout_mini_rc_transmitter.png
-  :width: 70%
+  :width: 100%
   :align: center
   :figclass: align-centered
   :alt: rc transmitter
@@ -246,29 +248,32 @@ ROS Packages
 
 Scout Mini의 ``ROS`` 인터페이스를 구성하고 있는 패키지들은 다음과 같습니다.
 
-* ``scout_base`` :
-  로봇 MCU와의 시리얼 통신을 위한 패키지입니다. 
-  그리고 피드백 데이터를 바탕으로 구현된 진단(diagnostic) 노드를 포함하고 있습니다. 
+* ``scout_lib`` :
+  로봇 MCU와의 시리얼 통신을 위한 라이브러리와 
+  피드백 데이터를 바탕으로 구현된 진단(diagnostic) 노드를 포함하고 있습니다. 
 
-* ``scout_base_controller`` :
+* ``scout_diff_controller`` :
   Differential drive controller를 구현한 패키지입니다.
 
-* ``scout_bringup`` :
-  로봇의 전체 ROS 시스템을 실행시키는 실행(launch) 파일과 설정 파일을 포함하고 있습니다.
+* ``scout_mini_base`` :
+   로봇의 전체 ROS 시스템을 실행시키는 실행(launch) 파일을 포함하고 있습니다.
 
 .. note::
 
-  scout_bringup 패키지에 있는 실행 파일(``scout_bringup.launch``)을 이용해서
-  전체 ROS 시스템을 실행 시킬 수 있습니다. 그리고 실행 파일의 ``robot_name`` 
-  변수 설정틀 통해서 로봇의 모델(Scout V1, V2, Mini)을 선택할 수 있습니다.
+  scout_mini_base 패키지에 있는 실행 파일(``base.launch``)을 이용해서
+  전체 ROS 시스템을 실행 시킬 수 있습니다. 그리고 실행 파일의 ``robot`` 
+  변수 설정틀 통해서 로봇의 모델(Diff, Omni)을 선택할 수 있습니다.
 
-* ``scout_description`` :
+* ``scout_mini_control`` :
+  로봇의 컨트롤러를 실행시키는 실행(launch) 파일을 포함하고 있습니다.
+
+* ``scout_mini_description`` :
   로봇의 좌표 체계를 정의한 URDF 파일과 시각화를 위한 3D mesh 파일을 포함하고 있습니다.
 
-* ``scout_navigation`` :
-  SLAM, Navigation 기능에 대한 설정, 실행 파일을 포함하고 있습니다.
+* ``scout_mini_msgs`` :
+  로봇의 ROS 인터페이스에서 사용하는 메세지 파일을 포함하고 있습니다.
 
-* ``scout_teleop`` :
+* ``scout_mini_teleop`` :
   블루투스 컨트롤러를 이용해서 로봇을 원격 조작할 수 있는 패키지입니다.
 
 |
@@ -286,7 +291,7 @@ Feedback Interface
 로봇의 피드백 데이터에는 3가지가 있습니다. 로봇 베이스에 대한 피드백, 모터에 대한 피드백,
 조명 제어에 대한 피드백이 있습니다.
 
-* **rostopic name:** ``/scout_base/base_feedback``
+* **rostopic name:** ``/scout_mini/base_feedback``
 
 .. code::
 
@@ -298,12 +303,13 @@ Feedback Interface
     string state             # NORMAL, STOP
     string control_mode      # REMOTE, CAN, SERIAL, NONE
     float64 battery_voltage  # Actual voltage (V)
-    string battery_state     # Under-voltage, Over-voltage
+    string battery_state     # NORMAL, WARNING, FAILURE
 
-  float64 linear_speed   # Linear speed (m/s)
-  float64 angular_speed  # Angular speed (rad/s)
+  float64 linearX_velocity  # LinearX velocity (m/s)
+  float64 linearY_velocity  # LinearY velocity (m/s)
+  float64 angular_speed     # Angular speed (rad/s)
 
-* **rostopic name:** ``/scout_base/motor_feedback``
+* **rostopic name:** ``/scout_mini/motor_feedback``
 
 .. code::
 
@@ -312,14 +318,14 @@ Feedback Interface
   MotorState[4] motor_states
     string id             # front_right, front_left, rear_left, rear_right
     float64 current       # Actual current (A)
-    float64 velocity      # Actual speed of motor (rad/s)
+    float64 velocity      # Actual velocity of motor (rad/s)
     float64 temperature   # Actual temperature of motor (C)
     string communication  # Communication state with motor
 
-  string current_state      # Current state of motors
-  string temperature_state  # Temperature state of motors
+  string current_state      # Current state of motors (NORMAL, FAILURE)
+  string temperature_state  # Temperature state of motors (NORMAL, FAILURE)
 
-* **rostopic name:** ``/scout_base/light_feedback``
+* **rostopic name:** ``/scout_mini/light_feedback``
 
 .. code::
 
@@ -328,7 +334,7 @@ Feedback Interface
   bool control_enable  # Lighting control enable flag
 
   LightState[2] light_states
-    string id         # FRONG, REAR
+    string id         # FRONT, REAR
     string mode       # The current mode (NC, NO, BL, CUSTOM)
     uint8 brightness  # The current brightness of light (0 - 100)
 
@@ -434,6 +440,9 @@ ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS
 
 ``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<ROBOT_HOSTNAME>`` 는 로봇 PC의 Hostname 입니다. 
 일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.
+
+.. tip::
+    Hostname은 ``hostname`` 명령을 터미널 창에 입력해서 확인할 수 있습니다.
 
 Visualize Data
 ++++++++++++++

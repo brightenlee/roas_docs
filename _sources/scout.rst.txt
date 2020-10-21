@@ -29,19 +29,21 @@ Navigation, Computer Vision 어플리케이션을 위하여 Stereo Camera, Lidar
 Component List
 ++++++++++++++
 
-+-----------------------------+----------+
-| Name                        | Quantity |
-+=============================+==========+
-| Robot body                  | x 1      |
-+-----------------------------+----------+
-| Battery charger (AC 220V)   | x 1      |
-+-----------------------------+----------+
-| Aviation plug (male, 4-pin) | x 2      |
-+-----------------------------+----------+
-| USB to RS232 cable          | x 1      |
-+-----------------------------+----------+
-| Remote control transmitter  | x 1      |
-+-----------------------------+----------+
++---------------------------------+----------+
+| Name                            | Quantity |
++=================================+==========+
+| Robot body                      | x 1      |
++---------------------------------+----------+
+| Battery charger (AC 220V)       | x 1      |
++---------------------------------+----------+
+| Aviation plug (male, 4-pin)     | x 2      |
++---------------------------------+----------+
+| USB to RS232 cable              | x 1      |
++---------------------------------+----------+
+| USB to CAN communication module | x 1      |
++---------------------------------+----------+
+| Remote control transmitter      | x 1      |
++---------------------------------+----------+
 
 |
 
@@ -59,7 +61,7 @@ Tech Specifications
 +---------------------------------------+-----------------------------------------------+
 | Weight of vehicle body (kg)           | 62                                            |
 +---------------------------------------+-----------------------------------------------+
-| Battery type                          | Lithium battery 24V 30aH                      |
+| Battery type                          | Lithium battery 24V 30Ah                      |
 +---------------------------------------+-----------------------------------------------+
 | Motor                                 | DC brushless 4 X 200W                         |
 +---------------------------------------+-----------------------------------------------+
@@ -73,11 +75,11 @@ Tech Specifications
 +---------------------------------------+-----------------------------------------------+
 | Safety equipment                      | Servo brake/anti-collision tube               |
 +---------------------------------------+-----------------------------------------------+
-| No-load highest speed (m/s)           | ≤ 1.5                                         |
+| No-load highest speed (m/s)           | 1.5                                           |
 +---------------------------------------+-----------------------------------------------+
 | Minimum turning radius                | Be able to turn on a pivot                    |
 +---------------------------------------+-----------------------------------------------+
-| Maximum climbing capacity             | ≥ 30°                                         |
+| Maximum climbing capacity             | 30°                                           |
 +---------------------------------------+-----------------------------------------------+
 | Minimum ground clearance (mm)         | 135                                           |
 +---------------------------------------+-----------------------------------------------+
@@ -94,7 +96,7 @@ Overview
 --------
 
 .. figure:: _static/scout/scout_front_view.png
-  :width: 90%
+  :width: 100%
   :align: center
   :figclass: align-centered
   :alt: front view
@@ -162,28 +164,28 @@ Top Electrical Interface
 |
 
 .. image:: _static/scout/scout_top_aviation_connector.png
-  :width: 25%
+  :width: 30%
   :align: left
   :alt: top aviation connector
 
 * Top aviation connector
 
-+---------+----------+-------------------------+-------------------------------+
-| Pin No. | Pin Type | Function and Definition | Remarks                       |
-+=========+==========+=========================+===============================+
-| 1       | Power    | VCC                     | Power positive, 23-29.2V, 10A |
-+---------+----------+-------------------------+-------------------------------+
-| 2       | Power    | GND                     | Power negative                |
-+---------+----------+-------------------------+-------------------------------+
-| 3       | CAN      | CAN_H                   | CAN bus high                  |
-+---------+----------+-------------------------+-------------------------------+
-| 4       | CAN      | CAN_L                   | CAN bus low                   |
-+---------+----------+-------------------------+-------------------------------+
++---------+----------+------------+-----------------------------------+
+| Pin No. | Pin Type | Definition | Remarks                           |
++=========+==========+============+===================================+
+| 1       | Power    | VCC        | Power positive, 23-29.2V, Max 10A |
++---------+----------+------------+-----------------------------------+
+| 2       | Power    | GND        | Power negative                    |
++---------+----------+------------+-----------------------------------+
+| 3       | CAN      | CAN_H      | CAN bus high                      |
++---------+----------+------------+-----------------------------------+
+| 4       | CAN      | CAN_L      | CAN bus low                       |
++---------+----------+------------+-----------------------------------+
 
 |
 
 .. image:: _static/scout/scout_top_db9_connector.png
-  :width: 25%
+  :width: 30%
   :align: left
   :alt: top db9 connector
 
@@ -233,23 +235,23 @@ Rear Electrical Interface
 |
 
 .. image:: _static/scout/scout_rear_aviation_connector.png
-  :width: 25%
+  :width: 30%
   :align: left
   :alt: rear aviation connector
 
 * Rear aviation connector
 
-+---------+----------+-------------------------+-------------------------------+
-| Pin No. | Pin Type | Function and Definition | Remarks                       |
-+=========+==========+=========================+===============================+
-| 1       | Power    | VCC                     | Power positive, 23-29.2V, 5A  |
-+---------+----------+-------------------------+-------------------------------+
-| 2       | Power    | GND                     | Power negative                |
-+---------+----------+-------------------------+-------------------------------+
-| 3       | CAN      | CAN_H                   | CAN bus high                  |
-+---------+----------+-------------------------+-------------------------------+
-| 4       | CAN      | CAN_L                   | CAN bus low                   |
-+---------+----------+-------------------------+-------------------------------+
++---------+----------+------------+----------------------------------+
+| Pin No. | Pin Type | Definition | Remarks                          |
++=========+==========+============+==================================+
+| 1       | Power    | VCC        | Power positive, 23-29.2V, Max 5A |
++---------+----------+------------+----------------------------------+
+| 2       | Power    | GND        | Power negative                   |
++---------+----------+------------+----------------------------------+
+| 3       | CAN      | CAN_H      | CAN bus high                     |
++---------+----------+------------+----------------------------------+
+| 4       | CAN      | CAN_L      | CAN bus low                      |
++---------+----------+------------+----------------------------------+
 
 |
 
@@ -257,7 +259,7 @@ Remote Control
 ++++++++++++++
 
 .. figure:: _static/scout/scout_rc_transmitter.png
-  :width: 70%
+  :width: 100%
   :align: center
   :figclass: align-centered
   :alt: rc transmitter
@@ -282,13 +284,13 @@ Light Control
 
 로봇의 전면과 후면에 조명이 설치되어 있으며, 제어 인터페이스는 사용자에게 개방되어 있습니다.
 
-* **NC:** 조명이 항시 꺼집니다.
+* **NC Mode:** 조명이 항시 꺼집니다.
 
-* **NO:** 조명이 항시 켜집니다.
+* **NO Mode:** 조명이 항시 켜집니다.
 
-* **BL:** 조명이 점차적으로 켜졌다가 꺼졌다가를 반복합니다.
+* **BL Mode:** 조명이 점차적으로 켜졌다가 꺼졌다가를 반복합니다.
 
-* **CUSTOM:** 지정한 밝기로 조명이 켜집니다.
+* **CUSTOM Mode:** 지정한 밝기로 조명이 켜집니다.
 
 |
 
@@ -348,27 +350,33 @@ ROS Packages
 
 Scout의 ``ROS`` 인터페이스를 구성하고 있는 패키지들은 다음과 같습니다.
 
-* ``scout_base`` :
-  로봇 MCU와의 시리얼 통신을 위한 패키지입니다. 
-  그리고 피드백 데이터를 바탕으로 구현된 진단(diagnostic) 노드를 포함하고 있습니다. 
+* ``scout_lib`` :
+  로봇 MCU와의 시리얼 통신을 위한 라이브러리와 
+  피드백 데이터를 바탕으로 구현된 진단(diagnostic) 노드를 포함하고 있습니다. 
 
-* ``scout_base_controller`` :
+* ``scout_diff_controller`` :
   Differential drive controller를 구현한 패키지입니다.
 
-* ``scout_bringup`` :
-  로봇의 전체 ROS 시스템을 실행시키는 실행(launch) 파일과 설정 파일을 포함하고 있습니다.
+* ``scout_base`` :
+   로봇의 전체 ROS 시스템을 실행시키는 실행(launch) 파일을 포함하고 있습니다.
 
 .. note::
 
-  scout_bringup 패키지에 있는 실행 파일(``scout_bringup.launch``)을 이용해서
-  전체 ROS 시스템을 실행 시킬 수 있습니다. 그리고 실행 파일의 ``robot_name`` 
-  변수 설정틀 통해서 로봇의 모델(Scout V1, V2, Mini)을 선택할 수 있습니다.
+  scout_base 패키지에 있는 실행 파일(``base.launch``)을 이용해서
+  전체 ROS 시스템을 실행 시킬 수 있습니다. 그리고 실행 파일의 ``robot`` 
+  변수 설정틀 통해서 로봇의 모델(Scout V1, V2)을 선택할 수 있습니다.
+
+* ``scout_control`` :
+  로봇의 컨트롤러를 실행시키는 실행(launch) 파일을 포함하고 있습니다.
 
 * ``scout_description`` :
   로봇의 좌표 체계를 정의한 URDF 파일과 시각화를 위한 3D mesh 파일을 포함하고 있습니다.
 
-* ``scout_navigation`` :
-  SLAM, Navigation 기능에 대한 설정, 실행 파일을 포함하고 있습니다.
+* ``scout_gazebo`` :
+  Gazebo를 이용하여 시뮬레이션할 수 있는 패키지입니다.
+
+* ``scout_msgs`` :
+  로봇의 ROS 인터페이스에서 사용하는 메세지 파일을 포함하고 있습니다.
 
 * ``scout_teleop`` :
   블루투스 컨트롤러를 이용해서 로봇을 원격 조작할 수 있는 패키지입니다.
@@ -388,7 +396,7 @@ Feedback Interface
 로봇의 피드백 데이터에는 3가지가 있습니다. 로봇 베이스에 대한 피드백, 모터에 대한 피드백,
 조명 제어에 대한 피드백이 있습니다.
 
-* **rostopic name:** ``/scout_base/base_feedback``
+* **rostopic name:** ``/scout/base_feedback``
 
 .. code::
 
@@ -400,12 +408,13 @@ Feedback Interface
     string state             # NORMAL, STOP
     string control_mode      # REMOTE, CAN, SERIAL, NONE
     float64 battery_voltage  # Actual voltage (V)
-    string battery_state     # Under-voltage, Over-voltage
+    string battery_state     # NORMAL, WARNING, FAILURE
 
-  float64 linear_speed   # Linear speed (m/s)
-  float64 angular_speed  # Angular speed (rad/s)
+  float64 linearX_velocity  # LinearX velocity (m/s)
+  float64 linearY_velocity  # LinearY velocity (m/s)
+  float64 angular_speed     # Angular speed (rad/s)
 
-* **rostopic name:** ``/scout_base/motor_feedback``
+* **rostopic name:** ``/scout/motor_feedback``
 
 .. code::
 
@@ -414,14 +423,14 @@ Feedback Interface
   MotorState[4] motor_states
     string id             # front_right, front_left, rear_left, rear_right
     float64 current       # Actual current (A)
-    float64 velocity      # Actual speed of motor (rad/s)
+    float64 velocity      # Actual velocity of motor (rad/s)
     float64 temperature   # Actual temperature of motor (C)
     string communication  # Communication state with motor
 
-  string current_state      # Current state of motors
-  string temperature_state  # Temperature state of motors
+  string current_state      # Current state of motors (NORMAL, FAILURE)
+  string temperature_state  # Temperature state of motors (NORMAL, FAILURE)
 
-* **rostopic name:** ``/scout_base/light_feedback``
+* **rostopic name:** ``/scout/light_feedback``
 
 .. code::
 
@@ -430,7 +439,7 @@ Feedback Interface
   bool control_enable  # Lighting control enable flag
 
   LightState[2] light_states
-    string id         # FRONG, REAR
+    string id         # FRONT, REAR
     string mode       # The current mode (NC, NO, BL, CUSTOM)
     uint8 brightness  # The current brightness of light (0 - 100)
 
@@ -462,7 +471,7 @@ Light Interface
 +++++++++++++++
 
 로봇의 전면과 후면에 설치되어 있는 조명의 제어 인터페이스는 사용자에게 개방되어 있습니다.
-사용자는 ``/scout_base/light_command`` 토픽을 이용해서 조명을 제어할 수 있습니다.
+사용자는 ``/scout/light_command`` 토픽을 이용해서 조명을 제어할 수 있습니다.
 
 .. code::
 
@@ -534,6 +543,9 @@ ROS는 분산 컴퓨팅 환경으로, 외부 디바이스에서 원격으로 ROS
 ``<ROBOT_IP>`` 는 로봇 PC의 IP 주소이고, ``<ROBOT_HOSTNAME>`` 는 로봇 PC의 Hostname 입니다. 
 일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.
 
+.. tip::
+    Hostname은 ``hostname`` 명령을 터미널 창에 입력해서 확인할 수 있습니다.
+
 Visualize Data
 ++++++++++++++
 
@@ -542,7 +554,7 @@ ROS 네트워크 설정이 완료되면 원격 PC에서 rostopic 데이터를 �
 
 ::
 
-  $ rviz
+  $ roslaunch scout_description rviz.launch
 
 .. figure:: _static/scout/scout_rviz.png
   :width: 100%

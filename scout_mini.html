@@ -58,6 +58,9 @@
               
 
               
+              
+              <img src="_static/ROAS_logo_white.png" class="logo" alt="Logo" />
+              
             </a>
 
             
@@ -85,24 +88,17 @@
           
           
           
-          <p class="caption"><span class="caption-text">ROS Tutorial</span></p>
+          <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ros_basic.html">Basic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ros_demo.html">Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros_basic.html">ROS Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros2_basic.html">ROS2 Basic</a></li>
 </ul>
-<p class="caption"><span class="caption-text">ROS2 Tutorial</span></p>
+<p class="caption"><span class="caption-text">Indoor Mobile Robot</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="ros2_basic.html">Basic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ros2_demo.html">Demo</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Application</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="slam.html">SLAM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="navigation.html">Navigation</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Mobile Robot</span></p>
-<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="former.html">Former</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Outdoor Mobile Robot</span></p>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="jackal.html">Jackal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="husky.html">Husky</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scout.html">Scout</a></li>
@@ -167,8 +163,8 @@
 
       <div class="wy-nav-content">
         <div class="header-override">
-          <a href="http://www.roas.co.kr/"><img src="_static/ROAS_logo.png" height="70"
-              style="margin-top:0px;margin-bottom:15px;"></a>
+          <!---a href="http://www.roas.co.kr/"><img src="_static/ROAS_logo.png" height="70"
+              style="margin-top:0px;margin-bottom:15px;"></a-->
           <!--a href="http://www.gaitech.kr/"><img src="_static/Gaitech_logo.png" height="70"
               style="margin-top:0px;margin-bottom:15px;margin-left:20px;"></a-->
         </div>
@@ -227,7 +223,7 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 상위 어플리케이션 개발을 위하여 Stereo Camera, Lidar, GPS, IMU 등과 같은
 추가 구성 요소들을 Scout Mini에 설치할 수 있습니다.
 이를 바탕으로 자율 주행 교육 및 연구, 실내외 보안 순찰, 환경 모니터링 등의 목적으로 사용할 수 있습니다.</p>
-<p><a class="reference download internal" download="" href="_downloads/f8d09aa47bf69d8487a7767b7027c557/Scout_Mini_User_Manual.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Scout</span> <span class="pre">Mini</span> <span class="pre">User</span> <span class="pre">Manual</span></code></a></p>
+<p><a class="reference download internal" download="" href="_downloads/4acce93e9b44f0ad175820866c18f6fb/Scout_Mini(diff)_User_Manual.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Scout</span> <span class="pre">Mini</span> <span class="pre">(Differential)</span> <span class="pre">User</span> <span class="pre">Manual</span></code></a></p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -235,8 +231,8 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 <h3>Component List<a class="headerlink" href="#component-list" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
-<col width="74%" />
-<col width="26%" />
+<col width="77%" />
+<col width="23%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Name</th>
@@ -256,7 +252,10 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 <tr class="row-odd"><td>USB to RS232 cable</td>
 <td>x 1</td>
 </tr>
-<tr class="row-even"><td>Remote control transmitter</td>
+<tr class="row-even"><td>USB to CAN communication module</td>
+<td>x 1</td>
+</tr>
+<tr class="row-odd"><td>Remote control transmitter</td>
 <td>x 1</td>
 </tr>
 </tbody>
@@ -279,7 +278,7 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>L × W × H (mm)</td>
-<td>627 x 550 x 252</td>
+<td>627 x 549 x 248</td>
 </tr>
 <tr class="row-odd"><td>Front and rear wheels separation (mm)</td>
 <td>460</td>
@@ -291,7 +290,7 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 <td>20</td>
 </tr>
 <tr class="row-even"><td>Battery type</td>
-<td>Lithium battery 24V 15aH</td>
+<td>Lithium battery 24V 15Ah</td>
 </tr>
 <tr class="row-odd"><td>Motor</td>
 <td>DC brushless 4 X 150W</td>
@@ -309,13 +308,13 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 <td>Servo brake/anti-collision tube</td>
 </tr>
 <tr class="row-even"><td>No-load highest speed (km/h)</td>
-<td>≤ 20</td>
+<td>10.8</td>
 </tr>
 <tr class="row-odd"><td>Minimum turning radius</td>
 <td>Be able to turn on a pivot</td>
 </tr>
 <tr class="row-even"><td>Maximum climbing capacity</td>
-<td>≥ 30°</td>
+<td>30°</td>
 </tr>
 <tr class="row-odd"><td>Minimum ground clearance (mm)</td>
 <td>107</td>
@@ -377,15 +376,15 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 </ul>
 <table border="1" class="docutils">
 <colgroup>
-<col width="12%" />
-<col width="13%" />
-<col width="33%" />
-<col width="41%" />
+<col width="14%" />
+<col width="15%" />
+<col width="18%" />
+<col width="52%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Pin No.</th>
 <th class="head">Pin Type</th>
-<th class="head">Function and Definition</th>
+<th class="head">Definition</th>
 <th class="head">Remarks</th>
 </tr>
 </thead>
@@ -393,7 +392,7 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 <tr class="row-even"><td>1</td>
 <td>Power</td>
 <td>VCC</td>
-<td>Power positive, 23-29.2V, 5A</td>
+<td>Power positive, 23-29.2V, Max 5A</td>
 </tr>
 <tr class="row-odd"><td>2</td>
 <td>Power</td>
@@ -419,7 +418,7 @@ Scuit Mini의 크기는 Scout의 절반이지만 탁월한 오프로드 성능�
 <div class="section" id="remote-control">
 <h3>Remote Control<a class="headerlink" href="#remote-control" title="Permalink to this headline">¶</a></h3>
 <div class="align-centered figure align-center" id="id3">
-<a class="reference internal image-reference" href="_images/scout_mini_rc_transmitter.png"><img alt="rc transmitter" src="_images/scout_mini_rc_transmitter.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="_images/scout_mini_rc_transmitter.png"><img alt="rc transmitter" src="_images/scout_mini_rc_transmitter.png" style="width: 100%;" /></a>
 <p class="caption"><span class="caption-text">RC transmitter</span></p>
 </div>
 <p>RC 조종기를 이용하여 로봇을 수동으로 조작할 수 있습니다.
@@ -498,26 +497,31 @@ SWC 스위치를 이용하면 조명 제어 모드(NC, NO, BL)를 전환할 수 
 <h2>ROS Packages<a class="headerlink" href="#ros-packages" title="Permalink to this headline">¶</a></h2>
 <p>Scout Mini의 <code class="docutils literal notranslate"><span class="pre">ROS</span></code> 인터페이스를 구성하고 있는 패키지들은 다음과 같습니다.</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">scout_base</span></code> :
-로봇 MCU와의 시리얼 통신을 위한 패키지입니다.
-그리고 피드백 데이터를 바탕으로 구현된 진단(diagnostic) 노드를 포함하고 있습니다.</li>
-<li><code class="docutils literal notranslate"><span class="pre">scout_base_controller</span></code> :
+<li><code class="docutils literal notranslate"><span class="pre">scout_lib</span></code> :
+로봇 MCU와의 시리얼 통신을 위한 라이브러리와
+피드백 데이터를 바탕으로 구현된 진단(diagnostic) 노드를 포함하고 있습니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">scout_diff_controller</span></code> :
 Differential drive controller를 구현한 패키지입니다.</li>
-<li><code class="docutils literal notranslate"><span class="pre">scout_bringup</span></code> :
-로봇의 전체 ROS 시스템을 실행시키는 실행(launch) 파일과 설정 파일을 포함하고 있습니다.</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">scout_mini_base</span></code> :</dt>
+<dd>로봇의 전체 ROS 시스템을 실행시키는 실행(launch) 파일을 포함하고 있습니다.</dd>
+</dl>
+</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">scout_bringup 패키지에 있는 실행 파일(<code class="docutils literal notranslate"><span class="pre">scout_bringup.launch</span></code>)을 이용해서
-전체 ROS 시스템을 실행 시킬 수 있습니다. 그리고 실행 파일의 <code class="docutils literal notranslate"><span class="pre">robot_name</span></code>
-변수 설정틀 통해서 로봇의 모델(Scout V1, V2, Mini)을 선택할 수 있습니다.</p>
+<p class="last">scout_mini_base 패키지에 있는 실행 파일(<code class="docutils literal notranslate"><span class="pre">base.launch</span></code>)을 이용해서
+전체 ROS 시스템을 실행 시킬 수 있습니다. 그리고 실행 파일의 <code class="docutils literal notranslate"><span class="pre">robot</span></code>
+변수 설정틀 통해서 로봇의 모델(Diff, Omni)을 선택할 수 있습니다.</p>
 </div>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">scout_description</span></code> :
+<li><code class="docutils literal notranslate"><span class="pre">scout_mini_control</span></code> :
+로봇의 컨트롤러를 실행시키는 실행(launch) 파일을 포함하고 있습니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">scout_mini_description</span></code> :
 로봇의 좌표 체계를 정의한 URDF 파일과 시각화를 위한 3D mesh 파일을 포함하고 있습니다.</li>
-<li><code class="docutils literal notranslate"><span class="pre">scout_navigation</span></code> :
-SLAM, Navigation 기능에 대한 설정, 실행 파일을 포함하고 있습니다.</li>
-<li><code class="docutils literal notranslate"><span class="pre">scout_teleop</span></code> :
+<li><code class="docutils literal notranslate"><span class="pre">scout_mini_msgs</span></code> :
+로봇의 ROS 인터페이스에서 사용하는 메세지 파일을 포함하고 있습니다.</li>
+<li><code class="docutils literal notranslate"><span class="pre">scout_mini_teleop</span></code> :
 블루투스 컨트롤러를 이용해서 로봇을 원격 조작할 수 있는 패키지입니다.</li>
 </ul>
 <div class="line-block">
@@ -534,7 +538,7 @@ SLAM, Navigation 기능에 대한 설정, 실행 파일을 포함하고 있습�
 <p>로봇의 피드백 데이터에는 3가지가 있습니다. 로봇 베이스에 대한 피드백, 모터에 대한 피드백,
 조명 제어에 대한 피드백이 있습니다.</p>
 <ul class="simple">
-<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_base/base_feedback</span></code></li>
+<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_mini/base_feedback</span></code></li>
 </ul>
 <div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
 
@@ -544,37 +548,38 @@ SLAM, Navigation 기능에 대한 설정, 실행 파일을 포함하고 있습�
   <span class="n">string</span> <span class="n">state</span>             <span class="c1"># NORMAL, STOP</span>
   <span class="n">string</span> <span class="n">control_mode</span>      <span class="c1"># REMOTE, CAN, SERIAL, NONE</span>
   <span class="n">float64</span> <span class="n">battery_voltage</span>  <span class="c1"># Actual voltage (V)</span>
-  <span class="n">string</span> <span class="n">battery_state</span>     <span class="c1"># Under-voltage, Over-voltage</span>
+  <span class="n">string</span> <span class="n">battery_state</span>     <span class="c1"># NORMAL, WARNING, FAILURE</span>
 
-<span class="n">float64</span> <span class="n">linear_speed</span>   <span class="c1"># Linear speed (m/s)</span>
-<span class="n">float64</span> <span class="n">angular_speed</span>  <span class="c1"># Angular speed (rad/s)</span>
+<span class="n">float64</span> <span class="n">linearX_velocity</span>  <span class="c1"># LinearX velocity (m/s)</span>
+<span class="n">float64</span> <span class="n">linearY_velocity</span>  <span class="c1"># LinearY velocity (m/s)</span>
+<span class="n">float64</span> <span class="n">angular_speed</span>     <span class="c1"># Angular speed (rad/s)</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_base/motor_feedback</span></code></li>
+<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_mini/motor_feedback</span></code></li>
 </ul>
 <div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
 
 <span class="n">MotorState</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">motor_states</span>
   <span class="n">string</span> <span class="nb">id</span>             <span class="c1"># front_right, front_left, rear_left, rear_right</span>
   <span class="n">float64</span> <span class="n">current</span>       <span class="c1"># Actual current (A)</span>
-  <span class="n">float64</span> <span class="n">velocity</span>      <span class="c1"># Actual speed of motor (rad/s)</span>
+  <span class="n">float64</span> <span class="n">velocity</span>      <span class="c1"># Actual velocity of motor (rad/s)</span>
   <span class="n">float64</span> <span class="n">temperature</span>   <span class="c1"># Actual temperature of motor (C)</span>
   <span class="n">string</span> <span class="n">communication</span>  <span class="c1"># Communication state with motor</span>
 
-<span class="n">string</span> <span class="n">current_state</span>      <span class="c1"># Current state of motors</span>
-<span class="n">string</span> <span class="n">temperature_state</span>  <span class="c1"># Temperature state of motors</span>
+<span class="n">string</span> <span class="n">current_state</span>      <span class="c1"># Current state of motors (NORMAL, FAILURE)</span>
+<span class="n">string</span> <span class="n">temperature_state</span>  <span class="c1"># Temperature state of motors (NORMAL, FAILURE)</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_base/light_feedback</span></code></li>
+<li><strong>rostopic name:</strong> <code class="docutils literal notranslate"><span class="pre">/scout_mini/light_feedback</span></code></li>
 </ul>
 <div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Header</span> <span class="n">header</span>
 
 <span class="nb">bool</span> <span class="n">control_enable</span>  <span class="c1"># Lighting control enable flag</span>
 
 <span class="n">LightState</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">light_states</span>
-  <span class="n">string</span> <span class="nb">id</span>         <span class="c1"># FRONG, REAR</span>
+  <span class="n">string</span> <span class="nb">id</span>         <span class="c1"># FRONT, REAR</span>
   <span class="n">string</span> <span class="n">mode</span>       <span class="c1"># The current mode (NC, NO, BL, CUSTOM)</span>
   <span class="n">uint8</span> <span class="n">brightness</span>  <span class="c1"># The current brightness of light (0 - 100)</span>
 </pre></div>
@@ -673,6 +678,10 @@ $ ssh scout@&lt;ROBOT_IP&gt;
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_HOSTNAME&gt;</span></code> 는 로봇 PC의 Hostname 입니다.
 일반적으로 Hostname은 로봇의 시리얼 넘버로 설정되어 있습니다.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Hostname은 <code class="docutils literal notranslate"><span class="pre">hostname</span></code> 명령을 터미널 창에 입력해서 확인할 수 있습니다.</p>
+</div>
 </div>
 <div class="section" id="visualize-data">
 <h3>Visualize Data<a class="headerlink" href="#visualize-data" title="Permalink to this headline">¶</a></h3>
