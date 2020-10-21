@@ -599,20 +599,18 @@ externally.</td>
 이를 통해 원격 PC에서 <code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">rostopic</span> <span class="pre">echo</span></code>, <code class="docutils literal notranslate"><span class="pre">rosnode</span> <span class="pre">list</span></code> 와 같은 ROS
 명령을 실행할 수 있습니다.</p>
 <p>이를 위한 <a class="reference external" href="http://wiki.ros.org/ROS/NetworkSetup">ROS 네트워크 설정</a>  방법은 아래와 같습니다.</p>
-<ol class="arabic simple">
-<li>bashrc 스크립트 파일에서 <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_HOSTNAME</span></code> 환경 변수를 설정하십시오.</li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ vim ~/.bashrc
-
-<span class="c1"># Add the following lines</span>
-<span class="nb">export</span> <span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://&lt;ROBOT_IP&gt;:11311
-<span class="nb">export</span> <span class="nv">ROS_HOSTNAME</span><span class="o">=</span>&lt;REMOTE_IP&gt;
+<ol class="arabic">
+<li><p class="first">bashrc 스크립트 파일에서 <code class="docutils literal notranslate"><span class="pre">ROS_MASTER_URI</span></code>, <code class="docutils literal notranslate"><span class="pre">ROS_HOSTNAME</span></code> 환경 변수를 설정하십시오.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
+<p>$ vim ~/.bashrc</p>
+<p># Add the following lines
+export ROS_MASTER_URI=http://&lt;ROBOT_IP&gt;:11311
+export ROS_HOSTNAME=&lt;REMOTE_IP&gt;</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;ROBOT_IP&gt;</span></code> 는 로봇 PC의 IP 주소이고, <code class="docutils literal notranslate"><span class="pre">&lt;REMOTE_IP&gt;</span></code> 는 원격 PC의 IP 주소입니다.</p>
-<ol class="arabic simple" start="2">
-<li>Hostname과 IP 주소를 매핑하기 위하여 <code class="docutils literal notranslate"><span class="pre">/etc/hosts</span></code> 파일에 아래의 내용을 추가하십시오.</li>
-</ol>
+</li>
+<li><p class="first">Hostname과 IP 주소를 매핑하기 위하여 <code class="docutils literal notranslate"><span class="pre">/etc/hosts</span></code> 파일에 아래의 내용을 추가하십시오.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo vim ~/.bashrc
 
 <span class="c1"># Add the following line</span>
@@ -625,6 +623,8 @@ externally.</td>
 <p class="first admonition-title">Tip</p>
 <p class="last">Hostname은 <code class="docutils literal notranslate"><span class="pre">hostname</span></code> 명령을 터미널 창에 입력해서 확인할 수 있습니다.</p>
 </div>
+</li>
+</ol>
 </div>
 <div class="section" id="connecting-power">
 <h3>Connecting Power<a class="headerlink" href="#connecting-power" title="Permalink to this headline">¶</a></h3>
